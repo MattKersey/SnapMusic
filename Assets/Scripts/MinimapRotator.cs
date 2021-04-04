@@ -1,17 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MinimapRotator : MonoBehaviour
 {
+    //get main camera transform
     public Transform player;
-    private Vector3 orig;
 
     private void Start()
     {
-        orig = transform.position;
     }
 
+    //follow the player's y axis rotation
     void Update()
     {
         Vector3 euler = transform.rotation.eulerAngles;
