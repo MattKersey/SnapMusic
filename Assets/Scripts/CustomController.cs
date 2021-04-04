@@ -39,14 +39,14 @@ public class CustomController : OVRGrabber
         m_prevLocation = location;
     }
 
-    new void OnTriggerEnter(Collider other)
+    new void OnTriggerEnter(Collider otherCollider)
     {
-        base.OnTriggerEnter(other);
-        if (other.CompareTag("Wall"))
+        base.OnTriggerEnter(otherCollider);
+        if (otherCollider.CompareTag("Wall"))
         {
             StartCoroutine(WarnWall());
         }
-        else if (other.CompareTag("Sound Bite"))
+        else if (otherCollider.CompareTag("Sound Bite"))
         {
             m_currentVibration = 0.25f;
             OVRInput.SetControllerVibration(m_currentVibration, m_currentVibration, m_controller);

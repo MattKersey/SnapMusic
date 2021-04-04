@@ -4673,8 +4673,8 @@ GameObject:
   - component: {fileID: 2141310472}
   - component: {fileID: 2141310471}
   - component: {fileID: 2141310470}
-  - component: {fileID: 2141310469}
   - component: {fileID: 2141310474}
+  - component: {fileID: 2141310469}
   m_Layer: 0
   m_Name: Sound Bite
   m_TagString: Sound Bite
@@ -4691,7 +4691,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2141310468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 775ca7563755c4675bef6fae41c81321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
@@ -4699,6 +4699,8 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  m_grabbedMaterial: {fileID: 2100000, guid: aecfadc03ab0a4ff4ab147fbffe74ab2, type: 2}
+  m_defaultMaterial: {fileID: 2100000, guid: 96255f10610a04408908cfce02618a70, type: 2}
 --- !u!65 &2141310470
 BoxCollider:
   m_ObjectHideFlags: 0
