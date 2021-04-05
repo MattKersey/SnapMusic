@@ -12,8 +12,16 @@ public class GogoSettings
 public class CustomController : OVRGrabber
 {
     public Transform m_headPose;
+    public GameObject ray;
     private float m_prevLocation = 0;
     private float m_currentVibration = 0.0f;
+    private Renderer[] controllerRenderers;
+
+    new void Start()
+    {
+        base.Start();
+        controllerRenderers = GetComponentsInChildren<Renderer>();
+    }
 
     new void Update()
     {
@@ -29,13 +37,24 @@ public class CustomController : OVRGrabber
         
         float location = 0.0f;
         if (trigger > 0.0f && dist > GogoSettings.D)
+        {
             location = (trigger * GogoSettings.Alpha) * Mathf.Pow(dist - GogoSettings.D, 2);
+            foreach (Renderer controllerRenderer in controllerRenderers)
+                controllerRenderer.enabled = false;
+        }
+        else
+        {
+            foreach (Renderer controllerRenderer in controllerRenderers)
+                controllerRenderer.enabled = true;
+        }
         // if (location - m_prevLocation > GogoSettings.MaxChange)
         //     location = m_prevLocation + GogoSettings.MaxChange;
         // else if (m_prevLocation - location > GogoSettings.MaxChange)
         //     location = m_prevLocation + GogoSettings.MaxChange;
         m_anchorOffsetPosition = new Vector3(0, 0, location);
         m_gripTransform.localPosition = m_anchorOffsetPosition;
+        ray.transform.localPosition = new Vector3(0, -0.01f, location);
+        ray.transform.localScale = new Vector3(0.02f, location / 2.0f, 0.02f);
         m_prevLocation = location;
     }
 
