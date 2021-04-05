@@ -91,13 +91,13 @@ public class BiteSelf : MonoBehaviour
         _audioSource.volume = newVolume;
     }
 
+    // Source: https://forum.unity.com/threads/playing-audio-backwards.95770/
     private void Reverse()
     {
         // left and right (color?) indicators
         // red or left-arrow -> reverse order of current song
         // green or right-arrow -> restore order of current song
 
-        // Source: https://forum.unity.com/threads/playing-audio-backwards.95770/
         _audioSource.pitch = -1; // to undo the reverse, just set to 1
         //_audioSource.timeSamples = _audioSource.clip.samples - 1;  // keep for now...
     }

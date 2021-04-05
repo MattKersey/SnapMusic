@@ -80,8 +80,6 @@ public class BiteController : MonoBehaviour
 
     public bool ValidateBiteOrder()
     {
-        if (!FoundAllBites()) { return false; }
-
         for (int idx = 0; idx<numOfTotalBites; idx++)
         {
             GameObject child = placeholderParent.transform.GetChild(idx).gameObject;
