@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1743441350101095645}
   - component: {fileID: 1743441350101095644}
   - component: {fileID: 1743441350101095647}
-  - component: {fileID: 1743441350101095642}
   m_Layer: 0
   m_Name: Bite-Cube
   m_TagString: Untagged
@@ -94,22 +93,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1743441350101095642
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743441350101095617}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &7718306379779422108
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7718306379779422109}
   - component: {fileID: 2709405831047551940}
-  - component: {fileID: 8962948587449339473}
+  - component: {fileID: 7875258549713948648}
   m_Layer: 0
   m_Name: Bite
   m_TagString: Bite
@@ -156,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 50
---- !u!82 &8962948587449339473
+--- !u!82 &7875258549713948648
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
