@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2b0f2e7fc23e46c78f6dc1a54c32708, type: 3}
+  m_Name: SnapMusicReverbMap
+  m_EditorClassIdentifier: 
+  surfaceMaterialFromGuid:
+    guids:
+    - fab3fe7f6e5a1ca449b9907c17526fdc
+    - 4bb12e2031b9add4ab7d29bb4095eadd
+    - a792762246421814b9b893a7e580ea87
+    - 96c665f70887143b9afa2f60890e24bf
+    - 3698fda11704093459851c5c477e2407
+    - 7b6d181fff3ce514db846cab711432f7
+    - 863b17f7d5923e34ba3ba6584f55dc58
+    - f5278a035c53344d3823fdd7507af123
+    - 9e2039a9f64694149afb9f115c4612d1
+    - 59a77f8509c947442a3415c2a8a08b94
+    surfaceMaterials: 0d0000000d0000000d0000000d0000000d0000000d00000000000000000000000000000016000000

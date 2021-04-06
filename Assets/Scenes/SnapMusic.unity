@@ -193,6 +193,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &39043563 stripped
@@ -273,6 +278,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &82355886 stripped
@@ -281,6 +291,158 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 82355885}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &103460397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 103460400}
+  - component: {fileID: 103460399}
+  - component: {fileID: 103460398}
+  m_Layer: 0
+  m_Name: Example Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &103460398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103460397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef5e1719799ca4f9b9f5db81449517ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  listenerDirectivityAlpha: 0
+  listenerDirectivitySharpness: 1
+  gainDb: 0
+  nearFieldEffectEnabled: 1
+  nearFieldEffectGain: 1
+  occlusionEnabled: 1
+  occlusionIntensity: 1
+  quality: 2
+--- !u!82 &103460399
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103460397}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 248799cb4acba48f7b3ee842a80f788c,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: e0fc963bd4168f84e8ece31c8ee1ad76, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 1
+  SpatializePostEffects: 1
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &103460400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103460397}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &140014481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -353,6 +515,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &140014482 stripped
@@ -445,6 +612,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffff4a477e4cd4a66b813dc8ecf633fa, type: 3}
+--- !u!1 &160408609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 160408610}
+  - component: {fileID: 160408611}
+  m_Layer: 0
+  m_Name: Room Reverb
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &160408610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160408609}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 388739963}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160408611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160408609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97139fbde32144241958106d7df4b4e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rt60s:
+  - 0.31694922
+  - 0.31470883
+  - 0.31242698
+  - 0.3124245
+  - 0.3082591
+  - 0.3082591
+  - 0.3082591
+  - 0.3032273
+  - 0.29759452
+  reverbGainDb: 0
+  reverbBrightness: 0
+  reverbTime: 1
+  regionShape: 1
+  boxRegionSize: {x: 67, y: 5, z: 67}
+  sphereRegionRadius: 1
+  onlyApplyWhenVisible: 1
+  proxyRoomPosition: {x: 0.53218764, y: 1.4933969, z: 0.42057422}
+  proxyRoomRotation: {x: 0, y: 0, z: 0, w: 1}
+  proxyRoomSize: {x: 13.449735, y: 13.449735, z: 13.449735}
+  proxyRoomLeftWall: 1
+  proxyRoomRightWall: 4
+  proxyRoomFloor: 0
+  proxyRoomCeiling: 0
+  proxyRoomBackWall: 4
+  proxyRoomFrontWall: 4
 --- !u!1001 &161123621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -517,6 +753,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &161123622 stripped
@@ -597,6 +838,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &175897009 stripped
@@ -677,6 +923,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &185605216 stripped
@@ -757,6 +1008,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &186583747 stripped
@@ -803,7 +1059,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &388739963
 Transform:
@@ -819,6 +1075,7 @@ Transform:
   - {fileID: 486633139}
   - {fileID: 389791839}
   - {fileID: 415784618}
+  - {fileID: 160408610}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -836,7 +1093,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &389791839
 Transform:
@@ -871,7 +1128,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &415784618
 Transform:
@@ -997,6 +1254,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &451721486 stripped
@@ -1088,6 +1350,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &481743043 stripped
@@ -1110,7 +1377,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &486633139
 Transform:
@@ -1202,6 +1469,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &493343442 stripped
@@ -1282,6 +1554,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &522291798 stripped
@@ -1545,6 +1822,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!1001 &551854332
@@ -1629,65 +1911,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Center Room Wall (South 2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ffff4a477e4cd4a66b813dc8ecf633fa, type: 3}
---- !u!1001 &570120341
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1730445620638092, guid: 5f35e6b598c1b496e978c6d5c26c2721, type: 3}
-      propertyPath: m_Name
-      value: beep
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210050051474276, guid: 5f35e6b598c1b496e978c6d5c26c2721, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210050051474276, guid: 5f35e6b598c1b496e978c6d5c26c2721, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210050051474276, guid: 5f35e6b598c1b496e978c6d5c26c2721, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210050051474276, guid: 5f35e6b598c1b496e978c6d5c26c2721, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210050051474276, guid: 5f35e6b598c1b496e978c6d5c26c2721, type: 3}
-      propertyPath: m_LocalRotation.w
+    - target: {fileID: 7656135447475119450, guid: ffff4a477e4cd4a66b813dc8ecf633fa,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4210050051474276, guid: 5f35e6b598c1b496e978c6d5c26c2721, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210050051474276, guid: 5f35e6b598c1b496e978c6d5c26c2721, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210050051474276, guid: 5f35e6b598c1b496e978c6d5c26c2721, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210050051474276, guid: 5f35e6b598c1b496e978c6d5c26c2721, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210050051474276, guid: 5f35e6b598c1b496e978c6d5c26c2721, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210050051474276, guid: 5f35e6b598c1b496e978c6d5c26c2721, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5f35e6b598c1b496e978c6d5c26c2721, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: ffff4a477e4cd4a66b813dc8ecf633fa, type: 3}
 --- !u!1001 &604343871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1905,6 +2135,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &711106094 stripped
@@ -1985,6 +2220,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &715551574 stripped
@@ -2070,6 +2310,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &725022895 stripped
@@ -2150,6 +2395,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!1001 &808275452
@@ -2229,6 +2479,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &808275453 stripped
@@ -2309,6 +2564,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &912828507 stripped
@@ -2487,6 +2747,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &1029804749 stripped
@@ -2573,6 +2838,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &1082000427 stripped
@@ -2658,6 +2928,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &1103285317 stripped
@@ -2750,6 +3025,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &1230249081 stripped
@@ -2830,6 +3110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!1001 &1279195160
@@ -2904,6 +3189,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &1279195161 stripped
@@ -3058,6 +3348,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &1360017379 stripped
@@ -3222,6 +3517,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &1473983663 stripped
@@ -3409,6 +3709,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &1625994759 stripped
@@ -3489,6 +3794,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &1669832345 stripped
@@ -3569,6 +3879,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!1001 &1702491889
@@ -3643,6 +3958,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &1702491890 stripped
@@ -3790,6 +4110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &1828143214 stripped
@@ -3798,63 +4123,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1828143213}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1853164174
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1435063941438842, guid: 73f12befbf8d8410ea998d7b761df418, type: 3}
-      propertyPath: m_Name
-      value: RTcmixmain
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049493007285284, guid: 73f12befbf8d8410ea998d7b761df418, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049493007285284, guid: 73f12befbf8d8410ea998d7b761df418, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049493007285284, guid: 73f12befbf8d8410ea998d7b761df418, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049493007285284, guid: 73f12befbf8d8410ea998d7b761df418, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049493007285284, guid: 73f12befbf8d8410ea998d7b761df418, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049493007285284, guid: 73f12befbf8d8410ea998d7b761df418, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049493007285284, guid: 73f12befbf8d8410ea998d7b761df418, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049493007285284, guid: 73f12befbf8d8410ea998d7b761df418, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049493007285284, guid: 73f12befbf8d8410ea998d7b761df418, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049493007285284, guid: 73f12befbf8d8410ea998d7b761df418, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049493007285284, guid: 73f12befbf8d8410ea998d7b761df418, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 73f12befbf8d8410ea998d7b761df418, type: 3}
 --- !u!1001 &1916276074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4016,6 +4284,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!1001 &1968781441
@@ -4090,6 +4363,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!1001 &2075286497
@@ -4169,6 +4447,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &2075286498 stripped
@@ -4254,6 +4537,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!1001 &2117184473
@@ -4328,6 +4616,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a77f8509c947442a3415c2a8a08b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!4 &2117184474 stripped
@@ -4413,6 +4706,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!1001 &1186800488231415763
@@ -4601,6 +4899,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interior Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 2687877160275253819, guid: 303f69cbf293841e4a287ebea5771572,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b6d181fff3ce514db846cab711432f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
 --- !u!1001 &8345169692673389551

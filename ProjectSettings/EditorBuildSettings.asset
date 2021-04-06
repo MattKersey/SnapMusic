@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SnapMusic.unity
     guid: 36ff1295977ee444cacf196db9634b33
+  - enabled: 0
+    path: Assets/ResonanceAudio/Demos/Scenes/ReverbBakingDemo.unity
+    guid: 1e43d8778a1ec455f90bf42cd2262999
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: e18bffb1fe7af49418d0532dbb8a267a,
       type: 2}
