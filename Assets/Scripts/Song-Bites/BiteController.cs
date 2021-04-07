@@ -36,7 +36,7 @@ public class BiteController : MonoBehaviour
         {
             BiteSelf _biteSelf = songBites[i].GetComponent<BiteSelf>();
             _biteSelf.SetBiteIdx(numberList[i]);
-            // PlaceBiteInStage(songBites[i]); // Testing Purposes
+            PlaceBiteInStage(songBites[i]); // Testing Purposes
         }
     }
 
@@ -67,7 +67,7 @@ public class BiteController : MonoBehaviour
     private void PlaceBiteInStage(GameObject bite)
     {
         BiteSelf _biteSelf = bite.GetComponent<BiteSelf>(); // add bite to parent obj 
-        _biteSelf.stopRotating(); // make still
+        //_biteSelf.StopRotating(); // make still
         bite.transform.parent = placeholderParent.transform; // add to placeholder group
         bite.transform.position = placeholderParent.transform.position; // reset position
         bite.transform.position = new Vector3( // change position afterwards to avoid conflict

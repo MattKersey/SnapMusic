@@ -16,19 +16,27 @@ public class BiteSelf : MonoBehaviour
     private string audioName;
     private AudioClip audioClip;
 
+    private float playbackOrder;
+    private Color originalColor;
 
     private void Start()
     {
         _biteController = gameObject.GetComponentInParent<BiteController>();
         _audioSource = gameObject.GetComponent<AudioSource>();
+        originalColor = gameObject.GetComponentInChildren<Renderer>().material.color;
+        Debug.Log("original color: " + originalColor);
+        playbackOrder = _audioSource.pitch;
     }
 
     private void FixedUpdate()
     {
         if (continueRotating)
         {
-            transform.Rotate(0f, rotateSpeed * Time.deltaTime, 0f);
+            transform.Rotate(0f, -playbackOrder * rotateSpeed * Time.deltaTime, 0f);
         }
+        // Testing Purposes - Manipulate inspector valus while in debug mode
+        //ImplementVolumeColor();
+        //if (playbackOrder != _audioSource.pitch) { Reverse(); }
     }
 
     public void SetBiteIdx(int idx)
@@ -38,7 +46,7 @@ public class BiteSelf : MonoBehaviour
         StartCoroutine(LoadAudio());
     }
 
-    public void stopRotating()
+    public void StopRotating()
     {
         continueRotating = false;
     }
@@ -60,9 +68,7 @@ public class BiteSelf : MonoBehaviour
         audioClip = request.GetAudioClip();
         audioClip.name = audioName;
         _audioSource.clip = audioClip;
-        // to verify attachment, just unclick "mute" on the `AudioSouce` component
-        PlayAudioFile();
-        Reverse(); // uncomment to verify play in reverse order
+        PlayAudioFile(); // to verify attachment, just unclick "mute" on the `AudioSouce` component
     }
 
     private void PlayAudioFile()
@@ -78,28 +84,44 @@ public class BiteSelf : MonoBehaviour
         return request;
     }
 
-    private void ScaleVolume()
+    private void GetNewVolume()
     {
         // raise or lower the volume depending on movement
-        // change color depending on volume
-        // raise -> darker
-        // lower -> lighter
-
-        // constraints
         // min = 0.0f, max = 1.0f
-        float newVolume = 0.75f; // prefab default is 0.5
+        // prefab default is 0.5
+        float newVolume = 0.5f; // insert funny math for calculating new volume
         _audioSource.volume = newVolume;
+        ImplementVolumeColor();
+    }
+
+    public void ImplementVolumeColor()
+    {
+        // raise volume -> darker shade
+        // lower volume -> lighter shade
+        Color newColor = new Color(
+            originalColor.r,                            // r
+            1 - ((255 * _audioSource.volume) / 255),    // g
+            originalColor.b);                           // b
+        gameObject.GetComponentInChildren<Renderer>().material.SetColor("_Color", newColor);
+        gameObject.GetComponentInChildren<Renderer>().material.SetColor("_EmissionColor", newColor);
     }
 
     // Source: https://forum.unity.com/threads/playing-audio-backwards.95770/
     private void Reverse()
     {
         // left and right (color?) indicators
-        // red or left-arrow -> reverse order of current song
-        // green or right-arrow -> restore order of current song
-
-        _audioSource.pitch = -1; // to undo the reverse, just set to 1
-        //_audioSource.timeSamples = _audioSource.clip.samples - 1;  // keep for now...
+        switch (playbackOrder) // to undo the reverse, just set to -1 or 1
+        {
+            case 1:
+                _audioSource.pitch = -1;
+                playbackOrder = -1;
+                break;
+            case -1:
+                _audioSource.pitch = 1;
+                playbackOrder = 1;
+                break;
+        }
+        //_audioSource.timeSamples = _audioSource.clip.samples - 1;  // keeping for now...
     }
 
     private void OnTriggerEnter(Collider other)
