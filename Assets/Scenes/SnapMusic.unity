@@ -1783,6 +1783,13 @@ MonoBehaviour:
   m_player: {fileID: 1592917445}
   m_headPose: {fileID: 2089741278}
   ray: {fileID: 944381392}
+  controllerRenderers:
+  - {fileID: 2774251407211936507}
+  - {fileID: 2114446121923221766}
+  - {fileID: 4828818720341896847}
+  - {fileID: 3092784099927683974}
+  - {fileID: 6871378271856711634}
+  - {fileID: 5342833014608516880}
 --- !u!54 &604343876
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3779,6 +3786,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1592917442}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1592917446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592917445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0459a68c4371b45b00aac60065c2d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minMotion: 0.001
+  ratio: 0.7741935
 --- !u!4 &1613354890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1265614856313010546, guid: 303f69cbf293841e4a287ebea5771572,
@@ -4181,6 +4202,13 @@ MonoBehaviour:
   m_player: {fileID: 1592917445}
   m_headPose: {fileID: 2089741278}
   ray: {fileID: 1197123593}
+  controllerRenderers:
+  - {fileID: 2774251405954359384}
+  - {fileID: 2114446122898981797}
+  - {fileID: 4828818721223685164}
+  - {fileID: 3092784100929268005}
+  - {fileID: 6871378270972824945}
+  - {fileID: 5342833015583100339}
 --- !u!54 &1777505441
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4754,6 +4782,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303f69cbf293841e4a287ebea5771572, type: 3}
+--- !u!1 &2111657050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100012, guid: ce816f2e6abb0504092c23ed9b970dfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1592917442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2111657051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111657050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead80e53296fc6244b6e5c18100c2c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VignetteShader: {fileID: 4800000, guid: 9d034fa3f535a1648b5059e6907c647d, type: 3}
+  MeshComplexity: 2
+  Falloff: 0
+  VignetteFieldOfView: 60
+  VignetteAspectRatio: 1
+  VignetteFalloffDegrees: 10
+  VignetteColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &2117184473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4961,8 +5014,8 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_grabbedMaterial: {fileID: 2100000, guid: aecfadc03ab0a4ff4ab147fbffe74ab2, type: 2}
-  m_defaultMaterial: {fileID: 2100000, guid: 96255f10610a04408908cfce02618a70, type: 2}
+  m_grabbedMaterial: {fileID: 2100000, guid: 96255f10610a04408908cfce02618a70, type: 2}
+  m_defaultMaterial: {fileID: 2100000, guid: aecfadc03ab0a4ff4ab147fbffe74ab2, type: 2}
 --- !u!65 &2141310470
 BoxCollider:
   m_ObjectHideFlags: 0
