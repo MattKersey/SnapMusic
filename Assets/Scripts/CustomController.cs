@@ -68,13 +68,15 @@ public class CustomController : OVRGrabber
 
     new void OnTriggerExit(Collider other)
     {
-        m_currentVibration = 0.0f;
-        OVRInput.SetControllerVibration(0.0f, 0.0f, m_controller);
-        // if (m_grabCandidates.Count == 0)
-        // {
-        //     m_currentVibration = 0.0f;
-        //     OVRInput.SetControllerVibration(0.0f, 0.0f, m_controller);
-        // }
+        base.OnTriggerExit(other);
+        if (other.CompareTag("Sound Bite"))
+        {
+            if (m_grabCandidates.Count == 0)
+            {
+                m_currentVibration = 0.0f;
+                OVRInput.SetControllerVibration(0.0f, 0.0f, m_controller);
+            }
+        }
     }
 
     IEnumerator WarnWall()

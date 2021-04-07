@@ -1757,7 +1757,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.07
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &604343875
 MonoBehaviour:
@@ -3800,6 +3800,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minMotion: 0.001
   ratio: 0.7741935
+  angularCoefficient: 20
+  linearCoefficient: 1
+  maxFov: 155
+  minFov: 55
 --- !u!4 &1613354890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1265614856313010546, guid: 303f69cbf293841e4a287ebea5771572,
@@ -4176,7 +4180,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.07
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1777505440
 MonoBehaviour:
@@ -4802,7 +4806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VignetteShader: {fileID: 4800000, guid: 9d034fa3f535a1648b5059e6907c647d, type: 3}
   MeshComplexity: 2
-  Falloff: 0
+  Falloff: 1
   VignetteFieldOfView: 60
   VignetteAspectRatio: 1
   VignetteFalloffDegrees: 10

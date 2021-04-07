@@ -6,8 +6,12 @@ public class FOVRestrictor : MonoBehaviour
 {
     public float minMotion = 0.001f;
     public float ratio = 120.0f / 155.0f;
-    private float ofov = 155.0f;
-    private float ifov = 120.0f;
+    public float angularCoefficient = 5.0f;
+    public float linearCoefficient = 1.0f;
+    public float maxFov = 155.0f;
+    public float minFov = 80.0f;
+    private float ofov;
+    private float ifov;
     private float simulationRate = 60f;
     private float rotationScaleMultiplier;
     private float rotationInfluence;
@@ -23,7 +27,8 @@ public class FOVRestrictor : MonoBehaviour
         playerController.GetRotationScaleMultiplier(ref rotationScaleMultiplier);
         rotationInfluence = simulationRate * playerController.RotationAmount * rotationScaleMultiplier;
         vignette = GetComponentInChildren<OVRVignette>();
-        
+        ofov = maxFov;
+        ifov = (84.0f / 75.0f) * (ofov - 155.0f) + 120.0f;
     }
 
     // Update is called once per frame
@@ -32,10 +37,10 @@ public class FOVRestrictor : MonoBehaviour
         Vector2 rtouch = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.RTouch);
         float angularV = Mathf.Abs(rtouch.x * Time.deltaTime * rotationInfluence);
         float v = characterController.velocity.magnitude;
-        float cRate = (angularV / 20f) + (v / 4f);
+        float cRate = (angularCoefficient * angularV / 20f) + (linearCoefficient * v / 4f);
         if (cRate < minMotion)
         {
-            if (ifov >= 120)
+            if (ofov >= maxFov)
                 cRate = 0f;
             else if (ifov < 80)
                 cRate = -3f * Time.deltaTime;
@@ -46,13 +51,18 @@ public class FOVRestrictor : MonoBehaviour
         {
             if (ofov > 130)
                 cRate = 3f * cRate;
-            else if (ofov <= 80)
+            else if (ofov <= minFov)
                 cRate = 0f;
             else
                 cRate = 0.5f * cRate;
         }
         ofov -= cRate;
-        ifov = ofov * ratio;
+        ifov = (84.0f / 75.0f) * (ofov - 155.0f) + 120.0f;
+        Debug.Log("Abcd123456 " + ofov + " " + vignette.VignetteFalloffDegrees);
+        // if ofov = 80, ifov = 36
+        // if ofov = 155, ifov = 120
+        // (120 - 36) / (155 - 80) (ofov - 155) + 120
+        // 84 / 
         vignette.VignetteFieldOfView = ofov;
         vignette.VignetteFalloffDegrees = 0.5f * (ofov - ifov);
     }
