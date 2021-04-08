@@ -6,10 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SnapMusic.unity
-    guid: 36ff1295977ee444cacf196db9634b33
-  m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: e18bffb1fe7af49418d0532dbb8a267a,
-      type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d110e6d7c090247d6a89565649ce9f5c,
-      type: 2}
+    path: Assets/Neon/Scenes/TutorialScene.unity
+    guid: a4c251521ce2ec2499d5db4fd55c1c9f
