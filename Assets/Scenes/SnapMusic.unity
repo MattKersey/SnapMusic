@@ -1858,13 +1858,7 @@ MonoBehaviour:
   m_player: {fileID: 1592917445}
   m_headPose: {fileID: 1320861452}
   ray: {fileID: 944381392}
-  controllerRenderers:
-  - {fileID: 2774251407211936507}
-  - {fileID: 2114446121923221766}
-  - {fileID: 4828818720341896847}
-  - {fileID: 3092784099927683974}
-  - {fileID: 6871378271856711634}
-  - {fileID: 5342833014608516880}
+  controllerRenderers: []
 --- !u!54 &604343876
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4556,13 +4550,7 @@ MonoBehaviour:
   m_player: {fileID: 1592917445}
   m_headPose: {fileID: 1320861452}
   ray: {fileID: 1197123593}
-  controllerRenderers:
-  - {fileID: 2774251405954359384}
-  - {fileID: 2114446122898981797}
-  - {fileID: 4828818721223685164}
-  - {fileID: 3092784100929268005}
-  - {fileID: 6871378270972824945}
-  - {fileID: 5342833015583100339}
+  controllerRenderers: []
 --- !u!54 &1777505441
 Rigidbody:
   m_ObjectHideFlags: 0
