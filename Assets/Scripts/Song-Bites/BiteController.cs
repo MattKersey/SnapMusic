@@ -16,6 +16,7 @@ public class BiteController : MonoBehaviour
     private float stepSize = 2;
 
     public GameObject placeholderParent;
+    public GameObject validatePodium;
     public bool validateOn = false;
 
     private void Start()
@@ -60,6 +61,7 @@ public class BiteController : MonoBehaviour
         SayHowManyFound();
         if (FoundAllBites())
         {
+            validatePodium.SetActive(true); // activate the podium
             // alternative: PlaceBitesInStage(); // will need to interate on all bites
             // Teleport the player to the center of world.
         }
@@ -102,6 +104,7 @@ public class BiteController : MonoBehaviour
             myChild.GetComponentInChildren<Renderer>().material.SetColor("_Color", finalColor);
             myChild.GetComponentInChildren<Renderer>().material.SetColor("_EmissionColor", finalColor);
         }
+
     } 
 
     private bool CorrectBiteOrder()
