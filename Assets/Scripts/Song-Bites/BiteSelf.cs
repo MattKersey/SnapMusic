@@ -35,8 +35,8 @@ public class BiteSelf : MonoBehaviour
             transform.Rotate(0f, -playbackOrder * rotateSpeed * Time.deltaTime, 0f);
         }
         // Testing Purposes - Manipulate inspector valus while in debug mode
-        //ImplementVolumeColor();
-        //if (playbackOrder != _audioSource.pitch) { Reverse(); }
+        ImplementVolumeColor();
+        if (playbackOrder != _audioSource.pitch) { Reverse(); }
     }
 
     public void SetBiteIdx(int idx)
