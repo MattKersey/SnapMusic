@@ -76,7 +76,7 @@ public class BiteController : MonoBehaviour
     private void PlaceBiteInStage(GameObject bite)
     {
         BiteSelf _biteSelf = bite.GetComponent<BiteSelf>(); // add bite to parent obj 
-        //_biteSelf.StopRotating(); // make still
+        //_biteSelf.StopBouncing();
         bite.transform.parent = placeholderParent.transform; // add to placeholder group
         bite.transform.position = placeholderParent.transform.position; // reset position
         bite.transform.position = new Vector3( // change position afterwards to avoid conflict

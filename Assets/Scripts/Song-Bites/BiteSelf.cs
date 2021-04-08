@@ -11,29 +11,34 @@ public class BiteSelf : MonoBehaviour
     private AudioSource _audioSource;
     private int biteIdx;
     private bool found = false;
-    private bool continueRotating = true;
+    private bool continueBouncing = true;
     private string soundPath = "file://" + Application.streamingAssetsPath + "/Test-Song-1/";
     private string audioName;
     private AudioClip audioClip;
 
     private float playbackOrder;
     private Color originalColor;
+    private Vector3 originalPosition;
 
     private void Start()
     {
         _biteController = gameObject.GetComponentInParent<BiteController>();
         _audioSource = gameObject.GetComponent<AudioSource>();
         originalColor = gameObject.GetComponentInChildren<Renderer>().material.color;
+        originalPosition = transform.position;
         Debug.Log("original color: " + originalColor);
         playbackOrder = _audioSource.pitch;
     }
 
     private void FixedUpdate()
     {
-        if (continueRotating)
+        transform.Rotate(0f, -playbackOrder * rotateSpeed * Time.deltaTime, 0f);
+        if (continueBouncing)
         {
-            transform.Rotate(0f, -playbackOrder * rotateSpeed * Time.deltaTime, 0f);
+            float newY = Mathf.Sin(Time.time * 1.5f) * 0.5f + originalPosition.y;
+            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
         }
+
         // Testing Purposes - Manipulate inspector valus while in debug mode
         ImplementVolumeColor();
         if (playbackOrder != _audioSource.pitch) { Reverse(); }
@@ -46,9 +51,10 @@ public class BiteSelf : MonoBehaviour
         StartCoroutine(LoadAudio());
     }
 
-    public void StopRotating()
+    public void StopBouncing()
     {
-        continueRotating = false;
+        continueBouncing = false;
+        transform.position = originalPosition;
     }
 
     public int GetBiteIdx()
