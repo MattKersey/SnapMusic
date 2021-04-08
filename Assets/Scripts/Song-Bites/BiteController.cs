@@ -16,6 +16,7 @@ public class BiteController : MonoBehaviour
     private float stepSize = 2;
 
     public GameObject placeholderParent;
+    public bool validateOn = false;
 
     private void Start()
     {
@@ -23,6 +24,12 @@ public class BiteController : MonoBehaviour
         numOfTotalBites = songBites.Length;
         orderFound = new int[songBites.Length];
         RandomizeBitIdxs();
+    }
+
+    // Testing Purposes
+    private void FixedUpdate()
+    {
+        if (validateOn) { AllInOrder(); }
     }
 
     private void RandomizeBitIdxs()
@@ -78,14 +85,33 @@ public class BiteController : MonoBehaviour
         minX += stepSize;
     }
 
-    public bool ValidateBiteOrder()
+    public void AllInOrder()
+    {
+        Color finalColor;
+        if (CorrectBiteOrder())
+        {
+            finalColor = Color.green;
+        }
+        else
+        {
+            finalColor = Color.red;
+        }
+        for (int idx = 0; idx < numOfTotalBites; idx++)
+        {
+            GameObject myChild = placeholderParent.transform.GetChild(idx).gameObject;
+            myChild.GetComponentInChildren<Renderer>().material.SetColor("_Color", finalColor);
+            myChild.GetComponentInChildren<Renderer>().material.SetColor("_EmissionColor", finalColor);
+        }
+    } 
+
+    private bool CorrectBiteOrder()
     {
         for (int idx = 0; idx<numOfTotalBites; idx++)
         {
             GameObject child = placeholderParent.transform.GetChild(idx).gameObject;
-            Debug.Log(child.name);
+            //Debug.Log(child.name);
             BiteSelf _biteSelf = child.GetComponent<BiteSelf>();
-            Debug.Log(_biteSelf.GetBiteIdx());
+            //Debug.Log(_biteSelf.GetBiteIdx());
             if (idx != _biteSelf.GetBiteIdx())
             {
                 return false;
