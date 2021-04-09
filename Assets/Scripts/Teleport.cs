@@ -5,6 +5,7 @@ public class Teleport : MonoBehaviour
 {
     public Transform connectedStation;
     public Transform player;
+    public GameObject justTeleported;
     public GameObject light;
     public GameObject cube;
     private bool inPort;
@@ -27,9 +28,12 @@ public class Teleport : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            inPort = true;
             cube.SetActive(true);
-            StartCoroutine(startTele());
+            if (!justTeleported.activeSelf)
+            {
+                inPort = true;
+                StartCoroutine(startTele());
+            }
         }
     }
 
@@ -39,11 +43,12 @@ public class Teleport : MonoBehaviour
         {
             inPort = false;
             light.transform.position = orig;
+            justTeleported.SetActive(false);
         }
     }
+
     IEnumerator startTele()
     {
-        light.SetActive(true);
         yield return new WaitForSeconds(2.5f);
         if (inPort)
         {
@@ -52,6 +57,7 @@ public class Teleport : MonoBehaviour
             player.gameObject.SetActive(true);
             light.transform.position = orig;
             inPort = false;
+            justTeleported.SetActive(true);
         }
     }
 }
