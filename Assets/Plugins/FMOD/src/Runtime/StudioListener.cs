@@ -11,6 +11,7 @@ namespace FMODUnity
         public GameObject attenuationObject;
 
         public int ListenerNumber = -1;
+        public LayerMask occlusionMask = -1;
 
         void OnEnable()
         {
