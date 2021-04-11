@@ -16,6 +16,7 @@ public class CustomController : OVRGrabber
     public Renderer[] controllerRenderers;
     private float m_prevLocation = 0;
     private float m_currentVibration = 0.0f;
+    protected SoundBiteGrabbable m_draggedObj = null;
 
     new void Start()
     {
@@ -50,6 +51,38 @@ public class CustomController : OVRGrabber
         ray.transform.localPosition = new Vector3(0, -0.01f, location / 2.0f);
         ray.transform.localScale = new Vector3(0.015f, Mathf.Max((location - 0.025f) / 2.0f, 0f), 0.015f);
         m_prevLocation = location;
+    }
+
+    new void GrabBegin()
+    {
+        base.GrabBegin();
+        if (m_grabbedObj == null && m_grabCandidates.Count > 0)
+        {
+            SoundBiteGrabbable sbGrabbable = null;
+            foreach (OVRGrabbable grabbable in m_grabCandidates.Keys)
+            {
+                if (grabbable is SoundBiteGrabbable)
+                {
+                    sbGrabbable = (SoundBiteGrabbable)grabbable;
+                    break;
+                }
+            }
+            if (sbGrabbable != null)
+            {
+                sbGrabbable.ScaleBegin(this);
+                m_draggedObj = sbGrabbable;
+            }
+        }
+    }
+
+    new void GrabEnd()
+    {
+        base.GrabEnd();
+        if (m_draggedObj != null)
+        {
+            m_draggedObj.ScaleEnd();
+            m_draggedObj = null;
+        }
     }
 
     new void OnTriggerEnter(Collider otherCollider)
