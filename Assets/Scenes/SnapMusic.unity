@@ -4612,7 +4612,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1621723515}
   - component: {fileID: 1621723516}
-  - component: {fileID: 1621723517}
   m_Layer: 10
   m_Name: Example Sound
   m_TagString: Untagged
@@ -4643,48 +4642,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1621723514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: d8daf46ffd3549644aecc8c47a85656d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/Example
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  fmodEvent: event:/Example
   occlusionEnabled: 1
-  occlusionParameterName: Occlusion
   occlusionIntensity: 1
-  currentOcclusion: 0
-  nextOcclusionUpdate: 0
---- !u!114 &1621723517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621723514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b0c5e63920ee4f55b7ec5248525af4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftWall: 4
-  rightWall: 4
-  floor: 14
-  ceiling: 15
-  backWall: 4
-  frontWall: 4
-  reflectivity: 1
-  reverbGainDb: 0
-  reverbBrightness: 0
-  reverbTime: 1
-  size: {x: 1, y: 1, z: 1}
 --- !u!1001 &1668520028
 PrefabInstance:
   m_ObjectHideFlags: 0

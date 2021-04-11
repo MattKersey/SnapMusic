@@ -50,9 +50,6 @@ namespace FMODUnity
             var overrideAtt = serializedObject.FindProperty("OverrideAttenuation");
             var minDistance = serializedObject.FindProperty("OverrideMinDistance");
             var maxDistance = serializedObject.FindProperty("OverrideMaxDistance");
-            var occlusionEnabled = serializedObject.FindProperty("occlusionEnabled");
-            var occlusionParameterName = serializedObject.FindProperty("occlusionParameterName");
-            var occlusionIntensity = serializedObject.FindProperty("occlusionIntensity");
 
             EditorGUILayout.PropertyField(begin, new GUIContent("Play Event"));
             EditorGUILayout.PropertyField(end, new GUIContent("Stop Event"));
@@ -68,14 +65,6 @@ namespace FMODUnity
             EditorGUILayout.PropertyField(ev, new GUIContent("Event"));
 
             EditorEventRef editorEvent = EventManager.EventFromPath(ev.stringValue);
-
-            EditorGUILayout.PropertyField(occlusionEnabled, new GUIContent("Enable Occlusion"));
-
-            if (occlusionEnabled.boolValue)
-            {
-                EditorGUILayout.PropertyField(occlusionParameterName, new GUIContent("Occlusion Parameter Name"));
-                EditorGUILayout.PropertyField(occlusionIntensity, new GUIContent("Occlusion Intensity"));
-            }
 
             if (EditorGUI.EndChangeCheck())
             {

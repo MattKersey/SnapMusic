@@ -32,13 +32,6 @@ namespace FMODUnity
 
         private const string SnapshotString = "snapshot";
 
-        public bool occlusionEnabled = false;
-        public string occlusionParameterName = null;
-        [Range(0.0f, 10.0f)]
-        public float occlusionIntensity = 1f;
-        public float currentOcclusion = 0.0f;
-        public float nextOcclusionUpdate = 0.0f;
-
         public bool IsActive { get; private set; }
 
         public float MaxDistance
@@ -82,23 +75,6 @@ namespace FMODUnity
                 }
             }
             HandleGameEvent(EmitterGameEvent.ObjectStart);
-        }
-
-        void Update()
-        {
-            if (instance.isValid())
-            {
-                if (!occlusionEnabled)
-                {
-                    currentOcclusion = 0.0f;
-                }
-                else if (Time.time >= nextOcclusionUpdate)
-                {
-                    nextOcclusionUpdate = Time.time + FmodResonanceAudio.occlusionDetectionInterval;
-                    currentOcclusion = occlusionIntensity * FmodResonanceAudio.ComputeOcclusion(transform);
-                    instance.setParameterByName(occlusionParameterName, currentOcclusion);
-                }
-            }
         }
 
         void OnApplicationQuit()
