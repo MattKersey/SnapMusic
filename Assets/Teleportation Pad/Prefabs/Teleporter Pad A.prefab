@@ -5044,7 +5044,7 @@ MonoBehaviour:
   connectedStation: {fileID: 0}
   player: {fileID: 0}
   justTeleported: {fileID: 0}
-  cube: {fileID: 5222464736322565275}
+  mapMarker: {fileID: 0}
   hum: {fileID: 8200000}
   teled: {fileID: 8200002}
 --- !u!1 &5222464736322565275
@@ -5106,7 +5106,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 93f644f14278a40d3989677ea3570576, type: 2}
+  - {fileID: 2100000, guid: 9d59bffe8aae0402d91d953f5f56920e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

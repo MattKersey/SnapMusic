@@ -50,8 +50,8 @@ public class Teleport : MonoBehaviour
     //coroutine to stall before player teleports
     IEnumerator startTele()
     {
-        yield return new WaitForSeconds(2.5f);
-        //make sure player is still in the portal after 2.5 seconds
+        yield return new WaitForSeconds(1.5f);
+        //make sure player is still in the portal after delay
         if (inPort)
         {
             //turn OVRcontroller off temporarily (translation won't work correctly if it is on
