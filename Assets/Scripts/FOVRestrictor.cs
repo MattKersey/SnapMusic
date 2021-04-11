@@ -49,7 +49,7 @@ public class FOVRestrictor : MonoBehaviour
         }
         else
         {
-            if (ofov > 130)
+            if (ofov > 110)
                 cRate = 3f * cRate;
             else if (ofov <= minFov)
                 cRate = 0f;
