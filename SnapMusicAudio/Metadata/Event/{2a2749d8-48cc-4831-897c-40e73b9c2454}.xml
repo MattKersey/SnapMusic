@@ -222,7 +222,7 @@
 			<value>Max Distance</value>
 		</property>
 		<property name="value">
-			<value>25</value>
+			<value>65</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(2.000000,1.000000)(5.000000,5.000000)(10.000000,10.000000)(15.000000,100.000000)(20.000000,1000.000000)(27.000000,10000.000000)}</value>
@@ -233,7 +233,7 @@
 			<value>Dist Rolloff</value>
 		</property>
 		<property name="value">
-			<value>2</value>
+			<value>3</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>
