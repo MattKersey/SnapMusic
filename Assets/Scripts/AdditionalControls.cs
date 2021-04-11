@@ -14,8 +14,12 @@ public class AdditionalControls : MonoBehaviour
     void FixedUpdate()
     {
         if (OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch))
-        {
             playerController.Jump();
-        }
+
+        if (OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.LTouch))
+            CustomController.Redo();
+        
+        if (OVRInput.GetDown(OVRInput.Button.Two, OVRInput.Controller.LTouch))
+            CustomController.Undo();
     }
 }

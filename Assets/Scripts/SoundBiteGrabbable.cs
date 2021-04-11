@@ -9,15 +9,17 @@ public class SoundBiteGrabbable : OVRGrabbable
 
     protected Collider m_draggedCollider = null;
     protected OVRGrabber m_draggedBy = null;
-    protected Vector3 m_startScale;
+    public Vector3 m_startScale;
+    public Vector3 m_startPosition;
+    public Vector3 m_startRotation;
     protected float m_startDist;
 
     void Update()
     {
         if (m_draggedBy != null && m_grabbedBy != null)
         {
-            float scale = (m_draggedBy.transform.position - m_grabbedBy.transform.position).magnitude / m_startDist;
-            transform.localScale = scale * m_startScale;
+            float scalar = (m_draggedBy.transform.position - m_grabbedBy.transform.position).magnitude / m_startDist;
+            transform.localScale = scalar * m_startScale;
         }
     }
 
@@ -35,6 +37,8 @@ public class SoundBiteGrabbable : OVRGrabbable
 
     override public void GrabBegin(OVRGrabber hand, Collider grabPoint)
     {
+        m_startPosition = transform.position;
+        m_startRotation = transform.rotation.eulerAngles;
         base.GrabBegin(hand, grabPoint);
         GetComponent<Renderer>().material = m_grabbedMaterial;
     }

@@ -9,6 +9,14 @@ public class GogoSettings
     public const float MaxChange = 1.0f;
 }
 
+public class MoveLogEntry
+{
+    public enum MoveType {Scale, Move};
+    public OVRGrabbable obj;
+    public List<Vector3> data;
+    public MoveType type;
+}
+
 public class CustomController : OVRGrabber
 {
     public Transform m_headPose;
@@ -21,10 +29,17 @@ public class CustomController : OVRGrabber
     private float m_prevLocation = 0;
     private float m_currentVibration = 0.0f;
     protected SoundBiteGrabbable m_draggedObj = null;
+    protected static List<MoveLogEntry> m_undoList = null;
+    protected static List<MoveLogEntry> m_redoList = null;
 
     new void Start()
     {
         base.Start();
+        if (m_undoList == null)
+            m_undoList = new List<MoveLogEntry>();
+
+        if (m_redoList == null)
+            m_redoList = new List<MoveLogEntry>();
     }
 
     new void Update()
@@ -57,6 +72,46 @@ public class CustomController : OVRGrabber
         m_prevLocation = location;
     }
 
+    public static void Undo()
+    {
+        int count = m_undoList.Count;
+        if (count > 0)
+        {
+            MoveLogEntry entry = m_undoList[count - 1];
+            if (entry.type == MoveLogEntry.MoveType.Move)
+            {
+                entry.obj.transform.position = entry.data[0];
+                entry.obj.transform.rotation = Quaternion.Euler(entry.data[1]);
+            }
+            else
+            {
+                entry.obj.transform.localScale = entry.data[0];
+            }
+            m_redoList.Add(entry);
+            m_undoList.RemoveAt(count - 1);
+        }
+    }
+
+    public static void Redo()
+    {
+        int count = m_redoList.Count;
+        if (count > 0)
+        {
+            MoveLogEntry entry = m_redoList[count - 1];
+            if (entry.type == MoveLogEntry.MoveType.Move)
+            {
+                entry.obj.transform.position = entry.data[2];
+                entry.obj.transform.rotation = Quaternion.Euler(entry.data[3]);
+            }
+            else
+            {
+                entry.obj.transform.localScale = entry.data[1];
+            }
+            m_redoList.RemoveAt(count - 1);
+            m_undoList.Add(entry);
+        }
+    }
+
     new void GrabBegin()
     {
         base.GrabBegin();
@@ -87,12 +142,32 @@ public class CustomController : OVRGrabber
 
     new void GrabEnd()
     {
-        base.GrabEnd();
+        if (m_grabbedObj != null)
+        {
+            MoveLogEntry newEntry = new MoveLogEntry();
+            newEntry.obj = m_grabbedObj;
+            newEntry.type = MoveLogEntry.MoveType.Move;
+            newEntry.data = new List<Vector3>();
+            newEntry.data.Add(((SoundBiteGrabbable)m_grabbedObj).m_startPosition);
+            newEntry.data.Add(((SoundBiteGrabbable)m_grabbedObj).m_startRotation);
+            newEntry.data.Add(m_grabbedObj.transform.position);
+            newEntry.data.Add(m_grabbedObj.transform.rotation.eulerAngles);
+            m_undoList.Add(newEntry);
+        }
         if (m_draggedObj != null)
         {
+            MoveLogEntry newEntry = new MoveLogEntry();
+            newEntry.obj = m_draggedObj;
+            newEntry.type = MoveLogEntry.MoveType.Scale;
+            newEntry.data = new List<Vector3>();
+            newEntry.data.Add(((SoundBiteGrabbable)m_draggedObj).m_startScale);
+            newEntry.data.Add(m_grabbedObj.transform.localScale);
+            m_undoList.Add(newEntry);
             m_draggedObj.ScaleEnd();
             m_draggedObj = null;
         }
+        m_redoList.Clear();
+        base.GrabEnd();
         foreach (Renderer controllerRenderer in controllerRenderers)
             controllerRenderer.material = m_defaultMaterial;
     }
