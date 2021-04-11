@@ -142,7 +142,7 @@ public class OVRGrabber : MonoBehaviour
     // Hands follow the touch anchors by calling MovePosition each frame to reach the anchor.
     // This is done instead of parenting to achieve workable physics. If you don't require physics on
     // your hands or held objects, you may wish to switch to parenting.
-    void OnUpdatedAnchors()
+    protected void OnUpdatedAnchors()
     {
         Vector3 destPos = m_parentTransform.TransformPoint(m_anchorOffsetPosition);
         Quaternion destRot = m_parentTransform.rotation * m_anchorOffsetRotation;
@@ -176,7 +176,7 @@ public class OVRGrabber : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider otherCollider)
+    protected void OnTriggerEnter(Collider otherCollider)
     {
         // Get the grab trigger
 		OVRGrabbable grabbable = otherCollider.GetComponent<OVRGrabbable>() ?? otherCollider.GetComponentInParent<OVRGrabbable>();
@@ -188,7 +188,7 @@ public class OVRGrabber : MonoBehaviour
         m_grabCandidates[grabbable] = refCount + 1;
     }
 
-    void OnTriggerExit(Collider otherCollider)
+    protected void OnTriggerExit(Collider otherCollider)
     {
 		OVRGrabbable grabbable = otherCollider.GetComponent<OVRGrabbable>() ?? otherCollider.GetComponentInParent<OVRGrabbable>();
         if (grabbable == null) return;
