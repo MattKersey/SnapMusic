@@ -4132,7 +4132,7 @@ MonoBehaviour:
   ratio: 0.7741935
   angularCoefficient: 20
   linearCoefficient: 1
-  maxFov: 135
+  maxFov: 155
   minFov: 55
 --- !u!4 &1613354890 stripped
 Transform:
