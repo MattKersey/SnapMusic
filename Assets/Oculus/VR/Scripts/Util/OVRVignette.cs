@@ -211,6 +211,7 @@ public class OVRVignette : MonoBehaviour {
 			_OpaqueMaterial.SetFloat("_BlendSrc", (float)BlendMode.One);
 			_OpaqueMaterial.SetFloat("_BlendDst", (float)BlendMode.Zero);
 			_OpaqueMaterial.SetFloat("_ZWrite", 1);
+			_OpaqueMaterial.renderQueue = 5000;
 		}
 		_OpaqueMeshRenderer.sharedMaterial = _OpaqueMaterial;
 
