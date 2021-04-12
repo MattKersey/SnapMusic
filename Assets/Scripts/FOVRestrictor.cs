@@ -58,7 +58,6 @@ public class FOVRestrictor : MonoBehaviour
         }
         ofov -= cRate;
         ifov = (84.0f / 75.0f) * (ofov - 155.0f) + 120.0f;
-        Debug.Log("Abcd123456 " + ofov + " " + vignette.VignetteFalloffDegrees);
         // if ofov = 80, ifov = 36
         // if ofov = 155, ifov = 120
         // (120 - 36) / (155 - 80) (ofov - 155) + 120

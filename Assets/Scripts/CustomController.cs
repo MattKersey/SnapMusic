@@ -112,35 +112,33 @@ public class CustomController : OVRGrabber
         }
     }
 
-    new void GrabBegin()
+    override protected void GrabBegin()
     {
-        base.GrabBegin();
-        if (m_grabbedObj == null && m_grabCandidates.Count > 0)
+        SoundBiteGrabbable sbGrabbable = null;
+        foreach (OVRGrabbable grabbable in m_grabCandidates.Keys)
         {
-            SoundBiteGrabbable sbGrabbable = null;
-            foreach (OVRGrabbable grabbable in m_grabCandidates.Keys)
+            if (grabbable is SoundBiteGrabbable)
             {
-                if (grabbable is SoundBiteGrabbable)
-                {
-                    sbGrabbable = (SoundBiteGrabbable)grabbable;
-                    break;
-                }
+                sbGrabbable = (SoundBiteGrabbable)grabbable;
+                break;
             }
-            if (sbGrabbable != null)
-            {
-                sbGrabbable.ScaleBegin(this);
-                m_draggedObj = sbGrabbable;
-            }
+        }
+        base.GrabBegin();
+        Debug.Log(m_controller + " " + m_grabbedObj + " " + m_grabCandidates.Count);
+        if (m_grabbedObj == null && sbGrabbable != null)
+        {
+            sbGrabbable.ScaleBegin(this);
+            m_draggedObj = sbGrabbable;
         }
         if (m_grabbedObj != null || m_draggedObj != null)
         {
-            m_objSound.Play();
+            //m_objSound.Play();
             foreach (Renderer controllerRenderer in controllerRenderers)
                 controllerRenderer.material = m_grabbedMaterial;
         }
     }
 
-    new void GrabEnd()
+    override protected void GrabEnd()
     {
         if (m_grabbedObj != null)
         {
@@ -161,7 +159,7 @@ public class CustomController : OVRGrabber
             newEntry.type = MoveLogEntry.MoveType.Scale;
             newEntry.data = new List<Vector3>();
             newEntry.data.Add(((SoundBiteGrabbable)m_draggedObj).m_startScale);
-            newEntry.data.Add(m_grabbedObj.transform.localScale);
+            newEntry.data.Add(m_draggedObj.transform.localScale);
             m_undoList.Add(newEntry);
             m_draggedObj.ScaleEnd();
             m_draggedObj = null;
@@ -170,6 +168,7 @@ public class CustomController : OVRGrabber
         base.GrabEnd();
         foreach (Renderer controllerRenderer in controllerRenderers)
             controllerRenderer.material = m_defaultMaterial;
+        Debug.Log("Grab End " + m_controller);
     }
 
     new void OnTriggerEnter(Collider otherCollider)
@@ -201,7 +200,7 @@ public class CustomController : OVRGrabber
 
     IEnumerator WarnWall()
     {
-        m_wallSound.Play();
+        //m_wallSound.Play();
         OVRInput.SetControllerVibration(1.0f, 1.0f, m_controller);
         yield return new WaitForSeconds(0.25f);
         OVRInput.SetControllerVibration(m_currentVibration, m_currentVibration, m_controller);

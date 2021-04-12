@@ -4424,6 +4424,18 @@ MonoBehaviour:
   linearCoefficient: 1
   maxFov: 155
   minFov: 55
+--- !u!114 &1592917452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592917445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fea4265de8584f4ebfa1cb773360cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1613354890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1265614856313010546, guid: 303f69cbf293841e4a287ebea5771572,
@@ -5980,6 +5992,9 @@ MonoBehaviour:
   m_grabPoints: []
   m_grabbedMaterial: {fileID: 2100000, guid: 96255f10610a04408908cfce02618a70, type: 2}
   m_defaultMaterial: {fileID: 2100000, guid: aecfadc03ab0a4ff4ab147fbffe74ab2, type: 2}
+  m_startScale: {x: 0, y: 0, z: 0}
+  m_startPosition: {x: 0, y: 0, z: 0}
+  m_startRotation: {x: 0, y: 0, z: 0}
 --- !u!65 &2141310470
 BoxCollider:
   m_ObjectHideFlags: 0
