@@ -16,6 +16,6 @@ public class MinimapLean : MonoBehaviour
         euler.x = player.eulerAngles.x;
         transform.rotation = Quaternion.Euler(euler);
 
-        transform.localPosition = new Vector3(transform.localPosition.x, 30 + euler.x, -100 + euler.x);
+        transform.localPosition = new Vector3(transform.localPosition.x, 60 + euler.x*.5f, -200 + euler.x*2.5f);
     }
 }
