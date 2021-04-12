@@ -17,6 +17,10 @@ public class CustomController : OVRGrabber
     private float m_prevLocation = 0;
     private float m_currentVibration = 0.0f;
 
+    //minimap camera
+    public GameObject hud;
+    private bool hudIsActive = true;
+
     new void Start()
     {
         base.Start();
@@ -50,6 +54,22 @@ public class CustomController : OVRGrabber
         ray.transform.localPosition = new Vector3(0, -0.01f, location / 2.0f);
         ray.transform.localScale = new Vector3(0.015f, Mathf.Max((location - 0.025f) / 2.0f, 0f), 0.015f);
         m_prevLocation = location;
+
+        //check for right hand b button
+        if (OVRInput.GetDown(OVRInput.Button.Two))
+        {
+            //check for current state of hud and toggle on/off
+            if(hudIsActive)
+            {
+                hud.SetActive(false);
+                hudIsActive = false;
+            }
+            else
+            {
+                hud.SetActive(true);
+                hudIsActive = true;
+            }
+        }
     }
 
     new void OnTriggerEnter(Collider otherCollider)
