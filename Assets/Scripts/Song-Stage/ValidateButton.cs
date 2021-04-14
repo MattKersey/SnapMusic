@@ -16,6 +16,7 @@ public class ValidateButton : OVRGrabbable
     {
         base.GrabBegin(hand, grabPoint);
         Debug.Log("Validate: Grabs");
+        EmissionStatus(true);
         songBitesContainer.GetComponent<BiteController>().AllInOrder();
     }
 
@@ -27,5 +28,19 @@ public class ValidateButton : OVRGrabbable
     {
         base.GrabEnd(linearVelocity, angularVelocity);
         Debug.Log("Validate: Let go");
+        EmissionStatus(false);
+    }
+
+    // Turns on/off the button's emission to indicate selected status
+    private void EmissionStatus(bool status)
+    {
+        if (status)
+        {
+            GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+        }
+        else
+        {
+            GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
+        }
     }
 }

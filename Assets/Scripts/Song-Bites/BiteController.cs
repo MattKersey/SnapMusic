@@ -54,7 +54,7 @@ public class BiteController : MonoBehaviour
         {
             BiteSelf _biteSelf = songBites[i].GetComponent<BiteSelf>();
             _biteSelf.SetBiteIdx(numberList[i]);
-            FoundBite(songBites[i], _biteSelf.GetBiteIdx());
+            // FoundBite(songBites[i], _biteSelf.GetBiteIdx()); // debug test purposes
         }
     }
 

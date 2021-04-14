@@ -15,6 +15,7 @@ public class SubmitButton : OVRGrabbable
     {
         base.GrabBegin(hand, grabPoint);
         Debug.Log("Submit: Grabs");
+        EmissionStatus(true);
         //PlayAudioInOrder();
     }
 
@@ -26,7 +27,21 @@ public class SubmitButton : OVRGrabbable
     {
         base.GrabEnd(linearVelocity, angularVelocity);
         Debug.Log("Submit: Lets go");
+        EmissionStatus(false);
         // StopAudio();
+    }
+
+    // Turns on/off the button's emission to indicate selected status
+    private void EmissionStatus(bool status)
+    {
+        if (status)
+        {
+            GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+        }
+        else
+        {
+            GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
+        }
     }
 
     /**

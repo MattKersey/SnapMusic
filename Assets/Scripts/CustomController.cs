@@ -16,6 +16,8 @@ public class CustomController : OVRGrabber
     public Renderer[] controllerRenderers;
     private float m_prevLocation = 0;
     private float m_currentVibration = 0.0f;
+    private bool touchedBite = false;
+    private GameObject bite;
 
     new void Start()
     {
@@ -50,6 +52,11 @@ public class CustomController : OVRGrabber
         ray.transform.localPosition = new Vector3(0, -0.01f, location / 2.0f);
         ray.transform.localScale = new Vector3(0.015f, Mathf.Max((location - 0.025f) / 2.0f, 0f), 0.015f);
         m_prevLocation = location;
+
+        if (touchedBite && OVRInput.GetDown(OVRInput.Button.One))
+        {
+            bite.GetComponent<BiteSelf>().Reverse();
+        }
     }
 
     new void OnTriggerEnter(Collider otherCollider)
@@ -63,6 +70,11 @@ public class CustomController : OVRGrabber
         {
             m_currentVibration = 0.25f;
             OVRInput.SetControllerVibration(m_currentVibration, m_currentVibration, m_controller);
+            if (otherCollider.CompareTag("Sound Bite"))
+            {
+                touchedBite = true;
+                bite = otherCollider.gameObject;
+            }
         }
     }
 
@@ -73,6 +85,8 @@ public class CustomController : OVRGrabber
         {
             if (m_grabCandidates.Count == 0)
             {
+                touchedBite = false;
+                bite = null;
                 m_currentVibration = 0.0f;
                 OVRInput.SetControllerVibration(0.0f, 0.0f, m_controller);
             }

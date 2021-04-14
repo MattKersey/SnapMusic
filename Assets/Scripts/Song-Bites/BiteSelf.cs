@@ -91,7 +91,7 @@ public class BiteSelf : MonoBehaviour
     }
 
     // Source: https://forum.unity.com/threads/playing-audio-backwards.95770/
-    private void Reverse()
+    public void Reverse()
     {
         // left and right (color?) indicators
         switch (playbackOrder) // to undo the reverse, just set to -1 or 1
