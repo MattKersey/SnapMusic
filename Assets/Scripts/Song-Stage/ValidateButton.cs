@@ -6,15 +6,26 @@ public class ValidateButton : OVRGrabbable
 {
     public GameObject songBitesContainer;
 
+    /**
+    If the controller 'grabs' the button, activate the allInOrder command 
+    which will check if all bites are arranged correctly. Note that the
+    controller won't physically grab the button (sphere) as the button's
+    rigidbody position is locked on all axises.
+    **/
     override public void GrabBegin(OVRGrabber hand, Collider grabPoint)
     {
         base.GrabBegin(hand, grabPoint);
-        //songBitesContainer.GetComponent<BiteController>().AllInOrder();
+        Debug.Log("Validate: Grabs");
+        songBitesContainer.GetComponent<BiteController>().AllInOrder();
     }
 
+    /**
+    If the controller 'lets go' of the button, do nothing. The function was mainly written
+    for debugging purposes. 
+    **/
     public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
         base.GrabEnd(linearVelocity, angularVelocity);
-        Debug.Log("Let go");
+        Debug.Log("Validate: Let go");
     }
 }

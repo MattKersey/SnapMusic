@@ -5,24 +5,21 @@ using UnityEngine.Networking;
 
 public class BiteSelf : MonoBehaviour
 {
-    public int rotateSpeed;
-
     private BiteController _biteController;
     private AudioSource _audioSource;
     private int biteIdx;
     private bool found = false;
-    private bool continueBouncing = true;
     private string soundPath = "Songs/Test-Song-1/";
     private string audioName;
     private AudioClip audioClip;
-
     private float playbackOrder;
     private Color originalColor;
     private Vector3 originalPosition;
-
+    private Quaternion originalAngles;
     private Vector3 foundPosition;
 
     public bool currentlySelected = false;
+    public int rotateSpeed;
 
     private void Start()
     {
@@ -31,18 +28,19 @@ public class BiteSelf : MonoBehaviour
         originalColor = gameObject.GetComponent<Renderer>().material.color; // solo: used to be child
         originalPosition = transform.position;
         playbackOrder = _audioSource.pitch;
+        originalAngles = transform.rotation;
     }
 
     private void FixedUpdate()
     {
-        //if (continueBouncing)
-        //{
-        //    float newY = Mathf.Sin(Time.time * 1.5f) * 0.5f + originalPosition.y;
-        //    transform.position = new Vector3(transform.position.x, newY, transform.position.z);
-        //}
-
-        // Testing Purposes - Manipulate inspector valus while in debug mode
-        //ImplementVolumeColor();
+        if (!found)
+        {
+           float newY = Mathf.Sin(Time.time * 1.5f) * 0.5f + originalPosition.y;
+           transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+        }
+        if (!currentlySelected) {
+            transform.Rotate(0f, -playbackOrder * rotateSpeed * Time.deltaTime, 0f);        
+        }
         //if (playbackOrder != _audioSource.pitch) { Reverse(); }
     }
 
@@ -57,43 +55,10 @@ public class BiteSelf : MonoBehaviour
         PlayAudioFile();
     }
 
-    public void StopBouncing()
-    {
-        continueBouncing = false;
-        transform.position = originalPosition;
-    }
-
-    public void ContinueBouncing()
-    {
-        continueBouncing = true;
-    }
-
     public int GetBiteIdx()
     {
         return biteIdx;
     }
-
-    //// Source: https://youtu.be/9gAHZGArDgU
-    //// Note: The type is deprecated so I tried upgrading it to the suggested type
-    //// (UnityWebRequest) but there was a method issue with the 3rd line, so I just
-    //// reverted back. 
-    //private IEnumerator LoadAudio()
-    //{
-    //    WWW request = GetAudioFromFile(soundPath, audioName);
-    //    yield return request;
-
-    //    audioClip = request.GetAudioClip();
-    //    audioClip.name = audioName;
-    //    _audioSource.clip = audioClip;
-    //    PlayAudioFile(); // to verify attachment, just unclick "mute" on the `AudioSouce` component
-    //}
-
-    //private WWW GetAudioFromFile(string path, string filename)
-    //{
-    //    string audioToLoad = string.Format(path + "{0}", filename);
-    //    WWW request = new WWW(audioToLoad);
-    //    return request;
-    //}
 
     private void PlayAudioFile()
     {
@@ -108,6 +73,7 @@ public class BiteSelf : MonoBehaviour
         // prefab default is 0.5
         float newVolume = 0.5f; // insert funny math for calculating new volume
         _audioSource.volume = newVolume;
+        // insert fancy math to pass onto implement volume color
         ImplementVolumeColor();
     }
 
@@ -148,7 +114,6 @@ public class BiteSelf : MonoBehaviour
         {
             _biteController.FoundBite(gameObject, biteIdx);
             found = true;
-            // add some animation (if possible)
         }
         else
         {
@@ -181,6 +146,10 @@ public class BiteSelf : MonoBehaviour
     public void SetCurrentlySelected(bool isSelected)
     {
         currentlySelected = isSelected;
+        if (!isSelected){
+            transform.position = foundPosition;
+            transform.rotation = originalAngles;
+        }
     }
 
     public void SetFoundPosition(Vector3 position)
@@ -192,4 +161,26 @@ public class BiteSelf : MonoBehaviour
     {
         return foundPosition;
     }
+
+    //// Source: https://youtu.be/9gAHZGArDgU
+    //// Note: The type is deprecated so I tried upgrading it to the suggested type
+    //// (UnityWebRequest) but there was a method issue with the 3rd line, so I just
+    //// reverted back. 
+    //private IEnumerator LoadAudio()
+    //{
+    //    WWW request = GetAudioFromFile(soundPath, audioName);
+    //    yield return request;
+
+    //    audioClip = request.GetAudioClip();
+    //    audioClip.name = audioName;
+    //    _audioSource.clip = audioClip;
+    //    PlayAudioFile(); // to verify attachment, just unclick "mute" on the `AudioSouce` component
+    //}
+
+    //private WWW GetAudioFromFile(string path, string filename)
+    //{
+    //    string audioToLoad = string.Format(path + "{0}", filename);
+    //    WWW request = new WWW(audioToLoad);
+    //    return request;
+    //}
 }

@@ -1249,30 +1249,6 @@ Transform:
   m_Father: {fileID: 388739963}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &437317945 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8065259597594996981, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
-    type: 3}
-  m_PrefabInstance: {fileID: 8065259597426147788}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &437317947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437317945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5871f941935ce43f995e03a18bad0ac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
-  songBitesContainer: {fileID: 2301854484746413067}
 --- !u!1001 &451721485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6853,6 +6829,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -1.64
       objectReference: {fileID: 0}
+    - target: {fileID: 3208359268192317558, guid: 3cb2cf3c6565345cd813d9f7db97430a,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5184367965644799794, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12119,11 +12100,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2301854484239497925, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
-        type: 3}
-      propertyPath: m_TagString
-      value: Stage-Button
-      objectReference: {fileID: 0}
     - target: {fileID: 2301854484874956707, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
         type: 3}
       propertyPath: m_RootOrder
@@ -12198,11 +12174,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8065259597594996981, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
-        type: 3}
-      propertyPath: m_TagString
-      value: Stage-Button
       objectReference: {fileID: 0}
     - target: {fileID: 8065259597703346657, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
         type: 3}

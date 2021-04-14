@@ -43,9 +43,10 @@ GameObject:
   - component: {fileID: 2301854484239497946}
   - component: {fileID: 2301854484239497947}
   - component: {fileID: 8065259597894146598}
+  - component: {fileID: 7045250480767556553}
   m_Layer: 0
   m_Name: Button
-  m_TagString: Validate Button
+  m_TagString: Stage-Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +137,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a0816e299044df19c88db7c84a2d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
   songBitesContainer: {fileID: 0}
+--- !u!54 &7045250480767556553
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2301854484239497925}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0
 --- !u!1 &2301854484247183945
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,9 +455,11 @@ GameObject:
   - component: {fileID: 8065259597594996978}
   - component: {fileID: 8065259597594996977}
   - component: {fileID: 8065259597594996976}
+  - component: {fileID: 4569174593199621845}
+  - component: {fileID: 6639753694598474671}
   m_Layer: 0
   m_Name: Button
-  m_TagString: Validate Button
+  m_TagString: Stage-Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -514,6 +538,40 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4569174593199621845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8065259597594996981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5871f941935ce43f995e03a18bad0ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
+  songBitesContainer: {fileID: 2301854483753524218}
+--- !u!54 &6639753694598474671
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8065259597594996981}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0
 --- !u!1 &8065259597703346663
 GameObject:
   m_ObjectHideFlags: 0

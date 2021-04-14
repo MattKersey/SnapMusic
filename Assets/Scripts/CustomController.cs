@@ -59,12 +59,7 @@ public class CustomController : OVRGrabber
         {
             StartCoroutine(WarnWall());
         }
-        else if (otherCollider.CompareTag("Sound Bite"))
-        {
-            m_currentVibration = 0.25f;
-            OVRInput.SetControllerVibration(m_currentVibration, m_currentVibration, m_controller);
-        }
-        else if (otherCollider.CompareTag("Stage-Button"))
+        else if (otherCollider.CompareTag("Sound Bite") || otherCollider.CompareTag("Stage-Button"))
         {
             m_currentVibration = 0.25f;
             OVRInput.SetControllerVibration(m_currentVibration, m_currentVibration, m_controller);
@@ -74,15 +69,7 @@ public class CustomController : OVRGrabber
     new void OnTriggerExit(Collider other)
     {
         base.OnTriggerExit(other);
-        if (other.CompareTag("Sound Bite"))
-        {
-            if (m_grabCandidates.Count == 0)
-            {
-                m_currentVibration = 0.0f;
-                OVRInput.SetControllerVibration(0.0f, 0.0f, m_controller);
-            }
-        }
-        else if (other.CompareTag("Stage-Button"))
+        if (other.CompareTag("Sound Bite") || other.CompareTag("Stage-Button"))
         {
             if (m_grabCandidates.Count == 0)
             {
