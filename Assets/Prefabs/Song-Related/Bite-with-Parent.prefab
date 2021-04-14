@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42d3df92e8ac7473da34f91707a013cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentlySelected: 0
   rotateSpeed: 50
 --- !u!82 &7875258549713948648
 AudioSource:

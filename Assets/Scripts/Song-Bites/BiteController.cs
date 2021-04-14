@@ -54,7 +54,7 @@ public class BiteController : MonoBehaviour
         {
             BiteSelf _biteSelf = songBites[i].GetComponent<BiteSelf>();
             _biteSelf.SetBiteIdx(numberList[i]);
-            // PlaceBiteInStage(songBites[i]); // Testing Purposes
+            FoundBite(songBites[i], _biteSelf.GetBiteIdx());
         }
     }
 
@@ -90,6 +90,11 @@ public class BiteController : MonoBehaviour
         Debug.Log(text);
     }
 
+    private void ParticleEffect(GameObject bite, bool status){
+        bite.transform.GetChild(0).gameObject.SetActive(status);
+    }
+
+
     // Lerp to the target destination from the bite's current position within duration (seconds)
     IEnumerator AnimateMove(GameObject bite, Vector3 targetPosition, float duration)
     {
@@ -102,6 +107,7 @@ public class BiteController : MonoBehaviour
             yield return null;
         }
         bite.transform.position = targetPosition;
+        ParticleEffect(bite, false);
     }
 
     /**
@@ -119,6 +125,7 @@ public class BiteController : MonoBehaviour
             placeholderParent.transform.position.z
         );
         float duration = 3f;
+        ParticleEffect(bite, true);
         StartCoroutine(AnimateMove(bite, target, duration));
         // bite.transform.position = placeholderParent.transform.position; // reset position
         // bite.transform.position = new Vector3( // change position afterwards to avoid conflict
