@@ -58,6 +58,8 @@ public class Teleport : MonoBehaviour
             player.gameObject.SetActive(false);
             //set player to position of connected station
             player.position = new Vector3(connectedStation.position.x, 0, connectedStation.position.z);
+            //change player rotation to look at center of maze
+            player.LookAt(Vector3.zero);
             player.gameObject.SetActive(true);
 
             //reset booleans
