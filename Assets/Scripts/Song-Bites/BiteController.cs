@@ -65,6 +65,12 @@ public class BiteController : MonoBehaviour
         return numOfFoundBites == numOfTotalBites;
     }
 
+    // Places the bite on the WIM by setting layer to 'minimap'
+    private void ChangeLayer(GameObject bite)
+    {
+        bite.layer = 9; // 9 is minimap
+    }
+
     /**
     If the user has found a bite, place it onto the stage, say how many have been 
     found so far (debugging), and if they've found all bites, then activate the two
@@ -74,6 +80,7 @@ public class BiteController : MonoBehaviour
     {
         orderFound[numOfFoundBites] = biteIdx;
         PlaceBiteInStage(bite);
+        ChangeLayer(bite);
         numOfFoundBites += 1;
         SayHowManyFound();
         if (FoundAllBites())
