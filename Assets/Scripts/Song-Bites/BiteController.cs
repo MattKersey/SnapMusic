@@ -54,7 +54,8 @@ public class BiteController : MonoBehaviour
         {
             BiteSelf _biteSelf = songBites[i].GetComponent<BiteSelf>();
             _biteSelf.SetBiteIdx(numberList[i]);
-            // FoundBite(songBites[i], _biteSelf.GetBiteIdx()); // debug test purposes
+            _biteSelf.SetRandomPitch();
+            FoundBite(songBites[i], _biteSelf.GetBiteIdx()); // debug test purposes
         }
     }
 
@@ -160,8 +161,9 @@ public class BiteController : MonoBehaviour
     } 
 
     /**
-    Iterate on every bite within the stage and return false if any bite is out of place, meaning
-    if idx != bite/song-index. Otherwise return true. 
+    Iterate on every bite within the stage and return false if any bite is out of place
+    or in the wrong playback order, meaning if idx != bite/song-index or pitch != 1.
+    Otherwise return true. 
     **/
     private bool CorrectBiteOrder()
     {
@@ -169,7 +171,7 @@ public class BiteController : MonoBehaviour
         {
             GameObject child = placeholderParent.transform.GetChild(idx).gameObject;
             BiteSelf _biteSelf = child.GetComponent<BiteSelf>();
-            if (idx != _biteSelf.GetBiteIdx())
+            if (idx != _biteSelf.GetBiteIdx() || _biteSelf.GetPlayBackOrder() != 1)
             {
                 return false;
             }
