@@ -10,13 +10,14 @@ public class SoundBiteGrabbable : OVRGrabbable
     override public void GrabBegin(OVRGrabber hand, Collider grabPoint)
     {
         base.GrabBegin(hand, grabPoint);
-        gameObject.GetComponent<Renderer>().material = m_grabbedMaterial;
+        GetComponent<BiteSelf>().SetCurrentlySelected(true);
+        GetComponent<Renderer>().material = m_grabbedMaterial;
     }
 
     public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
         base.GrabEnd(linearVelocity, angularVelocity);
-        gameObject.GetComponent<Renderer>().material = m_defaultMaterial;
-
+        GetComponent<BiteSelf>().SetCurrentlySelected(false);
+        GetComponent<Renderer>().material = m_defaultMaterial;
     }
 }

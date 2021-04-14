@@ -8,7 +8,7 @@ TagManager:
   - Sound Bite
   - Bite-Placeholder
   - Bite
-  - Validate Button
+  - Stage-Button
   layers:
   - Default
   - TransparentFX

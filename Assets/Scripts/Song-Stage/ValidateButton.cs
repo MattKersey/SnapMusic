@@ -2,22 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ValidateButton : MonoBehaviour
+public class ValidateButton : OVRGrabbable
 {
     public GameObject songBitesContainer;
-    private BiteController _biteController;
 
-    private void Start()
+    override public void GrabBegin(OVRGrabber hand, Collider grabPoint)
     {
-        _biteController = songBitesContainer.GetComponent<BiteController>();
-        Debug.Log(_biteController);
+        base.GrabBegin(hand, grabPoint);
+        //songBitesContainer.GetComponent<BiteController>().AllInOrder();
     }
 
-    // TODO: Have a trigger command that would
-    // enable `_biteController.AllInOrder`
-    private void OnTriggerEnter(Collider other)
+    public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
-
-        _biteController.AllInOrder();
+        base.GrabEnd(linearVelocity, angularVelocity);
+        Debug.Log("Let go");
     }
 }

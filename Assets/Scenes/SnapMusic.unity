@@ -1267,6 +1267,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5871f941935ce43f995e03a18bad0ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
   songBitesContainer: {fileID: 2301854484746413067}
 --- !u!1001 &451721485
 PrefabInstance:
@@ -12114,6 +12119,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2301854484239497925, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stage-Button
+      objectReference: {fileID: 0}
     - target: {fileID: 2301854484874956707, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
         type: 3}
       propertyPath: m_RootOrder
@@ -12173,6 +12183,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Song-Stage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2301854485309756537, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2301854485530233199, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065259596771524265, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065259597594996981, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stage-Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065259597703346657, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8065259597894146598, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
         type: 3}

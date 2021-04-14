@@ -34,10 +34,10 @@ public class BiteController : MonoBehaviour
     }
 
     // Testing Purposes
-    private void FixedUpdate()
-    {
-        if (validateOn) { AllInOrder(); }
-    }
+    //private void FixedUpdate()
+    //{
+    //    if (validateOn) { AllInOrder(); }
+    //}
 
     private void RandomizeBitIdxs()
     {

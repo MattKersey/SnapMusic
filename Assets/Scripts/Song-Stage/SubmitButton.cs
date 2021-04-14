@@ -2,21 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SubmitButton : MonoBehaviour
+public class SubmitButton : OVRGrabbable
 {
     public GameObject songBitesContainer;
-    private BiteController _biteController;
 
-    private void Start()
+    override public void GrabBegin(OVRGrabber hand, Collider grabPoint)
     {
-        _biteController = songBitesContainer.GetComponent<BiteController>();
+        base.GrabBegin(hand, grabPoint);
+        //PlayAudioInOrder();
+        Debug.Log("Submit: Grab Begin");
     }
 
-    // TODO: Delete these two and have a trigger command that would
-    // enable `PlayAudioInOrder`
-    private void OnTriggerEnter(Collider other)
+    public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
-        PlayAudioInOrder();
+        base.GrabEnd(linearVelocity, angularVelocity);
+        StopAudio();
+    }
+
+    private void StopAudio()
+    {
+        Debug.Log("Stopping Audio");
     }
 
     private void PlayAudioInOrder()
@@ -37,3 +42,4 @@ public class SubmitButton : MonoBehaviour
         audioSource.PlayScheduled(duration);
     }
 }
+
