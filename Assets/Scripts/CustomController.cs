@@ -61,6 +61,7 @@ public class CustomController : OVRGrabber
         }
         else if (otherCollider.CompareTag("Sound Bite"))
         {
+            otherCollider.gameObject.GetComponent<BiteSelf>().SetCurrentlySelected(true);
             m_currentVibration = 0.25f;
             OVRInput.SetControllerVibration(m_currentVibration, m_currentVibration, m_controller);
         }
@@ -73,6 +74,7 @@ public class CustomController : OVRGrabber
         {
             if (m_grabCandidates.Count == 0)
             {
+                other.gameObject.GetComponent<BiteSelf>().SetCurrentlySelected(false);
                 m_currentVibration = 0.0f;
                 OVRInput.SetControllerVibration(0.0f, 0.0f, m_controller);
             }

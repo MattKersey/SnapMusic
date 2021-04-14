@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Wall
   - Sound Bite
+  - Bite-Placeholder
+  - Bite
+  - Validate Button
   layers:
   - Default
   - TransparentFX
