@@ -53,7 +53,7 @@ public class CustomController : OVRGrabber
         ray.transform.localScale = new Vector3(0.015f, Mathf.Max((location - 0.025f) / 2.0f, 0f), 0.015f);
         m_prevLocation = location;
 
-        if (touchedBite && OVRInput.GetDown(OVRInput.Button.One))
+        if (touchedBite && OVRInput.GetDown(OVRInput.Button.Two))
         {
             bite.GetComponent<BiteSelf>().Reverse();
         }
