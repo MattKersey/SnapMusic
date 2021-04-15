@@ -5139,6 +5139,11 @@ PrefabInstance:
       objectReference: {fileID: 1795506021}
     - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
+      propertyPath: validateOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
+        type: 3}
       propertyPath: validatePodium
       value: 
       objectReference: {fileID: 2301854484572976798}
@@ -5146,7 +5151,7 @@ PrefabInstance:
         type: 3}
       propertyPath: thePlayerObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 726358509022975359}
     - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
       propertyPath: placeholderParent
@@ -5156,12 +5161,12 @@ PrefabInstance:
         type: 3}
       propertyPath: ThePlayerControllerR
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 726358509713741502}
     - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
       propertyPath: thePlayerControllerL
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 726358508704287773}
     - target: {fileID: 2089150267506245769, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
       propertyPath: m_allowOffhandGrab
@@ -11994,7 +11999,7 @@ GameObject:
   - component: {fileID: 726358509022876633}
   - component: {fileID: 726358509022975360}
   m_Layer: 0
-  m_Name: PlayerController
+  m_Name: OVRPlayerController
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
