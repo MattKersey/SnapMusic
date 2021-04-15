@@ -56,7 +56,7 @@ public class CustomController : OVRGrabber
         m_prevLocation = location;
 
         //check for right hand b button
-        if (OVRInput.GetDown(OVRInput.Button.Two))
+        if (OVRInput.GetDown(OVRInput.Button.One))
         {
             //check for current state of hud and toggle on/off
             if(hudIsActive)
