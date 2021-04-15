@@ -5136,7 +5136,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playPodium
       value: 
-      objectReference: {fileID: 441019098}
+      objectReference: {fileID: 1957279547}
     - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
       propertyPath: validateOn
@@ -5156,7 +5156,7 @@ PrefabInstance:
         type: 3}
       propertyPath: placeholderParent
       value: 
-      objectReference: {fileID: 1787155806}
+      objectReference: {fileID: 441019098}
     - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
       propertyPath: ThePlayerControllerR
@@ -8223,12 +8223,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1739315088}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1787155806 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2301854484874956716, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
-    type: 3}
-  m_PrefabInstance: {fileID: 8065259597426147788}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1789848999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9406,6 +9400,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9102712986067956187, guid: fd37d60ec51efe14890492e5e1a4a029,
     type: 3}
   m_PrefabInstance: {fileID: 1944907245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1957279547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8065259596771524265, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
+    type: 3}
+  m_PrefabInstance: {fileID: 8065259597426147788}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1970749923
 GameObject:
