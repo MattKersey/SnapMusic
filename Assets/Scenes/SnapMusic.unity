@@ -5136,7 +5136,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playPodium
       value: 
-      objectReference: {fileID: 1795506021}
+      objectReference: {fileID: 441019098}
     - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
       propertyPath: validatePodium
@@ -5274,6 +5274,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cb2cf3c6565345cd813d9f7db97430a, type: 3}
+--- !u!1 &1292455766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8890329374241208204, guid: 3cb2cf3c6565345cd813d9f7db97430a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1292455765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1301949921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8303,12 +8309,6 @@ PrefabInstance:
       objectReference: {fileID: 1816907402}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd95aa4817356645979f7a136313957, type: 3}
---- !u!1 &1795506021 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8065259596771524265, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
-    type: 3}
-  m_PrefabInstance: {fileID: 8065259597426147788}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1816907402 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 931a75669ffc1214f93c0d969895e8a1,
@@ -22562,6 +22562,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4569174593199621845, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
+        type: 3}
+      propertyPath: songBitesContainer
+      value: 
+      objectReference: {fileID: 1292455766}
     - target: {fileID: 8065259596771524265, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
         type: 3}
       propertyPath: m_IsActive
@@ -22576,7 +22581,7 @@ PrefabInstance:
         type: 3}
       propertyPath: songBitesContainer
       value: 
-      objectReference: {fileID: 441019098}
+      objectReference: {fileID: 1292455766}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4c1558d0ad5d4f88b792cdc2db7ba62, type: 3}
 --- !u!1001 &8345169692673389551
