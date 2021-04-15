@@ -19,6 +19,12 @@ public class BiteController : MonoBehaviour
     public GameObject playPodium;
     public bool validateOn = false;
 
+    //bool for Custom Controller Script
+    public GameObject thePlayerObject;
+    public GameObject thePlayerControllerL;
+    public GameObject ThePlayerControllerR;
+    public GameObject hud;
+
     /**
     Upon start, get all the bite gameobjects (children), calculate their quantity,
     and randomize their song-bite index (i.e. give them a random sample of the song
@@ -87,7 +93,16 @@ public class BiteController : MonoBehaviour
         {
             validatePodium.SetActive(true);
             playPodium.SetActive(true);
-            // TODO: Teleport the player to the center of world.
+            //turn off hud and hud toggle in controller script
+            hud.SetActive(false);
+            thePlayerControllerL.GetComponent<CustomController>().inEditMode = true;
+            ThePlayerControllerR.GetComponent<CustomController>().inEditMode = true;
+
+            //Teleport the player to the center of world.
+            thePlayerObject.SetActive(false);
+            thePlayerObject.transform.position = Vector3.zero;
+            thePlayerObject.transform.rotation = Quaternion.identity;
+            thePlayerObject.SetActive(true);
         }
     }
 

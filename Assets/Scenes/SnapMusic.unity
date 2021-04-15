@@ -2338,6 +2338,7 @@ MonoBehaviour:
   - {fileID: 6871378271856711634}
   - {fileID: 5342833014608516880}
   hud: {fileID: 1839510054}
+  inEditMode: 0
 --- !u!54 &604343876
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5290,6 +5291,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
+      propertyPath: hud
+      value: 
+      objectReference: {fileID: 1839510054}
+    - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
+        type: 3}
       propertyPath: playPodium
       value: 
       objectReference: {fileID: 1795506021}
@@ -5300,9 +5306,24 @@ PrefabInstance:
       objectReference: {fileID: 2301854484572976798}
     - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
+      propertyPath: thePlayerObject
+      value: 
+      objectReference: {fileID: 1559233709}
+    - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
+        type: 3}
       propertyPath: placeholderParent
       value: 
       objectReference: {fileID: 1787155806}
+    - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
+        type: 3}
+      propertyPath: ThePlayerControllerR
+      value: 
+      objectReference: {fileID: 604256427}
+    - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
+        type: 3}
+      propertyPath: thePlayerControllerL
+      value: 
+      objectReference: {fileID: 1777541640}
     - target: {fileID: 2988201345335955092, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8339,6 +8360,7 @@ MonoBehaviour:
   - {fileID: 6871378270972824945}
   - {fileID: 5342833015583100339}
   hud: {fileID: 1839510054}
+  inEditMode: 0
 --- !u!54 &1777505441
 Rigidbody:
   m_ObjectHideFlags: 0

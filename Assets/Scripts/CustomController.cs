@@ -23,6 +23,9 @@ public class CustomController : OVRGrabber
     public GameObject hud;
     private bool hudIsActive = true;
 
+    //bool for switching to edit play mode
+    public bool inEditMode = false;
+
     new void Start()
     {
         base.Start();
@@ -57,8 +60,7 @@ public class CustomController : OVRGrabber
         ray.transform.localScale = new Vector3(0.015f, Mathf.Max((location - 0.025f) / 2.0f, 0f), 0.015f);
         m_prevLocation = location;
 
-        //check for right hand b button
-        if (OVRInput.GetDown(OVRInput.Button.One))
+        if (OVRInput.GetDown(OVRInput.Button.Two) && !inEditMode)
         {
             //check for current state of hud and toggle on/off
             if (hudIsActive)
@@ -73,7 +75,7 @@ public class CustomController : OVRGrabber
             }
         }
 
-        if (touchedBite && OVRInput.GetDown(OVRInput.Button.Two))
+        if (touchedBite && OVRInput.GetDown(OVRInput.Button.Four))
         {
             bite.GetComponent<BiteSelf>().Reverse();
         }

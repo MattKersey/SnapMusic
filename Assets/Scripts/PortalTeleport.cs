@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PortalTeleport : MonoBehaviour
 {
@@ -12,7 +10,7 @@ public class PortalTeleport : MonoBehaviour
 
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.Four))
+        if (OVRInput.GetDown(OVRInput.Button.One))
         {
             if (player.transform.position.x > 8 || player.transform.position.z > 8 ||
                 player.transform.position.x < -8 || player.transform.position.z < -8)
