@@ -15,9 +15,29 @@ MonoBehaviour:
   Path: SnapMusicAudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637539888110000000
+  lastModified: 637536806335795246
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &-2390252761707779397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Example/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &-293909594138014903
 MonoBehaviour:
@@ -34,9 +54,13 @@ MonoBehaviour:
   Path: SnapMusicAudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637539888110000000
+  lastModified: 637536806335835074
   LoadResult: 0
-  FileSizes: []
+  FileSizes:
+  - Name: Desktop
+    Value: 748
+  - Name: Mobile
+    Value: 748
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -60,7 +84,7 @@ MonoBehaviour:
   - {fileID: -5593759632691209263}
   StringsBanks:
   - {fileID: -293909594138014903}
-  stringsBankWriteTime: 637539888110000000
+  stringsBankWriteTime: 637536806335835074
   cacheVersion: 6
 --- !u!114 &4712785339207516273
 MonoBehaviour:
@@ -82,7 +106,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 4921607267072915601}
+  - {fileID: -2390252761707779397}
   MinDistance: 0
   MaxDistance: 0
   Length: 6000
@@ -105,7 +129,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6637860414715290154
 MonoBehaviour:
   m_ObjectHideFlags: 0
