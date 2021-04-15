@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Wall
   - Sound Bite
+  - Bite-Placeholder
+  - Bite
+  - Stage-Button
   layers:
   - Default
   - TransparentFX
@@ -18,8 +21,8 @@ TagManager:
   - Player
   - Minimap
   - Level
-  - 
-  - 
+  - Non-MiniMap
+  - Found Bite
   - 
   - 
   - 

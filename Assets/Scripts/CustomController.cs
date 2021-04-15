@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,6 +31,15 @@ public class CustomController : OVRGrabber
     protected SoundBiteGrabbable m_draggedObj = null;
     protected static List<MoveLogEntry> m_undoList = null;
     protected static List<MoveLogEntry> m_redoList = null;
+    private bool touchedBite = false;
+    private GameObject bite;
+
+    //minimap camera
+    public GameObject hud;
+    private bool hudIsActive = true;
+
+    //bool for switching to edit play mode
+    public bool inEditMode = false;
 
     new void Start()
     {
@@ -53,7 +62,7 @@ public class CustomController : OVRGrabber
         // Vector3 eulerAngles = rotation.eulerAngles;
         // for (int i = 0; i < 3; i++)
         //     eulerAngles[i] = eulerAngles[i] > 180 ? 360 - eulerAngles[i] : eulerAngles[i];
-        
+
         float location = 0.0f;
         if (trigger > 0.0f && dist > GogoSettings.D)
         {
@@ -70,6 +79,26 @@ public class CustomController : OVRGrabber
         ray.transform.localPosition = new Vector3(0, -0.01f, location / 2.0f);
         ray.transform.localScale = new Vector3(0.015f, Mathf.Max((location - 0.025f) / 2.0f, 0f), 0.015f);
         m_prevLocation = location;
+
+        if (OVRInput.GetDown(OVRInput.Button.Two) && !inEditMode)
+        {
+            //check for current state of hud and toggle on/off
+            if (hudIsActive)
+            {
+                hud.SetActive(false);
+                hudIsActive = false;
+            }
+            else
+            {
+                hud.SetActive(true);
+                hudIsActive = true;
+            }
+        }
+
+        if (touchedBite && OVRInput.GetDown(OVRInput.Button.Four))
+        {
+            bite.GetComponent<BiteSelf>().Reverse();
+        }
     }
 
     public static void Undo()
@@ -178,20 +207,27 @@ public class CustomController : OVRGrabber
         {
             StartCoroutine(WarnWall());
         }
-        else if (otherCollider.CompareTag("Sound Bite"))
+        else if (otherCollider.CompareTag("Sound Bite") || otherCollider.CompareTag("Stage-Button"))
         {
             m_currentVibration = 0.25f;
             OVRInput.SetControllerVibration(m_currentVibration, m_currentVibration, m_controller);
+            if (otherCollider.CompareTag("Sound Bite"))
+            {
+                touchedBite = true;
+                bite = otherCollider.gameObject;
+            }
         }
     }
 
     new void OnTriggerExit(Collider other)
     {
         base.OnTriggerExit(other);
-        if (other.CompareTag("Sound Bite"))
+        if (other.CompareTag("Sound Bite") || other.CompareTag("Stage-Button"))
         {
             if (m_grabCandidates.Count == 0)
             {
+                touchedBite = false;
+                bite = null;
                 m_currentVibration = 0.0f;
                 OVRInput.SetControllerVibration(0.0f, 0.0f, m_controller);
             }
