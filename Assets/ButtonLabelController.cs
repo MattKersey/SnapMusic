@@ -6,16 +6,22 @@ using UnityEngine.UI;
 public class ButtonLabelController : MonoBehaviour
 {
     public Transform headPose;
-    public string labelText;
+    public string labelTextInitial;
+    public bool isGhostInitial;
     protected GameObject line;
     protected GameObject label;
     protected RectTransform labelTransform;
+    protected Text text = null;
+
     void Start()
     {
         line = transform.Find("Line").gameObject;
         label = transform.Find("Canvas").gameObject;
-        label.transform.Find("Text").GetComponent<Text>().text = labelText;
         labelTransform = label.GetComponent<RectTransform>();
+        text = label.transform.Find("Text").GetComponent<Text>();
+        text.text = labelTextInitial;
+        Ghost(isGhostInitial);
+        Activate(false);
     }
 
     void Update()
@@ -26,10 +32,28 @@ public class ButtonLabelController : MonoBehaviour
         }
     }
 
+    public void SetText(string labelText)
+    {
+        if (text != null)
+            text.text = labelText;
+    }
+
+    public void Ghost(bool isGhost)
+    {
+        if (text != null)
+        {
+            Color newColor = isGhost ? Color.grey : Color.white;
+            text.color = newColor;
+        }
+    }
+
     // Update is called once per frame
     public void Activate(bool isActive)
     {
-        line.SetActive(isActive);
-        label.SetActive(isActive);
+        if (line != null && label != null)
+        {
+            line.SetActive(isActive);
+            label.SetActive(isActive);
+        }
     }
 }
