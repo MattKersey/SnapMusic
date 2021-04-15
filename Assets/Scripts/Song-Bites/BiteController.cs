@@ -150,6 +150,15 @@ public class BiteController : MonoBehaviour
         ParticleEffect(bite, false);
     }
 
+    public GameObject ghostBite;
+    private void AddGhostBite(Vector3 originalPosition, string name)
+    {
+        // Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent);
+        GameObject copy = Instantiate(ghostBite, originalPosition, Quaternion.identity, transform);
+        copy.SetActive(true);
+        copy.name = "Ghost-" + name;
+    }
+
     /**
     With the currently found bite, attach it as a child to the container of found bites (gameobject)
     and transport it to it's destined location on the stage according to how many bites have been 
@@ -157,7 +166,7 @@ public class BiteController : MonoBehaviour
     **/
     private void PlaceBiteInStage(GameObject bite)
     {
-        BiteSelf _biteSelf = bite.GetComponent<BiteSelf>(); // add bite to parent obj 
+        BiteSelf _biteSelf = bite.GetComponent<BiteSelf>(); // add bite to parent obj
         bite.transform.parent = placeholderParent.transform; // add to placeholder group
         Vector3 target = new Vector3(
             minX + stepSize,
@@ -165,6 +174,7 @@ public class BiteController : MonoBehaviour
             placeholderParent.transform.position.z
         );
         float duration = 3f;
+        AddGhostBite(bite.transform.position, bite.name);
         ParticleEffect(bite, true);
         StartCoroutine(AnimateMove(bite, target, duration));
         // bite.transform.position = placeholderParent.transform.position; // reset position
