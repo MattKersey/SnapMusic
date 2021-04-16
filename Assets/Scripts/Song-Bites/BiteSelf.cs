@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
 public class BiteSelf : MonoBehaviour
 {
@@ -19,7 +17,7 @@ public class BiteSelf : MonoBehaviour
 
     public bool currentlySelected = false;
     public int rotateSpeed;
-    public float playbackOrder;
+    public int playbackOrder;
     StudioEventEmitterOcclusion biteAudio;
 
     // Store the initail positions, rotation, color, and pitch
@@ -29,7 +27,6 @@ public class BiteSelf : MonoBehaviour
         _audioSource = gameObject.GetComponent<AudioSource>();
         originalColor = gameObject.GetComponent<Renderer>().material.color;
         originalPosition = transform.position;
-        playbackOrder = _audioSource.pitch;
         originalAngles = transform.rotation;
     }
 
@@ -80,6 +77,15 @@ public class BiteSelf : MonoBehaviour
         List<int> pitches = new List<int> { -1, 1 };
         playbackOrder = pitches[random.Next(pitches.Count)];
         _audioSource.pitch = playbackOrder;
+    }
+
+    // Set the forward/reverse direction of the bite.  0 = forward, 1 = reverse
+    public void SetRandomDirection()
+    {
+        System.Random random = new System.Random();
+        List<int> pitches = new List<int> { 0, 1 };
+        playbackOrder = pitches[random.Next(pitches.Count)];
+        biteAudio.SetDirection(playbackOrder);
     }
 
     // Public method to get the bite (song) index
@@ -136,6 +142,7 @@ public class BiteSelf : MonoBehaviour
     Public method to reverse the pitch of the audio.
     Source: https://forum.unity.com/threads/playing-audio-backwards.95770/
     **/
+    /*
     public void Reverse()
     {
         switch (playbackOrder) // to undo the reverse, just set to -1 or 1
@@ -150,6 +157,24 @@ public class BiteSelf : MonoBehaviour
                 break;
         }
         //_audioSource.timeSamples = _audioSource.clip.samples - 1;  // keeping for now...
+    }
+    */
+
+    public void Reverse()
+    {
+        switch (playbackOrder) // to undo the reverse, just set to 0 or 1
+        {
+            case 0:
+                playbackOrder = 1;
+                break;
+            case 1:
+                playbackOrder = 0;
+                break;
+        }
+
+        Debug.Log("Reversing");
+
+        biteAudio.SetDirection(playbackOrder);
     }
 
     /**
@@ -177,6 +202,7 @@ public class BiteSelf : MonoBehaviour
         // Preview sound if controller collides
         else if (found && other.name == "OVRControllerPrefab")
         {
+            biteAudio.SetDirection(playbackOrder);
             biteAudio.PlayBite();
         }
     }

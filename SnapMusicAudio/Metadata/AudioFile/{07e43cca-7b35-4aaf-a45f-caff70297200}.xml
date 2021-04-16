@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{07e43cca-7b35-4aaf-a45f-caff70297200}">
+		<property name="assetPath">
+			<value>AphexTwin-Reverse-02.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>12.071904761904761</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f9e4ba8a-e87d-4fec-874c-f0ee57c4d20b}</destination>
+		</relationship>
+	</object>
+</objects>

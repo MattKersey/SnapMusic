@@ -35,6 +35,11 @@ public class StudioEventEmitterOcclusion : MonoBehaviour
         fmodInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
+    public void SetDirection(int direction)
+    {
+        fmodInstance.setParameterByName("Direction", direction);
+    }
+
     // Update is called once per frame
     void Update()
     {
