@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3966363703546557040}
   - component: {fileID: 4032846415505433352}
   - component: {fileID: 1508694402703710532}
-  - component: {fileID: -740198023219338910}
+  - component: {fileID: 4845740296143625354}
   m_Layer: 0
   m_Name: Bite-without-Parent
   m_TagString: Sound Bite
@@ -151,7 +151,7 @@ MonoBehaviour:
   currentlySelected: 0
   rotateSpeed: 50
   playbackOrder: 0
---- !u!114 &-740198023219338910
+--- !u!114 &4845740296143625354
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

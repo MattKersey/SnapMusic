@@ -20,6 +20,7 @@ public class BiteSelf : MonoBehaviour
     public bool currentlySelected = false;
     public int rotateSpeed;
     public float playbackOrder;
+    StudioEventEmitterOcclusion biteAudio;
 
     // Store the initail positions, rotation, color, and pitch
     private void Start()
@@ -50,6 +51,7 @@ public class BiteSelf : MonoBehaviour
         //if (playbackOrder != _audioSource.pitch) { Reverse(); }
     }
 
+    /*
     // Give the bite a random index/sample from the song 
     public void SetBiteIdx(int idx)
     {
@@ -60,6 +62,15 @@ public class BiteSelf : MonoBehaviour
         audioClip.name = audioName;
         _audioSource.clip = audioClip;
         PlayAudioFile();
+    }
+    */
+
+    // Give the bite a random index/sample from the song 
+    public void SetBiteIdx(int idx)
+    {
+        biteIdx = idx;
+        biteAudio = GetComponent<StudioEventEmitterOcclusion>();
+        biteAudio.LoadBite(idx + 1);
     }
 
     // Give the bite a random pitch. Note: 1=normal, -1=reverse
@@ -156,10 +167,25 @@ public class BiteSelf : MonoBehaviour
                 SwapInHierarchy(other.gameObject);
             }
         }
+
         else if (!found)
         {
             _biteController.FoundBite(gameObject, biteIdx);
             found = true;
+        }
+
+        // Preview sound if controller collides
+        else if (found && other.name == "OVRControllerPrefab")
+        {
+            biteAudio.PlayBite();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (found && other.name == "OVRControllerPrefab")
+        {
+            biteAudio.StopBite();
         }
     }
 
@@ -185,6 +211,9 @@ public class BiteSelf : MonoBehaviour
             int currSiblingIndex = transform.GetSiblingIndex();
             collideObj.transform.SetSiblingIndex(currSiblingIndex);
             transform.SetSiblingIndex(otherSiblingIndex);
+
+            // Stop audio
+            biteAudio.StopBite();
         }
     }
 

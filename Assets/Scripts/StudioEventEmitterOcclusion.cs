@@ -16,10 +16,23 @@ public class StudioEventEmitterOcclusion : MonoBehaviour
     float occlusion = 0.0f;
     float occlusionUpdate = 0.0f;
 
-    void Start()
+    public void LoadBite(int biteNum)
     {
+        Debug.Log("Loading Bite");
+        fmodEvent = "event:/Bite " + biteNum.ToString();
         fmodInstance = RuntimeManager.CreateInstance(fmodEvent);
+        RuntimeManager.AttachInstanceToGameObject(fmodInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
         fmodInstance.start();
+    }
+
+    public void PlayBite()
+    {
+        fmodInstance.start();
+    }
+
+    public void StopBite()
+    {
+        fmodInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     // Update is called once per frame
