@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
-using FMOD;
+using FMOD.Studio;
+using FMODUnity;
 using FMODUnityResonance;
 
 public class StudioEventEmitterOcclusion : MonoBehaviour
 {
 
-    private FMOD.Studio.EventInstance fmodInstance;
+    private EventInstance fmodInstance;
 
-    [FMODUnity.EventRef]
+    [EventRef]
     public string fmodEvent;
     public bool occlusionEnabled = true;
     string parameterName = "Occlusion";
@@ -17,7 +18,7 @@ public class StudioEventEmitterOcclusion : MonoBehaviour
 
     void Start()
     {
-        fmodInstance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+        fmodInstance = RuntimeManager.CreateInstance(fmodEvent);
         fmodInstance.start();
     }
 
@@ -26,7 +27,7 @@ public class StudioEventEmitterOcclusion : MonoBehaviour
     {
         if (fmodInstance.isValid())
         {
-            fmodInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(this.gameObject));
+            fmodInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
 
             if (!occlusionEnabled)
             {

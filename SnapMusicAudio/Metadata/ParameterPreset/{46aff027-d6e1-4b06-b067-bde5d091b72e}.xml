@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{46aff027-d6e1-4b06-b067-bde5d091b72e}">
+		<property name="name">
+			<value>Looping</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b0f2dc38-c984-4a06-9c68-cc483735a8cb}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e5982ad6-765d-4c85-881e-4ecd816fd30f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e5982ad6-765d-4c85-881e-4ecd816fd30f}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>
