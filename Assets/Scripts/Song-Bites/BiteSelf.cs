@@ -45,7 +45,6 @@ public class BiteSelf : MonoBehaviour
         if (!currentlySelected) {
             transform.Rotate(0f, -playbackOrder * rotateSpeed * Time.deltaTime, 0f);        
         }
-        //if (playbackOrder != _audioSource.pitch) { Reverse(); }
     }
 
     /*
@@ -70,22 +69,32 @@ public class BiteSelf : MonoBehaviour
         biteAudio.LoadBite(idx + 1);
     }
 
-    // Give the bite a random pitch. Note: 1=normal, -1=reverse
-    public void SetRandomPitch()
-    {
-        System.Random random = new System.Random();
-        List<int> pitches = new List<int> { -1, 1 };
-        playbackOrder = pitches[random.Next(pitches.Count)];
-        _audioSource.pitch = playbackOrder;
-    }
-
     // Set the forward/reverse direction of the bite.  0 = forward, 1 = reverse
     public void SetRandomDirection()
     {
         System.Random random = new System.Random();
-        List<int> pitches = new List<int> { 0, 1 };
+        List<int> pitches = new List<int> { -1, 1 };
         playbackOrder = pitches[random.Next(pitches.Count)];
         biteAudio.SetDirection(playbackOrder);
+    }
+
+    /**
+    Public method to reverse the pitch of the audio.
+    Source: https://forum.unity.com/threads/playing-audio-backwards.95770/
+    **/
+    public void Reverse()
+    {
+        switch (playbackOrder) // to undo the reverse, just set to -1 or 1
+        {
+            case 1:
+                playbackOrder = -1;
+                break;
+            case -1:
+                playbackOrder = 1;
+                break;
+        }
+        biteAudio.SetDirection(playbackOrder);
+
     }
 
     // Public method to get the bite (song) index
@@ -136,45 +145,6 @@ public class BiteSelf : MonoBehaviour
             originalColor.b);                           // b
         gameObject.GetComponent<Renderer>().material.SetColor("_Color", newColor); 
         gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", newColor);
-    }
-
-    /**
-    Public method to reverse the pitch of the audio.
-    Source: https://forum.unity.com/threads/playing-audio-backwards.95770/
-    **/
-    /*
-    public void Reverse()
-    {
-        switch (playbackOrder) // to undo the reverse, just set to -1 or 1
-        {
-            case 1:
-                _audioSource.pitch = -1;
-                playbackOrder = -1;
-                break;
-            case -1:
-                _audioSource.pitch = 1;
-                playbackOrder = 1;
-                break;
-        }
-        //_audioSource.timeSamples = _audioSource.clip.samples - 1;  // keeping for now...
-    }
-    */
-
-    public void Reverse()
-    {
-        switch (playbackOrder) // to undo the reverse, just set to 0 or 1
-        {
-            case 0:
-                playbackOrder = 1;
-                break;
-            case 1:
-                playbackOrder = 0;
-                break;
-        }
-
-        Debug.Log("Reversing");
-
-        biteAudio.SetDirection(playbackOrder);
     }
 
     /**
