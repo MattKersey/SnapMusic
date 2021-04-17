@@ -321,7 +321,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>3.81469727e-06</value>
+			<value>-80</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{8e0aa24c-8560-42a7-b1b1-c878050656a6}">
@@ -329,7 +329,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>0</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{49de1c25-0785-4d0b-8141-8def9dcc1f04}">
@@ -337,7 +337,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>0</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{1e84ffb8-fc30-4cd8-ae60-c2794c93d999}">
@@ -345,7 +345,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-80</value>
 		</property>
 	</object>
 	<object class="FloatPluginParameter" id="{e6230417-c302-488e-8619-62892f02cc68}">
@@ -446,7 +446,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -482,7 +481,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>

@@ -17,7 +17,8 @@ public class BiteSelf : MonoBehaviour
 
     public bool currentlySelected = false;
     public int rotateSpeed;
-    public int playbackOrder;
+    float rotationDirection = 1;
+    public int playbackDirection;
     StudioEventEmitterOcclusion biteAudio;
 
     // Store the initail positions, rotation, color, and pitch
@@ -43,7 +44,7 @@ public class BiteSelf : MonoBehaviour
            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
         }
         if (!currentlySelected) {
-            transform.Rotate(0f, -playbackOrder * rotateSpeed * Time.deltaTime, 0f);        
+            transform.Rotate(0f, -rotationDirection * rotateSpeed * Time.deltaTime, 0f);        
         }
     }
 
@@ -69,13 +70,13 @@ public class BiteSelf : MonoBehaviour
         biteAudio.LoadBite(idx + 1);
     }
 
-    // Set the forward/reverse direction of the bite.  0 = forward, 1 = reverse
+    // Set the forward/reverse direction of the bite.  0 = reverse, 1 = forward
     public void SetRandomDirection()
     {
-        System.Random random = new System.Random();
-        List<int> pitches = new List<int> { -1, 1 };
-        playbackOrder = pitches[random.Next(pitches.Count)];
-        biteAudio.SetDirection(playbackOrder);
+        List<int> rotations = new List<int> { -1, 1 };
+        playbackDirection = Random.Range(0, 2);
+        rotationDirection = rotations[playbackDirection];
+        biteAudio.SetDirection(playbackDirection);
     }
 
     /**
@@ -84,16 +85,18 @@ public class BiteSelf : MonoBehaviour
     **/
     public void Reverse()
     {
-        switch (playbackOrder) // to undo the reverse, just set to -1 or 1
+        switch (playbackDirection) // to undo the reverse, just set to 0 or 1
         {
             case 1:
-                playbackOrder = -1;
+                playbackDirection = 0;
+                rotationDirection = -1;
                 break;
-            case -1:
-                playbackOrder = 1;
+            case 0:
+                playbackDirection = 1;
+                rotationDirection = 1;
                 break;
         }
-        biteAudio.SetDirection(playbackOrder);
+        biteAudio.SetDirection(playbackDirection);
 
     }
 
@@ -106,7 +109,7 @@ public class BiteSelf : MonoBehaviour
     // Public method to get playback order (pitch)
     public float GetPlayBackOrder()
     {
-        return playbackOrder;
+        return playbackDirection;
     }
 
     // Play the audio clip and set it to loop
@@ -172,7 +175,7 @@ public class BiteSelf : MonoBehaviour
         // Preview sound if controller collides
         else if (found && other.name == "OVRControllerPrefab")
         {
-            biteAudio.SetDirection(playbackOrder);
+            biteAudio.SetDirection(playbackDirection);
             biteAudio.PlayBite();
         }
     }

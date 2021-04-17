@@ -281,8 +281,8 @@
 			<destination>{593b017a-8f91-4a18-bd76-7df73c861158}</destination>
 		</relationship>
 		<relationship name="automationPoints">
-			<destination>{4ef2197d-8c9a-4f8b-ade8-bd7a3ab39b6d}</destination>
 			<destination>{ebe72eac-3787-4db3-a60e-1e7a70d90002}</destination>
+			<destination>{02b6ff6a-2a8c-4a63-acdc-a5b5c6170009}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{e384a5f9-4f90-4787-a013-c5cd3cbb1e76}" />
@@ -316,20 +316,20 @@
 			<destination>{c3c5594b-5edc-4b05-9115-030e489f66fe}</destination>
 		</relationship>
 	</object>
-	<object class="AutomationPoint" id="{4ef2197d-8c9a-4f8b-ade8-bd7a3ab39b6d}">
+	<object class="AutomationPoint" id="{ebe72eac-3787-4db3-a60e-1e7a70d90002}">
 		<property name="position">
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-80</value>
 		</property>
 	</object>
-	<object class="AutomationPoint" id="{ebe72eac-3787-4db3-a60e-1e7a70d90002}">
+	<object class="AutomationPoint" id="{02b6ff6a-2a8c-4a63-acdc-a5b5c6170009}">
 		<property name="position">
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>3.81469727e-06</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{d9d54fe7-73d4-4c1e-af0c-d60a42bec6bf}">
@@ -337,7 +337,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>0</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{6fb52348-4c8f-42b9-9b90-84297cad3cd4}">
@@ -345,7 +345,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-80</value>
 		</property>
 	</object>
 	<object class="FloatPluginParameter" id="{bb8fa6c7-0104-4083-b7b2-9ec8fdd1cb31}">
@@ -446,7 +446,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -482,7 +481,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>
