@@ -17,7 +17,6 @@ public class BiteController : MonoBehaviour
     public GameObject placeholderParent;
     public GameObject validatePodium;
     public GameObject playPodium;
-    public bool validateOn = false;
 
     public GameObject thePlayerObject;
     public GameObject thePlayerControllerL;
@@ -66,7 +65,7 @@ public class BiteController : MonoBehaviour
             BiteSelf _biteSelf = songBites[i].GetComponent<BiteSelf>();
             _biteSelf.SetBiteIdx(numberList[i]);
             _biteSelf.SetRandomPitch();
-            FoundBite(songBites[i], _biteSelf.GetBiteIdx()); // debug test purposes
+            // FoundBite(songBites[i], _biteSelf.GetBiteIdx()); // debug test purposes
         }
     }
 
@@ -79,7 +78,7 @@ public class BiteController : MonoBehaviour
     // Places the bite on the WIM by setting layer to 'minimap'
     private void ChangeLayer(GameObject bite)
     {
-        bite.layer = 9; // 9 is minimap
+        bite.layer = 12; // 9 is minimap
     }
 
     /**
@@ -91,7 +90,7 @@ public class BiteController : MonoBehaviour
     {
         orderFound[numOfFoundBites] = biteIdx;
         PlaceBiteInStage(bite);
-        ChangeLayer(bite);
+        // ChangeLayer(bite);
         numOfFoundBites += 1;
         SayHowManyFound();
         if (FoundAllBites())
