@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Teleport : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Teleport : MonoBehaviour
     private bool inPort;
     public AudioSource hum;
     public AudioSource teled;
+    public GameObject cameraObscurer;
 
     private void Start()
     {
@@ -50,7 +52,8 @@ public class Teleport : MonoBehaviour
     //coroutine to stall before player teleports
     IEnumerator startTele()
     {
-        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(FadeScreen());
+        yield return new WaitForSeconds(1f);
         //make sure player is still in the portal after delay
         if (inPort)
         {
@@ -69,6 +72,34 @@ public class Teleport : MonoBehaviour
 
             //play teleported sound
             teled.Play();
+        }
+        StartCoroutine(FadeScreen(false));
+    }
+
+    public IEnumerator FadeScreen(bool fade = true, int fadeSpeed = 2)
+    {
+        Color obscurer = cameraObscurer.GetComponent<Image>().color;
+        float fadeAmount;
+
+        if(fade)
+        {
+            while (obscurer.a < 1)
+            {
+                fadeAmount = obscurer.a + (fadeSpeed * Time.deltaTime);
+                obscurer = new Color(obscurer.r, obscurer.g, obscurer.g, fadeAmount);
+                cameraObscurer.GetComponent<Image>().color = obscurer;
+                yield return null;
+            }
+        }
+        else
+        {
+            while (obscurer.a > 0)
+            {
+                fadeAmount = obscurer.a - (fadeSpeed * Time.deltaTime);
+                obscurer = new Color(obscurer.r, obscurer.g, obscurer.g, fadeAmount);
+                cameraObscurer.GetComponent<Image>().color = obscurer;
+                yield return null;
+            }
         }
     }
 }
