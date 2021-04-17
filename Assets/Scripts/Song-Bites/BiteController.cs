@@ -26,6 +26,8 @@ public class BiteController : MonoBehaviour
     public OVRScreenFade cameraFader;
     public AudioSource teled;
 
+    private GameObject arrows;
+
     /**
     Upon start, get all the bite gameobjects (children), calculate their quantity,
     and randomize their song-bite index (i.e. give them a random sample of the song
@@ -35,6 +37,9 @@ public class BiteController : MonoBehaviour
     {
         //get the screen fader object from the main camera
         cameraFader = GameObject.Find("CenterEyeAnchor").GetComponent<OVRScreenFade>();
+
+        arrows = GameObject.Find("Stage Directions");
+        arrows.SetActive(false);
 
         songBites = GameObject.FindGameObjectsWithTag("Sound Bite");
         numOfTotalBites = songBites.Length;
@@ -106,6 +111,9 @@ public class BiteController : MonoBehaviour
             hud.SetActive(false);
             thePlayerControllerL.GetComponent<CustomController>().inEditMode = true;
             ThePlayerControllerR.GetComponent<CustomController>().inEditMode = true;
+
+            //turn on song bite direction arrows
+            arrows.SetActive(true);
         }
     }
 
