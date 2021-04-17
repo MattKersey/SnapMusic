@@ -6,7 +6,7 @@ using FMODUnityResonance;
 public class StudioEventEmitterOcclusion : MonoBehaviour
 {
 
-    private EventInstance fmodInstance;
+    public EventInstance fmodInstance;
 
     [EventRef]
     public string fmodEvent;
@@ -16,6 +16,7 @@ public class StudioEventEmitterOcclusion : MonoBehaviour
     float occlusion = 0.0f;
     float occlusionUpdate = 0.0f;
 
+    /*
     public void LoadBite(int biteNum)
     {
         Debug.Log("Loading Bite");
@@ -34,11 +35,12 @@ public class StudioEventEmitterOcclusion : MonoBehaviour
     {
         fmodInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
-
+    
     public void SetDirection(int direction)
     {
         fmodInstance.setParameterByName("Direction", direction);
     }
+    */
 
     // Update is called once per frame
     void Update()

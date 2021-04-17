@@ -19,7 +19,7 @@ public class BiteSelf : MonoBehaviour
     public int rotateSpeed;
     float rotationDirection = 1;
     public int playbackDirection;
-    StudioEventEmitterOcclusion biteAudio;
+    BiteAudio biteAudio;
 
     // Store the initail positions, rotation, color, and pitch
     private void Start()
@@ -66,7 +66,7 @@ public class BiteSelf : MonoBehaviour
     public void SetBiteIdx(int idx)
     {
         biteIdx = idx;
-        biteAudio = GetComponent<StudioEventEmitterOcclusion>();
+        biteAudio = GetComponent<BiteAudio>();
         biteAudio.LoadBite(idx + 1);
     }
 

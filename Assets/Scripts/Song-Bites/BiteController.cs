@@ -130,7 +130,7 @@ public class BiteController : MonoBehaviour
         }
         bite.transform.position = targetPosition;
         ParticleEffect(bite, false);
-        bite.GetComponent<StudioEventEmitterOcclusion>().StopBite();
+        bite.GetComponent<BiteAudio>().StopBite();
     }
 
     /**
