@@ -92,6 +92,7 @@ public class BiteController : MonoBehaviour
         PlaceBiteInStage(bite);
         // ChangeLayer(bite);
         numOfFoundBites += 1;
+        ChangeLayer(bite);
         SayHowManyFound();
         if (FoundAllBites())
         {

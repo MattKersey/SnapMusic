@@ -3705,7 +3705,7 @@ PrefabInstance:
         type: 3}
       propertyPath: justTeleported
       value: 
-      objectReference: {fileID: 1364626270}
+      objectReference: {fileID: 2117706665}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
       propertyPath: connectedStation
@@ -5366,6 +5366,11 @@ PrefabInstance:
       objectReference: {fileID: 1839510054}
     - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
+      propertyPath: teled
+      value: 
+      objectReference: {fileID: 824138096}
+    - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
+        type: 3}
       propertyPath: playPodium
       value: 
       objectReference: {fileID: 1957279547}
@@ -5374,11 +5379,6 @@ PrefabInstance:
       propertyPath: validateOn
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
-        type: 3}
-      propertyPath: teled
-      value: 
-      objectReference: {fileID: 824138096}
     - target: {fileID: 1064962491296051140, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
       propertyPath: cameraObscurer
@@ -10056,6 +10056,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ddd95aa4817356645979f7a136313957,
     type: 3}
   m_PrefabInstance: {fileID: 1789848999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2117706665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: b46e0920d9667ca45b59dc5301c885aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 451721485}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &725481378687251753
 GameObject:
