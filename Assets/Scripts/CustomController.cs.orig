@@ -28,9 +28,11 @@ public class CustomController : OVRGrabber
     public AudioSource m_objSound;
     private float m_prevLocation = 0;
     private float m_currentVibration = 0.0f;
+<<<<<<< HEAD
     protected SoundBiteGrabbable m_draggedObj = null;
     protected static List<MoveLogEntry> m_undoList = null;
     protected static List<MoveLogEntry> m_redoList = null;
+=======
     private bool touchedBite = false;
     private GameObject bite;
 
@@ -40,6 +42,7 @@ public class CustomController : OVRGrabber
 
     //bool for switching to edit play mode
     public bool inEditMode = false;
+>>>>>>> main
 
     new void Start()
     {

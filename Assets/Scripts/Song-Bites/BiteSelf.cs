@@ -142,23 +142,24 @@ public class BiteSelf : MonoBehaviour
     }
 
     /**
-    - found=false: The user has just encountered and collides it's controller
-    with the bite. In this case, mark the bite was found.
-    - found=true: The user collides the bite with another bite so swap them.
+    If the bite collides with another bite and both bites have been found (i.e. on stage),
+    then swap them. Else if the bite hasn't been found (i.e. the user has just encountered
+    it and collides it's controller with the bite), then mark the bite as found.
     **/
     private void OnTriggerEnter(Collider other)
     {
-        if (!found)
+        if (other.CompareTag("Sound Bite"))
         {
-            _biteController.FoundBite(gameObject, biteIdx);
-            found = true;
-        }
-        else
-        {
-            if (other.CompareTag("Sound Bite"))
+            bool otherFound = other.gameObject.GetComponent<BiteSelf>().found;
+            if ((found) && (otherFound))
             {
                 SwapInHierarchy(other.gameObject);
             }
+        }
+        else if (!found)
+        {
+            _biteController.FoundBite(gameObject, biteIdx);
+            found = true;
         }
     }
 

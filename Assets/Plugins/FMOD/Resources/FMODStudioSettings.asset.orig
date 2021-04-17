@@ -426,7 +426,11 @@ MonoBehaviour:
   threadAffinities:
     Value: []
     HasValue: 0
+<<<<<<< HEAD
+--- !u!114 &2801791946458950522
+=======
 --- !u!114 &1421246135988195448
+>>>>>>> main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -435,10 +439,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: 3abeb1429547a134480f4f2f1efc7e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifier: c88d16e5272a4e241b0ef0ac2e53b73d
+=======
   m_Script: {fileID: 11500000, guid: 17eea195bdfbf014e91ba7620ee491f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   identifier: e7a046c753c3c3d4aacc91f6597f310d
+>>>>>>> main
   parentIdentifier: default
   displaySortOrder: 0
   active: 0
