@@ -9,6 +9,7 @@ public class PortalTeleport : MonoBehaviour
     public Camera portalView;
     public AudioSource teled;
     public OVRScreenFade cameraFader;
+    private bool waitPeriod;
 
     private void Start()
     {
@@ -30,7 +31,7 @@ public class PortalTeleport : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player")
+        if (other.transform.tag == "Player" && !waitPeriod)
         {
             cameraFader.FadeOut();
             StartCoroutine(TelepReturn());
@@ -39,7 +40,7 @@ public class PortalTeleport : MonoBehaviour
     
     IEnumerator TelepHome()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         portalView.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.4f, player.transform.position.z);
         portalView.transform.forward = player.transform.forward;
 
@@ -55,7 +56,8 @@ public class PortalTeleport : MonoBehaviour
 
     IEnumerator TelepReturn()
     {
-        yield return new WaitForSeconds(2f);
+        waitPeriod = true;
+        yield return new WaitForSeconds(.2f);
 
         player.SetActive(false);
         player.transform.position = prev_position;
@@ -63,6 +65,7 @@ public class PortalTeleport : MonoBehaviour
         teled.Play();
         player.SetActive(true);
 
+        waitPeriod = false;
         cameraFader.FadeIn();
     }
 }

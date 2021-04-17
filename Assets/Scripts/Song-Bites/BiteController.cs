@@ -33,13 +33,13 @@ public class BiteController : MonoBehaviour
     **/
     private void Start()
     {
+        //get the screen fader object from the main camera
+        cameraFader = GameObject.Find("CenterEyeAnchor").GetComponent<OVRScreenFade>();
+
         songBites = GameObject.FindGameObjectsWithTag("Sound Bite");
         numOfTotalBites = songBites.Length;
         orderFound = new int[songBites.Length];
         RandomizeBitIdxs();
-
-        //get the screen fader object from the main camera
-        cameraFader = GameObject.Find("CenterEyeAnchor").GetComponent<OVRScreenFade>();
     }
 
     // Public method to get all the sound bite gameobjects
@@ -98,13 +98,14 @@ public class BiteController : MonoBehaviour
             validatePodium.SetActive(true);
             playPodium.SetActive(true);
 
+            //teleport playrer to center
+            cameraFader.FadeOut();
+            StartCoroutine(TelepHome());
+
             //turn off hud and hud toggle in controller script
             hud.SetActive(false);
             thePlayerControllerL.GetComponent<CustomController>().inEditMode = true;
             ThePlayerControllerR.GetComponent<CustomController>().inEditMode = true;
-
-            cameraFader.FadeOut();
-            StartCoroutine(TelepHome());
         }
     }
 
@@ -205,7 +206,7 @@ public class BiteController : MonoBehaviour
 
     IEnumerator TelepHome()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         //Teleport the player to the center of world.
         thePlayerObject.SetActive(false);

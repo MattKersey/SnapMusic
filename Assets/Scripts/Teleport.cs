@@ -54,7 +54,7 @@ public class Teleport : MonoBehaviour
     IEnumerator startTele()
     {
         cameraFader.FadeOut();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         //make sure player is still in the portal after delay
         if (inPort)
         {
