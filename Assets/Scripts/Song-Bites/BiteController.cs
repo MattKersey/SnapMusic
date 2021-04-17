@@ -106,6 +106,7 @@ public class BiteController : MonoBehaviour
             hud.SetActive(false);
             thePlayerControllerL.GetComponent<CustomController>().inEditMode = true;
             ThePlayerControllerR.GetComponent<CustomController>().inEditMode = true;
+            thePlayerObject.GetComponent<AdditionalControls>().UpdateState(AdditionalControls.States.EDIT);
         }
     }
 

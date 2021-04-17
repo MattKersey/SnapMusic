@@ -11,9 +11,10 @@ public class GogoSettings
 
 public class MoveLogEntry
 {
-    public enum MoveType {Scale, Move};
-    public OVRGrabbable obj;
-    public List<Vector3> data;
+    public enum MoveType { Scale, Swap, Reverse };
+    public OVRGrabbable obj0;
+    public OVRGrabbable obj1;
+    public List<Vector3> scales;
     public MoveType type;
 }
 
@@ -97,8 +98,20 @@ public class CustomController : OVRGrabber
 
         if (touchedBite && OVRInput.GetDown(OVRInput.Button.Four))
         {
+            CustomController.AddAction(MoveLogEntry.MoveType.Reverse, bite.GetComponent<SoundBiteGrabbable>(), null, null);
             bite.GetComponent<BiteSelf>().Reverse();
         }
+    }
+
+    public static void AddAction(MoveLogEntry.MoveType moveType, OVRGrabbable obj0, OVRGrabbable obj1, List<Vector3> scales)
+    {
+        MoveLogEntry newEntry = new MoveLogEntry();
+        newEntry.obj0 = obj0;
+        newEntry.obj1 = obj1;
+        newEntry.scales = scales;
+        newEntry.type = moveType;
+        m_undoList.Add(newEntry);
+        m_redoList.Clear();
     }
 
     public static void Undo()
@@ -107,14 +120,17 @@ public class CustomController : OVRGrabber
         if (count > 0)
         {
             MoveLogEntry entry = m_undoList[count - 1];
-            if (entry.type == MoveLogEntry.MoveType.Move)
+            switch (entry.type)
             {
-                entry.obj.transform.position = entry.data[0];
-                entry.obj.transform.rotation = Quaternion.Euler(entry.data[1]);
-            }
-            else
-            {
-                entry.obj.transform.localScale = entry.data[0];
+                case MoveLogEntry.MoveType.Scale:
+                    entry.obj0.transform.localScale = entry.scales[0];
+                    break;
+                case MoveLogEntry.MoveType.Swap:
+                    entry.obj0.GetComponent<BiteSelf>().SwapInHierarchy(entry.obj1.gameObject, true);
+                    break;
+                case MoveLogEntry.MoveType.Reverse:
+                    entry.obj0.GetComponent<BiteSelf>().Reverse();
+                    break;
             }
             m_redoList.Add(entry);
             m_undoList.RemoveAt(count - 1);
@@ -127,14 +143,17 @@ public class CustomController : OVRGrabber
         if (count > 0)
         {
             MoveLogEntry entry = m_redoList[count - 1];
-            if (entry.type == MoveLogEntry.MoveType.Move)
+            switch (entry.type)
             {
-                entry.obj.transform.position = entry.data[2];
-                entry.obj.transform.rotation = Quaternion.Euler(entry.data[3]);
-            }
-            else
-            {
-                entry.obj.transform.localScale = entry.data[1];
+                case MoveLogEntry.MoveType.Scale:
+                    entry.obj0.transform.localScale = entry.scales[1];
+                    break;
+                case MoveLogEntry.MoveType.Swap:
+                    entry.obj1.GetComponent<BiteSelf>().SwapInHierarchy(entry.obj0.gameObject, true);
+                    break;
+                case MoveLogEntry.MoveType.Reverse:
+                    entry.obj0.GetComponent<BiteSelf>().Reverse();
+                    break;
             }
             m_redoList.RemoveAt(count - 1);
             m_undoList.Add(entry);
@@ -169,42 +188,27 @@ public class CustomController : OVRGrabber
 
     override protected void GrabEnd()
     {
-        if (m_grabbedObj != null)
+        if (m_draggedObj != null && m_draggedObj is SoundBiteGrabbable)
         {
-            MoveLogEntry newEntry = new MoveLogEntry();
-            newEntry.obj = m_grabbedObj;
-            newEntry.type = MoveLogEntry.MoveType.Move;
-            newEntry.data = new List<Vector3>();
-            newEntry.data.Add(((SoundBiteGrabbable)m_grabbedObj).m_startPosition);
-            newEntry.data.Add(((SoundBiteGrabbable)m_grabbedObj).m_startRotation);
-            newEntry.data.Add(m_grabbedObj.transform.position);
-            newEntry.data.Add(m_grabbedObj.transform.rotation.eulerAngles);
-            m_undoList.Add(newEntry);
-        }
-        if (m_draggedObj != null)
-        {
-            MoveLogEntry newEntry = new MoveLogEntry();
-            newEntry.obj = m_draggedObj;
-            newEntry.type = MoveLogEntry.MoveType.Scale;
-            newEntry.data = new List<Vector3>();
-            newEntry.data.Add(((SoundBiteGrabbable)m_draggedObj).m_startScale);
-            newEntry.data.Add(m_draggedObj.transform.localScale);
-            m_undoList.Add(newEntry);
+            List<Vector3> scales = new List<Vector3>();
+            scales.Add(((SoundBiteGrabbable)m_draggedObj).m_startScale);
+            scales.Add(m_draggedObj.transform.localScale);
+            AddAction(MoveLogEntry.MoveType.Scale, m_draggedObj, null, scales);
             m_draggedObj.ScaleEnd();
             m_draggedObj = null;
         }
-        m_redoList.Clear();
         base.GrabEnd();
         foreach (Renderer controllerRenderer in controllerRenderers)
             controllerRenderer.material = m_defaultMaterial;
-        Debug.Log("Grab End " + m_controller);
     }
 
     new void OnTriggerEnter(Collider otherCollider)
     {
+        Debug.Log(otherCollider.tag);
         base.OnTriggerEnter(otherCollider);
         if (otherCollider.CompareTag("Wall"))
         {
+            Debug.Log("good");
             StartCoroutine(WarnWall());
         }
         else if (otherCollider.CompareTag("Sound Bite") || otherCollider.CompareTag("Stage-Button"))
