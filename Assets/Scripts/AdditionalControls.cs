@@ -5,9 +5,11 @@ using UnityEngine;
 public class AdditionalControls : MonoBehaviour
 {
     public enum States { EDIT, EXPLORE };
+    protected bool leftInContact = false;
+    protected bool rightInContact = false;
     protected States currentState = States.EXPLORE;
     protected HashSet<string> EditGhosts;
-    protected HashSet<string> ExploreGhosts = new HashSet<string>();
+    protected HashSet<string> ExploreGhosts;
     protected Dictionary<string, ButtonLabelController[]> labelControllers = new Dictionary<string, ButtonLabelController[]>();
     protected Dictionary<string, string> labelTexts = new Dictionary<string, string>();
     protected OVRPlayerController playerController;
@@ -50,7 +52,7 @@ public class AdditionalControls : MonoBehaviour
         //playerController = GetComponent<OVRPlayerController>();
         string[] ed = { "a", "b" };
         EditGhosts = new HashSet<string>(ed);
-        string[] ex = { "l", "r" };
+        string[] ex = { "l", "r", "x", "y", "a" };
         ExploreGhosts = new HashSet<string>(ex);
         labelControllers.Add("a", aLabels);
         labelTexts.Add("a", aLabelText);
@@ -111,6 +113,35 @@ public class AdditionalControls : MonoBehaviour
                 label.Ghost(ghosts.Contains(buttonTitle));
             }
         }
+        SetReverseLabel();
+    }
+
+    public void SetInMainRoom(bool isInRoom)
+    {
+        foreach (ButtonLabelController label in labelControllers["a"])
+        {
+            label.Ghost(isInRoom);
+        }
+    }
+
+    public void SetInContact(bool isLeft, bool isInContact)
+    {
+        if (isLeft)
+            leftInContact = isInContact;
+        else
+            rightInContact = isInContact;
+        SetReverseLabel();
+    }
+
+    protected void SetReverseLabel()
+    {
+        if (currentState == States.EDIT)
+        {
+            foreach (ButtonLabelController label in labelControllers["y"])
+            {
+                label.Ghost(!leftInContact && !rightInContact);
+            }
+        }
     }
 
     void Update()
@@ -145,5 +176,11 @@ public class AdditionalControls : MonoBehaviour
                 }
             }
         }
+        SetInMainRoom(!(
+            transform.position.x > 8 ||
+            transform.position.z > 8 ||
+            transform.position.x < -8 ||
+            transform.position.z < -8
+        ));
     }
 }

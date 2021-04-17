@@ -22,6 +22,7 @@ public class CustomController : OVRGrabber
 {
     public Transform m_headPose;
     public GameObject ray;
+    public AdditionalControls additionalControls;
     public Renderer[] controllerRenderers;
     public Material m_grabbedMaterial;
     public Material m_defaultMaterial;
@@ -219,6 +220,7 @@ public class CustomController : OVRGrabber
             {
                 touchedBite = true;
                 bite = otherCollider.gameObject;
+                additionalControls.SetInContact(m_controller == OVRInput.Controller.LTouch, true);
             }
         }
     }
@@ -234,6 +236,7 @@ public class CustomController : OVRGrabber
                 bite = null;
                 m_currentVibration = 0.0f;
                 OVRInput.SetControllerVibration(0.0f, 0.0f, m_controller);
+                additionalControls.SetInContact(m_controller == OVRInput.Controller.LTouch, false);
             }
         }
     }
