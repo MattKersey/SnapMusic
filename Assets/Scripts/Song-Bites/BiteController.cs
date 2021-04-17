@@ -19,11 +19,13 @@ public class BiteController : MonoBehaviour
     public GameObject playPodium;
     public bool validateOn = false;
 
-    //bool for Custom Controller Script
     public GameObject thePlayerObject;
     public GameObject thePlayerControllerL;
     public GameObject ThePlayerControllerR;
     public GameObject hud;
+
+    public OVRScreenFade cameraFader;
+    public AudioSource teled;
 
     /**
     Upon start, get all the bite gameobjects (children), calculate their quantity,
@@ -36,6 +38,9 @@ public class BiteController : MonoBehaviour
         numOfTotalBites = songBites.Length;
         orderFound = new int[songBites.Length];
         RandomizeBitIdxs();
+
+        //get the screen fader object from the main camera
+        cameraFader = GameObject.Find("CenterEyeAnchor").GetComponent<OVRScreenFade>();
     }
 
     // Public method to get all the sound bite gameobjects
@@ -93,16 +98,14 @@ public class BiteController : MonoBehaviour
         {
             validatePodium.SetActive(true);
             playPodium.SetActive(true);
+
             //turn off hud and hud toggle in controller script
             hud.SetActive(false);
             thePlayerControllerL.GetComponent<CustomController>().inEditMode = true;
             ThePlayerControllerR.GetComponent<CustomController>().inEditMode = true;
 
-            //Teleport the player to the center of world.
-            thePlayerObject.SetActive(false);
-            thePlayerObject.transform.position = Vector3.zero;
-            thePlayerObject.transform.rotation = Quaternion.identity;
-            thePlayerObject.SetActive(true);
+            cameraFader.FadeOut();
+            StartCoroutine(TelepHome());
         }
     }
 
@@ -201,4 +204,17 @@ public class BiteController : MonoBehaviour
         return true;
     }
 
+    IEnumerator TelepHome()
+    {
+        yield return new WaitForSeconds(2f);
+
+        //Teleport the player to the center of world.
+        thePlayerObject.SetActive(false);
+        thePlayerObject.transform.position = Vector3.zero;
+        thePlayerObject.transform.rotation = Quaternion.identity;
+        teled.Play();
+        thePlayerObject.SetActive(true);
+
+        cameraFader.FadeIn();
+    }
 }
