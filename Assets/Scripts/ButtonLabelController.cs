@@ -8,6 +8,7 @@ public class ButtonLabelController : MonoBehaviour
     public Transform headPose;
     public string labelTextInitial;
     public bool isGhostInitial;
+    public bool isLeft;
     protected GameObject line;
     protected GameObject label;
     protected RectTransform labelTransform;

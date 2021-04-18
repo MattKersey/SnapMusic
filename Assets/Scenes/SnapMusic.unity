@@ -10678,6 +10678,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -10779,6 +10784,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -10867,6 +10877,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
+      propertyPath: isLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
@@ -11162,6 +11177,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -11351,6 +11371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
+      propertyPath: isLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
@@ -11783,6 +11808,7 @@ MonoBehaviour:
   m_player: {fileID: 726358509022975359}
   m_headPose: {fileID: 726358509022742875}
   ray: {fileID: 726358509130565148}
+  additionalControls: {fileID: 726358509022876633}
   controllerRenderers:
   - {fileID: 3212357103043497549}
   - {fileID: 1678873702278458800}
@@ -11862,6 +11888,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
+      propertyPath: isLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
@@ -12047,6 +12078,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -12138,6 +12174,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -12226,6 +12267,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
+      propertyPath: isLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
@@ -12408,6 +12454,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
+      propertyPath: isLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
@@ -13447,6 +13498,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -13639,6 +13695,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -13818,6 +13879,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
+      propertyPath: isLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
@@ -14653,6 +14719,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -14911,6 +14982,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
+      propertyPath: isLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
@@ -15262,6 +15338,7 @@ MonoBehaviour:
   m_player: {fileID: 726358509022975359}
   m_headPose: {fileID: 726358509022742875}
   ray: {fileID: 726358509517534149}
+  additionalControls: {fileID: 726358509022876633}
   controllerRenderers:
   - {fileID: 3212357102184649966}
   - {fileID: 1678873703418066707}
@@ -15597,6 +15674,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -15894,6 +15976,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
+      propertyPath: isLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
@@ -16375,6 +16462,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -16466,6 +16558,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -16554,6 +16651,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
+      propertyPath: isLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
@@ -16840,6 +16942,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -16941,6 +17048,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -17029,6 +17141,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
+      propertyPath: isLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
@@ -17211,6 +17328,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
+      propertyPath: isLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
@@ -17495,6 +17617,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -17586,6 +17713,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -17674,6 +17806,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
+      propertyPath: isLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
@@ -17859,6 +17996,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
+      propertyPath: isLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
       propertyPath: headPose
       value: 
       objectReference: {fileID: 726358509022742875}
@@ -17947,6 +18089,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
+      propertyPath: isLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}
@@ -18230,6 +18377,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
+        type: 3}
+      propertyPath: isLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3159631232893789040, guid: 40b6450d73ec84bc4b9ef7ce7fb8dbcd,
         type: 3}

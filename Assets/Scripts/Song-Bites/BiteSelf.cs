@@ -167,9 +167,9 @@ public class BiteSelf : MonoBehaviour
     With the current object and the one it collided with, swap both item in
     terms of position on the stage and their index on the hierarchy. 
     **/
-    private void SwapInHierarchy(GameObject collideObj)
+    public void SwapInHierarchy(GameObject collideObj, bool programmatic = false)
     {
-        if (currentlySelected)
+        if (currentlySelected || programmatic)
         {
             // swap in position
             BiteSelf otherBiteSelf = collideObj.GetComponent<BiteSelf>();
@@ -185,6 +185,8 @@ public class BiteSelf : MonoBehaviour
             int currSiblingIndex = transform.GetSiblingIndex();
             collideObj.transform.SetSiblingIndex(currSiblingIndex);
             transform.SetSiblingIndex(otherSiblingIndex);
+            if (!programmatic)
+                CustomController.AddAction(MoveLogEntry.MoveType.Swap, GetComponent<SoundBiteGrabbable>(), collideObj.GetComponent<SoundBiteGrabbable>(), null);
         }
     }
 
