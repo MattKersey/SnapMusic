@@ -13,20 +13,27 @@ public class BiteController : MonoBehaviour
     private float minX = -7;
     private float stepSize = 2;
     private int numOfTotalBites;
+    private GameObject arrows;
+    private float timer = 0f;
+    private int numOfSwaps = 0;
+    private bool gameOver = false;
 
-    public GameObject placeholderParent;
+    public GameObject finalBitesPositions;
     public GameObject validatePodium;
     public GameObject playPodium;
-
+    public Material invalidMaterial;
+    public Material validMaterial;
+    public bool validateOn = false;
     public GameObject thePlayerObject;
     public GameObject thePlayerControllerL;
     public GameObject ThePlayerControllerR;
     public GameObject hud;
-
+    public GameObject celebrateObj;
+    public GameObject watchTextObj;
+    public GameObject ghostBite;
     public OVRScreenFade cameraFader;
     public AudioSource teled;
 
-    private GameObject arrows;
 
     /**
     Upon start, get all the bite gameobjects (children), calculate their quantity,
@@ -47,6 +54,38 @@ public class BiteController : MonoBehaviour
         RandomizeBitIdxs();
     }
 
+    // Every fixed update, check if gameover and update the time
+    private void FixedUpdate()
+    {
+        if (!gameOver)
+        {
+            timer += Time.deltaTime;
+            watchTextObj.GetComponent<WristText>().UpdateTime(timer);
+            //if (timer > 3f)
+            //{       // Testing: DELETE ALL UNDERNEATH
+            //    gameOver = true;
+            //    Celebrate();
+            //}
+        }
+    }
+
+    // Adds another swap to the counter
+    public void AddSwap()
+    {
+        if (!gameOver)
+        {
+            numOfSwaps += 1;
+        }
+    }
+
+    // Activates the celebration-related objects
+    private void Celebrate()
+    {
+        Debug.Log("Celebrate");
+        celebrateObj.SetActive(true);
+        celebrateObj.GetComponent<Celebrate>().ShowMessages(timer, numOfSwaps);
+    }
+
     // Public method to get all the sound bite gameobjects
     public GameObject[] GetSoundBites()
     {
@@ -64,7 +103,7 @@ public class BiteController : MonoBehaviour
         System.Random random = new System.Random();
         List<int> numberList = Enumerable.Range(0, numOfTotalBites).ToList();
         numberList = numberList.OrderBy(item => random.Next()).ToList<int>();
-        foreach (int i in numberList) { Debug.Log("numberList: " + i); }
+        // foreach (int i in numberList) { Debug.Log("numberList: " + i); }
         for (int i=0; i<numOfTotalBites; i++)
         {
             BiteSelf _biteSelf = songBites[i].GetComponent<BiteSelf>();
@@ -95,7 +134,7 @@ public class BiteController : MonoBehaviour
     {
         orderFound[numOfFoundBites] = biteIdx;
         PlaceBiteInStage(bite);
-        // ChangeLayer(bite);
+        ChangeLayer(bite);
         numOfFoundBites += 1;
         SayHowManyFound();
         if (FoundAllBites())
@@ -111,6 +150,7 @@ public class BiteController : MonoBehaviour
             hud.SetActive(false);
             thePlayerControllerL.GetComponent<CustomController>().inEditMode = true;
             ThePlayerControllerR.GetComponent<CustomController>().inEditMode = true;
+            thePlayerObject.GetComponent<AdditionalControls>().UpdateState(AdditionalControls.States.EDIT);
 
             //turn on song bite direction arrows
             arrows.SetActive(true);
@@ -124,6 +164,7 @@ public class BiteController : MonoBehaviour
         Debug.Log(text);
     }
 
+    // Activates the Particle Effect
     private void ParticleEffect(GameObject bite, bool status){
         bite.transform.GetChild(0).gameObject.SetActive(status);
     }
@@ -144,7 +185,7 @@ public class BiteController : MonoBehaviour
         ParticleEffect(bite, false);
     }
 
-    public GameObject ghostBite;
+    // Instantiates a ghost bite in place of the found bite. 
     private void AddGhostBite(Vector3 originalPosition, string name)
     {
         // Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent);
@@ -161,17 +202,17 @@ public class BiteController : MonoBehaviour
     private void PlaceBiteInStage(GameObject bite)
     {
         BiteSelf _biteSelf = bite.GetComponent<BiteSelf>(); // add bite to parent obj
-        bite.transform.parent = placeholderParent.transform; // add to placeholder group
+        bite.transform.parent = finalBitesPositions.transform; // add to finalBitesPositions group
         Vector3 target = new Vector3(
             minX + stepSize,
-            placeholderParent.transform.position.y + floatHeight,
-            placeholderParent.transform.position.z
+            finalBitesPositions.transform.position.y + floatHeight,
+            finalBitesPositions.transform.position.z
         );
         float duration = 3f;
         AddGhostBite(bite.transform.position, bite.name);
         ParticleEffect(bite, true);
         StartCoroutine(AnimateMove(bite, target, duration));
-        // bite.transform.position = placeholderParent.transform.position; // reset position
+        // bite.transform.position = finalBitesPositions.transform.position; // reset position
         // bite.transform.position = new Vector3( // change position afterwards to avoid conflict
         //     minX + stepSize,
         //     bite.transform.position.y + floatHeight,
@@ -184,23 +225,29 @@ public class BiteController : MonoBehaviour
     // If all bites are in order, then turn every bite green. Otherwise, turn them red.
     public void AllInOrder()
     {
-        Color finalColor;
+        bool correct = false;
         if (CorrectBiteOrder())
         {
-            finalColor = Color.green;
+            for (int idx = 0; idx < numOfTotalBites; idx++)
+            {
+                GameObject myChild = finalBitesPositions.transform.GetChild(idx).gameObject;
+                myChild.GetComponent<Renderer>().material = validMaterial;
+            }
+            correct = true;
         }
         else
         {
-            finalColor = Color.red;
+            for (int idx = 0; idx < numOfTotalBites; idx++)
+            {
+                GameObject myChild = finalBitesPositions.transform.GetChild(idx).gameObject;
+                myChild.GetComponent<Renderer>().material = invalidMaterial;
+            }
         }
-        for (int idx = 0; idx < numOfTotalBites; idx++)
+        if (correct)
         {
-            GameObject myChild = placeholderParent.transform.GetChild(idx).gameObject;
-            // both: used to be child
-            myChild.GetComponent<Renderer>().material.SetColor("_Color", finalColor);
-            myChild.GetComponent<Renderer>().material.SetColor("_EmissionColor", finalColor);
+            gameOver = true;
+            Celebrate();
         }
-
     } 
 
     /**
@@ -212,7 +259,7 @@ public class BiteController : MonoBehaviour
     {
         for (int idx = 0; idx<numOfTotalBites; idx++)
         {
-            GameObject child = placeholderParent.transform.GetChild(idx).gameObject;
+            GameObject child = finalBitesPositions.transform.GetChild(idx).gameObject;
             BiteSelf _biteSelf = child.GetComponent<BiteSelf>();
             if (idx != _biteSelf.GetBiteIdx() || _biteSelf.GetPlayBackOrder() != 1)
             {
@@ -222,11 +269,13 @@ public class BiteController : MonoBehaviour
         return true;
     }
 
+    /**
+    Teleports the player back to the center of the world in 1 second. 
+    **/
     IEnumerator TelepHome()
     {
         yield return new WaitForSeconds(1f);
 
-        //Teleport the player to the center of world.
         thePlayerObject.SetActive(false);
         thePlayerObject.transform.position = Vector3.zero;
         thePlayerObject.transform.rotation = Quaternion.identity;
