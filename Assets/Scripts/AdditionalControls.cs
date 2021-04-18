@@ -50,9 +50,9 @@ public class AdditionalControls : MonoBehaviour
     void Start()
     {
         //playerController = GetComponent<OVRPlayerController>();
-        string[] ed = { "a", "b" };
+        string[] ed = { "a", "b", "h" };
         EditGhosts = new HashSet<string>(ed);
-        string[] ex = { "l", "r", "x", "y", "a" };
+        string[] ex = { "l", "r", "x", "y", "a", "h" };
         ExploreGhosts = new HashSet<string>(ex);
         labelControllers.Add("a", aLabels);
         labelTexts.Add("a", aLabelText);
@@ -113,7 +113,7 @@ public class AdditionalControls : MonoBehaviour
                 label.Ghost(ghosts.Contains(buttonTitle));
             }
         }
-        SetReverseLabel();
+        SetContactLabels();
     }
 
     public void SetInMainRoom(bool isInRoom)
@@ -130,10 +130,10 @@ public class AdditionalControls : MonoBehaviour
             leftInContact = isInContact;
         else
             rightInContact = isInContact;
-        SetReverseLabel();
+        SetContactLabels();
     }
 
-    protected void SetReverseLabel()
+    protected void SetContactLabels()
     {
         if (currentState == States.EDIT)
         {
@@ -141,6 +141,13 @@ public class AdditionalControls : MonoBehaviour
             {
                 label.Ghost(!leftInContact && !rightInContact);
             }
+        }
+        foreach (ButtonLabelController label in labelControllers["h"])
+        {
+            if (label.isLeft)
+                label.Ghost(!leftInContact);
+            else
+                label.Ghost(!rightInContact);
         }
     }
 
