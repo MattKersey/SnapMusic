@@ -107,7 +107,7 @@ public class CustomController : OVRGrabber
 
         if (trigger > 0.0f)
         {
-            pCont.Acceleration = Mathf.Clamp(pCont.Acceleration + .002f, .15f, .5f);
+            pCont.Acceleration = Mathf.Clamp(pCont.Acceleration + .002f, .15f, .3f);
         }
         else
         {
