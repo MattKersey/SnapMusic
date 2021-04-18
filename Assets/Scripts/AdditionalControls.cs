@@ -5,7 +5,7 @@ using UnityEngine;
 public class AdditionalControls : MonoBehaviour
 {
     public enum States { EDIT, EXPLORE };
-    public float maxSpeed = 0.25f;
+    public float maxSpeed = 0.21f;
     public float minSpeed = 0.15f;
     protected bool leftInContact = false;
     protected bool rightInContact = false;
@@ -54,7 +54,7 @@ public class AdditionalControls : MonoBehaviour
         playerController = GetComponent<OVRPlayerController>();
         string[] ed = { "a", "b", "h" };
         EditGhosts = new HashSet<string>(ed);
-        string[] ex = { "l", "r", "x", "y", "a", "h" };
+        string[] ex = { "l", "r", "x", "y", "a" };
         ExploreGhosts = new HashSet<string>(ex);
         labelControllers.Add("a", aLabels);
         labelTexts.Add("a", aLabelText);
@@ -99,19 +99,27 @@ public class AdditionalControls : MonoBehaviour
     protected void SetGhostLabels()
     {
         HashSet<string> ghosts = new HashSet<string>();
+        string hLabel = "";
         switch (currentState)
         {
             case States.EDIT:
                 ghosts = EditGhosts;
+                hLabel = "Grab";
                 break;
             case States.EXPLORE:
                 ghosts = ExploreGhosts;
+                hLabel = "Run";
                 break;
         }
         foreach (string buttonTitle in labelControllers.Keys)
         {
             foreach (ButtonLabelController label in labelControllers[buttonTitle])
             {
+                if (buttonTitle == "h")
+                {
+                    label.labelTextInitial = hLabel;
+                    label.SetText(hLabel);
+                }
                 label.Ghost(ghosts.Contains(buttonTitle));
             }
         }
@@ -143,13 +151,13 @@ public class AdditionalControls : MonoBehaviour
             {
                 label.Ghost(!leftInContact && !rightInContact);
             }
-        }
-        foreach (ButtonLabelController label in labelControllers["h"])
-        {
-            if (label.isLeft)
-                label.Ghost(!leftInContact);
-            else
-                label.Ghost(!rightInContact);
+            foreach (ButtonLabelController label in labelControllers["h"])
+            {
+                if (label.isLeft)
+                    label.Ghost(!leftInContact);
+                else
+                    label.Ghost(!rightInContact);
+            }
         }
     }
 
