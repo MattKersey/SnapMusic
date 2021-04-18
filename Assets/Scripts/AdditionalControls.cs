@@ -5,6 +5,8 @@ using UnityEngine;
 public class AdditionalControls : MonoBehaviour
 {
     public enum States { EDIT, EXPLORE };
+    public float maxSpeed = 0.25f;
+    public float minSpeed = 0.15f;
     protected bool leftInContact = false;
     protected bool rightInContact = false;
     protected States currentState = States.EXPLORE;
@@ -49,7 +51,7 @@ public class AdditionalControls : MonoBehaviour
 
     void Start()
     {
-        //playerController = GetComponent<OVRPlayerController>();
+        playerController = GetComponent<OVRPlayerController>();
         string[] ed = { "a", "b", "h" };
         EditGhosts = new HashSet<string>(ed);
         string[] ex = { "l", "r", "x", "y", "a", "h" };
@@ -183,6 +185,20 @@ public class AdditionalControls : MonoBehaviour
                 }
             }
         }
+
+        if (
+            currentState == States.EXPLORE &&
+            OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.LTouch) > 0.0f &&
+            OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.RTouch) > 0.0f
+        )
+        {
+            playerController.Acceleration = Mathf.Clamp(playerController.Acceleration + .002f, minSpeed, maxSpeed);
+        }
+        else
+        {
+            playerController.Acceleration = minSpeed;
+        }
+
         SetInMainRoom(!(
             transform.position.x > 8 ||
             transform.position.z > 8 ||
