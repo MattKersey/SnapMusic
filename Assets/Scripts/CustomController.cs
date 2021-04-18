@@ -26,8 +26,9 @@ public class CustomController : OVRGrabber
     public Renderer[] controllerRenderers;
     public Material m_grabbedMaterial;
     public Material m_defaultMaterial;
-    public AudioSource m_wallSound;
-    public AudioSource m_objSound;
+    public ControllerSound m_wallSound;
+    public ControllerSound m_grabSound;
+    public ControllerSound m_releaseSound;
     private float m_prevLocation = 0;
     private float m_currentVibration = 0.0f;
     protected SoundBiteGrabbable m_draggedObj = null;
@@ -181,7 +182,7 @@ public class CustomController : OVRGrabber
         }
         if (m_grabbedObj != null || m_draggedObj != null)
         {
-            //m_objSound.Play();
+            m_grabSound.Play();
             foreach (Renderer controllerRenderer in controllerRenderers)
                 controllerRenderer.material = m_grabbedMaterial;
         }
@@ -189,6 +190,8 @@ public class CustomController : OVRGrabber
 
     override protected void GrabEnd()
     {
+        if (m_grabbedObj != null || m_draggedObj != null)
+            m_releaseSound.Play();
         if (m_draggedObj != null && m_draggedObj is SoundBiteGrabbable)
         {
             List<Vector3> scales = new List<Vector3>();
@@ -243,7 +246,7 @@ public class CustomController : OVRGrabber
 
     IEnumerator WarnWall()
     {
-        //m_wallSound.Play();
+        m_wallSound.Play();
         OVRInput.SetControllerVibration(1.0f, 1.0f, m_controller);
         yield return new WaitForSeconds(0.25f);
         OVRInput.SetControllerVibration(m_currentVibration, m_currentVibration, m_controller);

@@ -5,7 +5,7 @@ using FMODUnityResonance;
 public class StudioEventEmitterOcclusion : MonoBehaviour
 {
 
-    private FMOD.Studio.EventInstance fmodInstance;
+    public FMOD.Studio.EventInstance fmodInstance;
 
     [FMODUnity.EventRef]
     public string fmodEvent;
@@ -15,7 +15,7 @@ public class StudioEventEmitterOcclusion : MonoBehaviour
     float occlusion = 0.0f;
     float occlusionUpdate = 0.0f;
 
-    void Start()
+    protected void Start()
     {
         fmodInstance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
         fmodInstance.start();
