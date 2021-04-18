@@ -66,6 +66,18 @@ public class AmbiencePatrol : StudioEventEmitterOcclusion
         fmodInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
+    public void ForwardPatrol()
+    {
+        startPosition = startMark.transform.position;
+        endPosition = endMark.transform.position;
+    }
+
+    public void ReversePatrol()
+    {
+        startPosition = endMark.transform.position;
+        endPosition = startMark.transform.position;
+    }
+
     IEnumerator Move()
     {
         coroutineAllowed = false;
