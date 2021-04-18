@@ -5,7 +5,6 @@ public class BiteAudio : StudioEventEmitterOcclusion
 {
     public void LoadBite(int biteNum)
     {
-        Debug.Log("Loading Bite");
         fmodEvent = "event:/Bitz " + biteNum.ToString();
         fmodInstance = RuntimeManager.CreateInstance(fmodEvent);
         RuntimeManager.AttachInstanceToGameObject(fmodInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());

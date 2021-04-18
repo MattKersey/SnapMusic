@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{d68f6846-5681-46f7-8a72-38619c732bb8}">
+		<property name="name">
+			<value>Attenuation</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b0f2dc38-c984-4a06-9c68-cc483735a8cb}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a523ee33-dfbc-4b5d-a489-7fe95e2e12b9}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a523ee33-dfbc-4b5d-a489-7fe95e2e12b9}">
+		<property name="minimum">
+			<value>5</value>
+		</property>
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="initialValue">
+			<value>5</value>
+		</property>
+	</object>
+</objects>

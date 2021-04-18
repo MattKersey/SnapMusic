@@ -11,13 +11,30 @@ public class AmbiencePatrol : StudioEventEmitterOcclusion
 
     public GameObject startMark;
     public GameObject endMark;
+    GameObject player;
+    float distance;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Get player, start marker, and end marker positions
+        player = GameObject.Find("OVRPlayerController");
         startPosition = startMark.transform.position;
         endPosition = endMark.transform.position;
         transform.position = startPosition;
+
+        // Compute distance between start marker and end marker
+        if (startPosition.x == endPosition.x)
+        {
+            distance = Mathf.Abs(endPosition.z - startPosition.z);
+        }
+
+        else if (startPosition.z == endPosition.z)
+        {
+            distance = Mathf.Abs(endPosition.x - startPosition.x);
+        }
+
+        // Initialize FMOD Instance
         fmodInstance = RuntimeManager.CreateInstance(fmodEvent);
         RuntimeManager.AttachInstanceToGameObject(fmodInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
 
@@ -44,6 +61,11 @@ public class AmbiencePatrol : StudioEventEmitterOcclusion
         {
             if (coroutineAllowed)
             {
+                /*
+                float angle = Vector3.Angle(player.transform.forward, startMark.transform.position - player.transform.position);
+                Debug.Log("Angle");
+                Debug.Log(angle);
+                */
                 StartCoroutine("Move");
             }
         }
@@ -56,6 +78,7 @@ public class AmbiencePatrol : StudioEventEmitterOcclusion
 
     public void StartPatrol()
     {
+        fmodInstance.setParameterByName("Attenuation", distance);
         fmodInstance.start();
     }
 

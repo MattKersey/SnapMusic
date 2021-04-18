@@ -26,6 +26,5 @@ public class AmbienceLTriggerChild : MonoBehaviour
             manager.ComputeDirection(other.transform.position, transform.position, name, false);
             state = "exit";
         }
-        // manager.OnChildTriggerEnter(other.transform.position, transform.position, name);
     }
 }
