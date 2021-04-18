@@ -4873,7 +4873,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 191047cc3db95a741af12a1f8b69fb51, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4963e1671bed542dd9f0f9360699f272, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5073,6 +5073,7 @@ MonoBehaviour:
   mapMarker: {fileID: 0}
   hum: {fileID: 8200000}
   teled: {fileID: 8200002}
+  cameraFader: {fileID: 0}
 --- !u!1 &1693305313571678926
 GameObject:
   m_ObjectHideFlags: 0
