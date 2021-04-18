@@ -81,7 +81,7 @@ public class BiteController : MonoBehaviour
         celebrateObj.SetActive(true);
         celebrateObj.GetComponent<Celebrate>().ShowMessages(timer, numOfSwaps);
     }
-
+    
     // Public method to get all the sound bite gameobjects
     public GameObject[] GetSoundBites()
     {
@@ -98,8 +98,8 @@ public class BiteController : MonoBehaviour
     {
         System.Random random = new System.Random();
         List<int> numberList = Enumerable.Range(0, numOfTotalBites).ToList();
-        //numberList = numberList.OrderBy(item => random.Next()).ToList<int>();
-        //foreach (int i in numberList) { Debug.Log("numberList: " + i); }
+        numberList = numberList.OrderBy(item => random.Next()).ToList<int>();
+        foreach (int i in numberList) { Debug.Log("numberList: " + i); }
         for (int i=0; i<numOfTotalBites; i++)
         {
             BiteSelf _biteSelf = songBites[i].GetComponent<BiteSelf>();
@@ -149,6 +149,7 @@ public class BiteController : MonoBehaviour
 
             //turn on song bite direction arrows
             arrows.SetActive(true);
+            thePlayerObject.GetComponent<AdditionalControls>().UpdateState(AdditionalControls.States.EDIT);
         }
     }
 
@@ -187,7 +188,7 @@ public class BiteController : MonoBehaviour
         copy.SetActive(true);
         copy.name = "Ghost-" + name;
     }
-
+    
     /**
     With the currently found bite, attach it as a child to the container of found bites (gameobject)
     and transport it to it's destined location on the stage according to how many bites have been 

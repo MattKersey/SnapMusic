@@ -196,6 +196,7 @@ public class OVRGrabber : MonoBehaviour
         // Remove the grabbable
         int refCount = 0;
         bool found = m_grabCandidates.TryGetValue(grabbable, out refCount);
+        Debug.Log("refCount: " + refCount);
         if (!found)
         {
             return;
