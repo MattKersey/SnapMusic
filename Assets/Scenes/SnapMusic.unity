@@ -11606,7 +11606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077c062596959410882cc455daf4e43e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fmodEvent: event:/Wall Bump
+  fmodEvent: event:/Wall Bump 2
   occlusionEnabled: 0
   occlusionIntensity: 1
 --- !u!135 &726358508704332427
