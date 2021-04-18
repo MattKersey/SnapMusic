@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -111,9 +111,13 @@ public class BiteController : MonoBehaviour
             hud.SetActive(false);
             thePlayerControllerL.GetComponent<CustomController>().inEditMode = true;
             ThePlayerControllerR.GetComponent<CustomController>().inEditMode = true;
+<<<<<<< HEAD
             thePlayerObject.GetComponent<AdditionalControls>().UpdateState(AdditionalControls.States.EDIT);
+=======
+
             //turn on song bite direction arrows
             arrows.SetActive(true);
+>>>>>>> main
         }
     }
 

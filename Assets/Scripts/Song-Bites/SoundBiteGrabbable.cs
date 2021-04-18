@@ -11,6 +11,8 @@ public class SoundBiteGrabbable : OVRGrabbable
     public Vector3 m_startScale;
     public Vector3 m_startPosition;
     public Vector3 m_startRotation;
+    public float maxSize;
+    public float minSize;
     protected float m_startDist;
 
     void Update()
