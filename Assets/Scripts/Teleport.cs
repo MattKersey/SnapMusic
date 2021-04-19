@@ -13,6 +13,9 @@ public class Teleport : MonoBehaviour
     public TeleportSound teled;
     public OVRScreenFade cameraFader;
 
+    public AmbienceLTrigger currentPatrols;
+    public AmbienceLTrigger stationPatrols;
+
     private void Start()
     {
         cameraFader = GameObject.Find("CenterEyeAnchor").GetComponent<OVRScreenFade>();
@@ -60,6 +63,11 @@ public class Teleport : MonoBehaviour
         //make sure player is still in the portal after delay
         if (inPort)
         {
+            if (currentPatrols != null)
+            {
+                currentPatrols.StopAllPatrols();
+            }
+
             //turn OVRcontroller off temporarily (translation won't work correctly if it is on
             player.gameObject.SetActive(false);
             //set player to position of connected station
@@ -75,6 +83,11 @@ public class Teleport : MonoBehaviour
 
             //play teleported sound
             teled.PlaySound();
+
+            if (stationPatrols != null)
+            {
+                stationPatrols.StartAllPatrols();
+            }
         }
         cameraFader.FadeIn();
     }

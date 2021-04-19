@@ -11,10 +11,13 @@ public class PortalTeleport : MonoBehaviour
     private bool waitPeriod;
     private TeleportSound teled;
 
+    AmbiencePatrol centerRoomPatrol;
+
     private void Start()
     {
         cameraFader = GameObject.Find("CenterEyeAnchor").GetComponent<OVRScreenFade>();
         teled = transform.GetComponent<TeleportSound>();
+        centerRoomPatrol = GameObject.Find("Patrol 1").GetComponent<AmbiencePatrol>();
     }
 
     void Update()
@@ -52,6 +55,9 @@ public class PortalTeleport : MonoBehaviour
         player.transform.LookAt(transform);
         player.SetActive(true);
 
+        centerRoomPatrol.activated = true;
+        centerRoomPatrol.StartPatrol();
+
         cameraFader.FadeIn();
     }
 
@@ -59,6 +65,9 @@ public class PortalTeleport : MonoBehaviour
     {
         waitPeriod = true;
         yield return new WaitForSeconds(.2f);
+
+        centerRoomPatrol.activated = false;
+        centerRoomPatrol.StopPatrol();
 
         player.SetActive(false);
         player.transform.position = prev_position;

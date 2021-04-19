@@ -102,4 +102,20 @@ public class AmbienceLTrigger : MonoBehaviour
             patrolAmbience2.StartPatrol();
         }
     }
+
+    public void StartAllPatrols()
+    {
+        patrolAmbience1.activated = true;
+        patrolAmbience1.StartPatrol();
+        patrolAmbience2.activated = true;
+        patrolAmbience2.StartPatrol();
+    }
+
+    public void StopAllPatrols()
+    {
+        patrolAmbience1.activated = false;
+        patrolAmbience1.StopPatrol();
+        patrolAmbience2.activated = false;
+        patrolAmbience2.StopPatrol();
+    }
 }
