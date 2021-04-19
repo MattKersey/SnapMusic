@@ -20,7 +20,6 @@ public class SubmitButton : OVRGrabbable
         base.GrabBegin(hand, grabPoint);
         Debug.Log("Submit: Grabs");
         EmissionStatus(true);
-        PlayAudioInOrder();
     }
 
     /**
@@ -31,8 +30,12 @@ public class SubmitButton : OVRGrabbable
     {
         base.GrabEnd(linearVelocity, angularVelocity);
         Debug.Log("Submit: Lets go");
-        EmissionStatus(false);
-        StopAudio();
+        if (isPlaying)
+        {
+            StopAudio();
+        }
+        else
+            PlayAudioInOrder();
     }
 
     // Turns on/off the button's emission to indicate selected status
@@ -65,6 +68,7 @@ public class SubmitButton : OVRGrabbable
         instances.Clear();
         coroutines.Clear();
         isPlaying = false;
+        EmissionStatus(false);
     }
 
     static int SortByX(Transform t0, Transform t1)
@@ -116,6 +120,7 @@ public class SubmitButton : OVRGrabbable
             instances.Clear();
             coroutines.Clear();
             isPlaying = false;
+            EmissionStatus(false);
         }
         else
             instance.stop(STOP_MODE.IMMEDIATE);
