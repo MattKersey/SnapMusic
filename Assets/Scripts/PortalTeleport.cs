@@ -7,13 +7,14 @@ public class PortalTeleport : MonoBehaviour
     public GameObject player;
     private Vector3 prev_position;
     public Camera portalView;
-    public AudioSource teled;
     public OVRScreenFade cameraFader;
     private bool waitPeriod;
+    private TeleportSound teled;
 
     private void Start()
     {
         cameraFader = GameObject.Find("CenterEyeAnchor").GetComponent<OVRScreenFade>();
+        teled = transform.GetComponent<TeleportSound>();
     }
 
     void Update()
@@ -46,7 +47,7 @@ public class PortalTeleport : MonoBehaviour
 
         prev_position = player.transform.position;
         player.SetActive(false);
-        teled.Play();
+        teled.PlaySound();
         player.transform.position = Vector3.zero;
         player.transform.LookAt(transform);
         player.SetActive(true);
@@ -62,7 +63,7 @@ public class PortalTeleport : MonoBehaviour
         player.SetActive(false);
         player.transform.position = prev_position;
         player.transform.forward = portalView.transform.forward;
-        teled.Play();
+        teled.PlaySound();
         player.SetActive(true);
 
         waitPeriod = false;

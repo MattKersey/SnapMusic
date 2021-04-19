@@ -9,13 +9,15 @@ public class Teleport : MonoBehaviour
     public GameObject justTeleported;
     public GameObject mapMarker;
     private bool inPort;
-    public AudioSource hum;
-    public AudioSource teled;
+    public TeleportHum hum;
+    public TeleportSound teled;
     public OVRScreenFade cameraFader;
 
     private void Start()
     {
         cameraFader = GameObject.Find("CenterEyeAnchor").GetComponent<OVRScreenFade>();
+        teled = transform.GetComponent<TeleportSound>();
+        hum = transform.GetComponent<TeleportHum>();
     }
 
     //Call if something runs into the teleporter
@@ -30,7 +32,7 @@ public class Teleport : MonoBehaviour
             if (!justTeleported.activeSelf)
             {
                 //give audio cue
-                hum.enabled = true;
+                hum.PlaySound();
                 inPort = true;
                 StartCoroutine(startTele());
             }
@@ -42,7 +44,7 @@ public class Teleport : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            hum.enabled = false;
+            hum.StopSound();
             inPort = false;
 
             //make sure player is able to teleport again
@@ -69,10 +71,10 @@ public class Teleport : MonoBehaviour
             //reset booleans
             inPort = false;
             justTeleported.SetActive(true);
-            hum.enabled = false;
+            hum.StopSound();
 
             //play teleported sound
-            teled.Play();
+            teled.PlaySound();
         }
         cameraFader.FadeIn();
     }

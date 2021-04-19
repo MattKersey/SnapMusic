@@ -43,9 +43,6 @@ public class CustomController : OVRGrabber
     //bool for switching to edit play mode
     public bool inEditMode = false;
 
-    //player controller script
-    public OVRPlayerController pCont;
-
     new void Start()
     {
         base.Start();
@@ -54,8 +51,6 @@ public class CustomController : OVRGrabber
 
         if (m_redoList == null)
             m_redoList = new List<MoveLogEntry>();
-
-        pCont = GameObject.Find("OVRPlayerController").GetComponent<OVRPlayerController>();
     }
 
     new void Update()
@@ -106,15 +101,6 @@ public class CustomController : OVRGrabber
         {
             CustomController.AddAction(MoveLogEntry.MoveType.Reverse, bite.GetComponent<SoundBiteGrabbable>(), null, null);
             bite.GetComponent<BiteSelf>().Reverse();
-        }
-
-        if (trigger > 0.0f)
-        {
-            pCont.Acceleration = Mathf.Clamp(pCont.Acceleration + .002f, .15f, .3f);
-        }
-        else
-        {
-            pCont.Acceleration = .15f;
         }
     }
 
