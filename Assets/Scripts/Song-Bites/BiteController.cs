@@ -24,7 +24,7 @@ public class BiteController : MonoBehaviour
     public GameObject hud;
 
     public OVRScreenFade cameraFader;
-    public AudioSource teled;
+    public TeleportSound teled;
 
     private GameObject directionsParent;
     private GameObject directions;
@@ -40,6 +40,9 @@ public class BiteController : MonoBehaviour
     {
         //get the screen fader object from the main camera
         cameraFader = GameObject.Find("CenterEyeAnchor").GetComponent<OVRScreenFade>();
+
+        //get the audio script
+        teled = transform.GetComponent<TeleportSound>();
 
         directionsParent = GameObject.Find("Stage Directions");
         arrows = directionsParent.transform.GetChild(1).gameObject;
@@ -184,20 +187,14 @@ public class BiteController : MonoBehaviour
         Color finalColor;
         if (CorrectBiteOrder())
         {
-            finalColor = Color.green;
+            for (int idx = 0; idx < numOfTotalBites; idx++)
+            {
+                GameObject myChild = placeholderParent.transform.GetChild(idx).gameObject;
+                // both: used to be child
+                myChild.GetComponent<Renderer>().material.SetColor("_Color", Color.green);
+                myChild.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.green);
+            }
         }
-        else
-        {
-            finalColor = Color.red;
-        }
-        for (int idx = 0; idx < numOfTotalBites; idx++)
-        {
-            GameObject myChild = placeholderParent.transform.GetChild(idx).gameObject;
-            // both: used to be child
-            myChild.GetComponent<Renderer>().material.SetColor("_Color", finalColor);
-            myChild.GetComponent<Renderer>().material.SetColor("_EmissionColor", finalColor);
-        }
-
     } 
 
     /**
@@ -207,16 +204,21 @@ public class BiteController : MonoBehaviour
     **/
     private bool CorrectBiteOrder()
     {
+        bool correctOrder = true;
+
         for (int idx = 0; idx<numOfTotalBites; idx++)
         {
             GameObject child = placeholderParent.transform.GetChild(idx).gameObject;
             BiteSelf _biteSelf = child.GetComponent<BiteSelf>();
             if (idx != _biteSelf.GetBiteIdx() || _biteSelf.GetPlayBackOrder() != 1)
             {
-                return false;
+                GameObject myChild = placeholderParent.transform.GetChild(idx).gameObject;
+                myChild.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
+                myChild.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.red);
+                correctOrder = false;
             }
         }
-        return true;
+        return correctOrder;
     }
 
     IEnumerator TelepHome()
@@ -227,7 +229,7 @@ public class BiteController : MonoBehaviour
         thePlayerObject.SetActive(false);
         thePlayerObject.transform.position = Vector3.zero;
         thePlayerObject.transform.rotation = Quaternion.identity;
-        teled.Play();
+        teled.PlaySound();
         thePlayerObject.SetActive(true);
 
         cameraFader.FadeIn();
