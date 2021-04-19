@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,10 +26,7 @@ public class BiteController : MonoBehaviour
     public OVRScreenFade cameraFader;
     public AudioSource teled;
 
-    private GameObject directionsParent;
-    private GameObject directions;
     private GameObject arrows;
-
 
     /**
     Upon start, get all the bite gameobjects (children), calculate their quantity,
@@ -41,10 +38,8 @@ public class BiteController : MonoBehaviour
         //get the screen fader object from the main camera
         cameraFader = GameObject.Find("CenterEyeAnchor").GetComponent<OVRScreenFade>();
 
-        directionsParent = GameObject.Find("Stage Directions");
-        arrows = directionsParent.transform.GetChild(1).gameObject;
+        arrows = GameObject.Find("Stage Directions");
         arrows.SetActive(false);
-        directions = directionsParent.transform.GetChild(0).gameObject;
 
         songBites = GameObject.FindGameObjectsWithTag("Sound Bite");
         numOfTotalBites = songBites.Length;
@@ -74,7 +69,7 @@ public class BiteController : MonoBehaviour
         {
             BiteSelf _biteSelf = songBites[i].GetComponent<BiteSelf>();
             _biteSelf.SetBiteIdx(numberList[i]);
-            _biteSelf.SetRandomDirection();
+            _biteSelf.SetRandomPitch();
             // FoundBite(songBites[i], _biteSelf.GetBiteIdx()); // debug test purposes
         }
     }
@@ -116,10 +111,13 @@ public class BiteController : MonoBehaviour
             hud.SetActive(false);
             thePlayerControllerL.GetComponent<CustomController>().inEditMode = true;
             ThePlayerControllerR.GetComponent<CustomController>().inEditMode = true;
+<<<<<<< HEAD
             thePlayerObject.GetComponent<AdditionalControls>().UpdateState(AdditionalControls.States.EDIT);
+=======
+
             //turn on song bite direction arrows
             arrows.SetActive(true);
-            directions.SetActive(false);
+>>>>>>> main
         }
     }
 
@@ -148,7 +146,6 @@ public class BiteController : MonoBehaviour
         }
         bite.transform.position = targetPosition;
         ParticleEffect(bite, false);
-        bite.GetComponent<BiteAudio>().StopBite();
     }
 
     /**
