@@ -14,6 +14,11 @@ public class BiteSelf : MonoBehaviour
     private Vector3 originalPosition;
     private Quaternion originalAngles;
     private Vector3 foundPosition;
+    private Material originalMaterial;
+    public Material highlightMaterial;
+    public Material grabbedMaterial;
+    private GameObject cubeInContact;
+
 
     public bool currentlySelected = false;
     public int rotateSpeed;
@@ -21,13 +26,16 @@ public class BiteSelf : MonoBehaviour
     public int playbackDirection;
     BiteAudio biteAudio;
 
+
     // Store the initail positions, rotation, color, and pitch
     private void Start()
     {
         _biteController = gameObject.GetComponentInParent<BiteController>();
         _audioSource = gameObject.GetComponent<AudioSource>();
+        originalMaterial = gameObject.GetComponent<Renderer>().material;
         originalColor = gameObject.GetComponent<Renderer>().material.color;
         originalPosition = transform.position;
+        // playbackOrder = _audioSource.pitch;
         originalAngles = transform.rotation;
     }
 
@@ -55,10 +63,10 @@ public class BiteSelf : MonoBehaviour
         biteIdx = idx;
         audioName = "sample-" + idx.ToString();
         //StartCoroutine(LoadAudio());
-        audioClip = Resources.Load<AudioClip>(soundPath + audioName);
-        audioClip.name = audioName;
-        _audioSource.clip = audioClip;
-        PlayAudioFile();
+        //audioClip = Resources.Load<AudioClip>(soundPath + audioName);
+        //audioClip.name = audioName;
+        //_audioSource.clip = audioClip;
+        //PlayAudioFile();
     }
     */
 
@@ -98,6 +106,11 @@ public class BiteSelf : MonoBehaviour
         }
         biteAudio.SetDirection(playbackDirection);
 
+        //System.Random random = new System.Random();
+        //List<int> pitches = new List<int> { -1, 1 };
+        //playbackOrder = pitches[random.Next(pitches.Count)];
+        //Debug.Log("idx: " + biteIdx + ", pitch: " + playbackOrder);
+        //_audioSource.pitch = playbackOrder;
     }
 
     // Public method to get the bite (song) index
@@ -131,23 +144,82 @@ public class BiteSelf : MonoBehaviour
         float newVolume = 0.5f; // insert funny math for calculating new volume
         _audioSource.volume = newVolume;
         // insert fancy math to pass onto implement volume color
-        ImplementVolumeColor();
+        // ImplementVolumeColor();
     }
 
     /**
     Change the bite material's color and emission depending on how much the user
     scales the cube's volume. 
     **/
-    public void ImplementVolumeColor()
+    public void ImplementVolumeColor(float scalar)
     {
         // raise volume -> darker shade
         // lower volume -> lighter shade
         Color newColor = new Color(
             originalColor.r,                            // r
-            1 - ((255 * _audioSource.volume) / 255),    // g
+            1 - ((255 * scalar) / 255),    // g
             originalColor.b);                           // b
         gameObject.GetComponent<Renderer>().material.SetColor("_Color", newColor); 
         gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", newColor);
+        originalMaterial = gameObject.GetComponent<Renderer>().material;
+    }
+
+    /**
+    Public method to reverse the pitch of the audio.
+    Source: https://forum.unity.com/threads/playing-audio-backwards.95770/
+    **/
+    public void Reverse()
+    {
+        switch (playbackOrder) // to undo the reverse, just set to -1 or 1
+        {
+            case 1:
+                _audioSource.pitch = -1;
+                playbackOrder = -1;
+                break;
+            case -1:
+                _audioSource.pitch = 1;
+                playbackOrder = 1;
+                break;
+        }
+        //_audioSource.timeSamples = _audioSource.clip.samples - 1;  // keeping for now...
+    }
+
+    // Performs the swap when the bite is in contact with another bite
+    public void PerformSwap()
+    {
+        if (cubeInContact != null)
+        {
+            _biteController.AddSwap();
+            SwapInHierarchy(cubeInContact);
+        }
+    }
+
+    // Removes the color from the collided bite
+    public void RemoveCollidedColor()
+    {
+        if (cubeInContact != null)
+        {
+            UnColorBite(cubeInContact);
+        }
+    }
+
+    // Color a bite to show that it is selected or in collision with (highlight)
+    public void ColorBite(GameObject obj, bool isHighlight)
+    {
+        if (isHighlight) // collided case
+        {
+            obj.GetComponent<Renderer>().material = highlightMaterial;
+        }
+        else // grabbed
+        {
+            obj.GetComponent<Renderer>().material = grabbedMaterial;
+        }
+    }
+
+    // Uncolors a bite to show that it is no longer selected or in collision with
+    public void UnColorBite(GameObject obj)
+    {
+        obj.GetComponent<Renderer>().material = originalMaterial;
     }
 
     /**
@@ -157,17 +229,20 @@ public class BiteSelf : MonoBehaviour
     **/
     private void OnTriggerEnter(Collider other)
     {
+        // if the current bite enters the collider of another bite 
         if (other.CompareTag("Sound Bite"))
         {
-            bool otherFound = other.gameObject.GetComponent<BiteSelf>().found;
-            if ((found) && (otherFound))
+            // and both are already on stage, then highlight the other one
+            if (found && other.gameObject.GetComponent<BiteSelf>().found && currentlySelected)
             {
-                SwapInHierarchy(other.gameObject);
+                cubeInContact = other.gameObject;
+                ColorBite(other.gameObject, true);
             }
         }
-
+        // if the current bite hasn't been found
         else if (!found)
         {
+            // mark it as found
             _biteController.FoundBite(gameObject, biteIdx);
             found = true;
         }
@@ -185,6 +260,20 @@ public class BiteSelf : MonoBehaviour
         if (found && other.name == "OVRControllerPrefab")
         {
             biteAudio.StopBite();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        // if the current bite leaves the collider of another bite
+        if (other.CompareTag("Sound Bite"))
+        {
+            // and both are already on stage, then unhighlight the other one
+            if (found && other.gameObject.GetComponent<BiteSelf>().found && currentlySelected)
+            {
+                UnColorBite(other.gameObject);
+                cubeInContact = null;
+            }
         }
     }
 

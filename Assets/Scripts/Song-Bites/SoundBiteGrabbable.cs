@@ -15,15 +15,25 @@ public class SoundBiteGrabbable : OVRGrabbable
     public float minSize;
     protected float m_startDist;
 
+    /**
+    In every frame update, check if the bite is grabbed and dragged by the two
+    controllers. If so, scale the bite.
+    **/
     void Update()
     {
         if (m_draggedBy != null && m_grabbedBy != null)
         {
             float scalar = (m_draggedBy.transform.position - m_grabbedBy.transform.position).magnitude / m_startDist;
-            transform.localScale = scalar * m_startScale;
+            // EDIT THE COLOR
+            gameObject.GetComponent<BiteSelf>().ImplementVolumeColor(scalar);
+            // transform.localScale = scalar * m_startScale;
         }
     }
 
+    /**
+    Begins the scaling procedure. Calculate the distance between the two controllers
+    in order to compute the magnitude of the scaling.
+    **/
     public void ScaleBegin(OVRGrabber hand)
     {
         m_draggedBy = hand;
@@ -31,6 +41,7 @@ public class SoundBiteGrabbable : OVRGrabbable
         m_startDist = (m_draggedBy.transform.position - m_grabbedBy.transform.position).magnitude;
     }
 
+    // Ends the scaling procedure
     public void ScaleEnd()
     {
         m_draggedBy = null;
@@ -46,7 +57,7 @@ public class SoundBiteGrabbable : OVRGrabbable
         m_startRotation = transform.rotation.eulerAngles;
         base.GrabBegin(hand, grabPoint);
         GetComponent<BiteSelf>().SetCurrentlySelected(true);
-        GetComponent<Renderer>().material = m_grabbedMaterial;
+        //GetComponent<Renderer>().material = m_grabbedMaterial;
     }
 
     /**
@@ -57,7 +68,10 @@ public class SoundBiteGrabbable : OVRGrabbable
     {
         base.GrabEnd(linearVelocity, angularVelocity);
         ScaleEnd();
+        GetComponent<BiteSelf>().UnColorBite(gameObject);
+        GetComponent<BiteSelf>().RemoveCollidedColor();
+        GetComponent<BiteSelf>().PerformSwap();
         GetComponent<BiteSelf>().SetCurrentlySelected(false);
-        GetComponent<Renderer>().material = m_defaultMaterial;
+        //GetComponent<Renderer>().material = m_defaultMaterial;
     }
 }

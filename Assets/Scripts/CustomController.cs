@@ -220,6 +220,7 @@ public class CustomController : OVRGrabber
             {
                 touchedBite = true;
                 bite = otherCollider.gameObject;
+                bite.GetComponent<BiteSelf>().ColorBite(bite, false);
                 additionalControls.SetInContact(m_controller == OVRInput.Controller.LTouch, true);
             }
         }
@@ -233,6 +234,7 @@ public class CustomController : OVRGrabber
             if (m_grabCandidates.Count == 0)
             {
                 touchedBite = false;
+                bite.GetComponent<BiteSelf>().UnColorBite(bite);
                 bite = null;
                 m_currentVibration = 0.0f;
                 OVRInput.SetControllerVibration(0.0f, 0.0f, m_controller);

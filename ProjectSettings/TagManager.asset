@@ -9,6 +9,8 @@ TagManager:
   - Bite-Placeholder
   - Bite
   - Stage-Button
+  - Ignore-Me
+  - Ghost Bite
   layers:
   - Default
   - TransparentFX

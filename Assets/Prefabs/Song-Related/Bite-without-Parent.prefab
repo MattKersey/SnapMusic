@@ -136,6 +136,8 @@ MonoBehaviour:
   m_startScale: {x: 0, y: 0, z: 0}
   m_startPosition: {x: 0, y: 0, z: 0}
   m_startRotation: {x: 0, y: 0, z: 0}
+  maxSize: 0
+  minSize: 0
 --- !u!114 &1508694402703710532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,11 +150,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42d3df92e8ac7473da34f91707a013cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highlightMaterial: {fileID: 2100000, guid: 0af1c926196d244f38def95d18463b8c, type: 2}
+  grabbedMaterial: {fileID: 2100000, guid: 4ab01a4d4849d42d3b9797ef436e2720, type: 2}
   currentlySelected: 0
   rotateSpeed: 50
-  playbackDirection: 0
---- !u!114 &-5399517614861118527
-MonoBehaviour:
+  playbackOrder: 0
+--- !u!82 &1508694402703710533
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
