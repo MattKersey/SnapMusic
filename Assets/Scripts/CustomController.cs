@@ -248,6 +248,7 @@ public class CustomController : OVRGrabber
             if (m_grabCandidates.Count == 0)
             {
                 touchedBite = false;
+                bite.GetComponent<BiteSelf>().SetCurrentlySelected(false);
                 bite.GetComponent<BiteSelf>().UnColorBite(bite);
                 bite = null;
                 m_currentVibration = 0.0f;

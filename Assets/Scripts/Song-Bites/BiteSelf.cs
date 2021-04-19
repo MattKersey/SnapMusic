@@ -214,6 +214,11 @@ public class BiteSelf : MonoBehaviour
         }
     }
 
+    private void UnSelectTheOther(GameObject other)
+    {
+        other.GetComponent<BiteSelf>().SetCurrentlySelected(false);
+    }
+
     private void OnTriggerExit(Collider other)
     {
         // if the current bite leaves the collider of another bite
@@ -223,6 +228,7 @@ public class BiteSelf : MonoBehaviour
             if (found && other.gameObject.GetComponent<BiteSelf>().found && currentlySelected)
             {
                 UnColorBite(other.gameObject);
+                SetCurrentlySelected(false);
                 cubeInContact = null;
             }
         }
