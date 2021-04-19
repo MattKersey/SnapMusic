@@ -174,7 +174,7 @@ public class AdditionalControls : MonoBehaviour
             Debug.Log("rs");
             CustomController.Redo();
         }
-        
+
         if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstick, OVRInput.Controller.LTouch))
         {
             Debug.Log("ls");
