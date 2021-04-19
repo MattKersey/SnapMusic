@@ -64,6 +64,7 @@ public class Teleport : MonoBehaviour
             if (currentPatrols != null)
             {
                 currentPatrols.StopAllPatrols();
+                BiteSelf.insideLTrigger = false;
             }
 
             //turn OVRcontroller off temporarily (translation won't work correctly if it is on
@@ -84,6 +85,7 @@ public class Teleport : MonoBehaviour
 
             if (stationPatrols != null)
             {
+                BiteSelf.insideLTrigger = true;
                 stationPatrols.StartAllPatrols();
             }
         }

@@ -7,7 +7,6 @@ public class AmbienceLTrigger : MonoBehaviour
 
     AmbiencePatrol patrolAmbience1;
     AmbiencePatrol patrolAmbience2;
-    public bool backTrigger = true;
 
     float enterDirection = 0.0f;
     float exitDirection = 0.0f;
