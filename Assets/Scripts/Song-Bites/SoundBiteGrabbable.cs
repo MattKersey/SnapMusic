@@ -24,7 +24,9 @@ public class SoundBiteGrabbable : OVRGrabbable
         if (m_draggedBy != null && m_grabbedBy != null)
         {
             float scalar = (m_draggedBy.transform.position - m_grabbedBy.transform.position).magnitude / m_startDist;
-            transform.localScale = scalar * m_startScale;
+            // EDIT THE COLOR
+            gameObject.GetComponent<BiteSelf>().ImplementVolumeColor(scalar);
+            // transform.localScale = scalar * m_startScale;
         }
     }
 
