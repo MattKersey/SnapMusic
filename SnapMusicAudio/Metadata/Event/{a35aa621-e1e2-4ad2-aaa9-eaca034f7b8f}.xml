@@ -284,7 +284,7 @@
 			<value>Near-Field FX</value>
 		</property>
 		<property name="value">
-			<value>false</value>
+			<value>true</value>
 		</property>
 	</object>
 	<object class="FloatPluginParameter" id="{caec28a0-f287-4dfe-9680-d8b70b4c718e}">

@@ -256,7 +256,7 @@
 			<value>Dist Rolloff</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>4</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>

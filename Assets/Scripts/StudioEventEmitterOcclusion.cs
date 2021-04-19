@@ -15,6 +15,17 @@ public class StudioEventEmitterOcclusion : MonoBehaviour
     public float occlusionIntensity = 1.0f;
     float occlusion = 0.0f;
     float occlusionUpdate = 0.0f;
+    public bool playOnStartup;
+
+    private void Start()
+    {
+        if (playOnStartup)
+        {
+            fmodInstance = RuntimeManager.CreateInstance(fmodEvent);
+            RuntimeManager.AttachInstanceToGameObject(fmodInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+            fmodInstance.start();
+        }
+    }
 
     // Update is called once per frame
     void Update()
