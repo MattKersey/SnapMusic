@@ -39,21 +39,49 @@ public class BiteSelf : MonoBehaviour
     {
         if (!found)
         {
+            // Send Raycast to check whether bite is within line of sight
+            RaycastHit[] hits;
+            Vector3 direction = (transform.position - player.transform.position);
+            Ray ray = new Ray(player.transform.position, direction);
+            hits = Physics.RaycastAll(ray, direction.magnitude);
+
             // Calculate distance between player and sound bite
             float distance = Vector3.Distance(player.transform.position, transform.position);
-            if (distance <= playbackThreshold && !biteAudio.isPlaying && !insideLTrigger)
+
+            // Determine whether distance or line of sight criteria is met
+            bool distanceCheck = (distance <= playbackThreshold);
+            bool lineOfSightCheck = false;
+            foreach (RaycastHit hit in hits)
             {
-                biteAudio.PlayBite();
+                Debug.Log(hit.collider.transform);
+                if (hit.collider.transform == transform)
+                {
+                    lineOfSightCheck = true;
+                    break;
+                }
             }
 
-            else if (distance > playbackThreshold && biteAudio.isPlaying)
+            // If criteria is met, check that player is not inside L trigger before playing
+            if (distanceCheck || lineOfSightCheck)
             {
-                biteAudio.StopBite();
+                if (!biteAudio.isPlaying && !insideLTrigger)
+                {
+                    biteAudio.PlayBite();
+                }
+
+                else if (biteAudio.isPlaying && insideLTrigger)
+                {
+                    biteAudio.StopBite();
+                }
             }
 
-            else if (biteAudio.isPlaying && insideLTrigger)
+            // If criteria is not met, stop audio bite
+            else
             {
-                biteAudio.StopBite();
+                if (biteAudio.isPlaying)
+                {
+                    biteAudio.StopBite();
+                }
             }
         }        
     }
