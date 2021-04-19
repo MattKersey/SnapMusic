@@ -127,7 +127,7 @@ public class BiteSelf : MonoBehaviour
             originalColor.b);                           // b
         gameObject.GetComponent<Renderer>().material.SetColor("_Color", newColor); 
         gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", newColor);
-        originalMaterial = gameObject.GetComponent<Renderer>().material;
+        //originalMaterial = gameObject.GetComponent<Renderer>().material;
     }
 
     /**
