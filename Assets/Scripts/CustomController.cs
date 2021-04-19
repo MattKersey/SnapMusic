@@ -129,17 +129,6 @@ public class CustomController : OVRGrabber
         m_redoList.Clear();
     }
 
-    public static void AddAction(MoveLogEntry.MoveType moveType, OVRGrabbable obj0, OVRGrabbable obj1, List<Vector3> scales)
-    {
-        MoveLogEntry newEntry = new MoveLogEntry();
-        newEntry.obj0 = obj0;
-        newEntry.obj1 = obj1;
-        newEntry.scales = scales;
-        newEntry.type = moveType;
-        m_undoList.Add(newEntry);
-        m_redoList.Clear();
-    }
-
     public static void Undo()
     {
         int count = m_undoList.Count;
