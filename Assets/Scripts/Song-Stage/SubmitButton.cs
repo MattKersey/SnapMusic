@@ -90,6 +90,7 @@ public class SubmitButton : OVRGrabbable
         bites.Sort(SortByX);
 
         int totalLength = 0;
+        int index = 0;
         foreach (Transform bite in bites)
         {
             // EventDescription description;
@@ -100,11 +101,13 @@ public class SubmitButton : OVRGrabbable
             // EventInstance instanceCopy;
             // description.createInstance(out instanceCopy);
             // instanceCopy.setParameterByName("Direction", direction);
+            // instanceCopy.setVolume(3.0f);
             // int length;
             // description.getLength(out length);
             // instances.Add(instanceCopy);
-            // coroutines.Add(StartCoroutine(PlayBites(length, totalLength, instanceCopy)));
+            // coroutines.Add(StartCoroutine(PlayBites(totalLength, length, instanceCopy, index==5)));
             // totalLength += length;
+            // index += 1;
         }
         isPlaying = true;
     }
@@ -126,4 +129,3 @@ public class SubmitButton : OVRGrabbable
             instance.stop(STOP_MODE.IMMEDIATE);
     }
 }
-
