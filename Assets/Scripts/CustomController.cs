@@ -43,6 +43,10 @@ public class CustomController : OVRGrabber
     //bool for switching to edit play mode
     public bool inEditMode = false;
 
+    //full song playing
+    public Avril14th fullSong;
+    private bool songIsPlaying;
+
     new void Start()
     {
         base.Start();
@@ -51,6 +55,8 @@ public class CustomController : OVRGrabber
 
         if (m_redoList == null)
             m_redoList = new List<MoveLogEntry>();
+
+        fullSong = transform.GetComponent<Avril14th>();
     }
 
     new void Update()
@@ -101,6 +107,20 @@ public class CustomController : OVRGrabber
         {
             CustomController.AddAction(MoveLogEntry.MoveType.Reverse, bite.GetComponent<SoundBiteGrabbable>(), null, null);
             bite.GetComponent<BiteSelf>().Reverse();
+        }
+
+        if (OVRInput.GetDown(OVRInput.Button.Three) || Input.GetKey(KeyCode.C))
+        {
+            if (songIsPlaying)
+            {
+                fullSong.StopSong();
+                songIsPlaying = false;
+            }
+            else
+            {
+                fullSong.PlaySong();
+                songIsPlaying = true;
+            }
         }
     }
 

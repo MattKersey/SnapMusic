@@ -17131,6 +17131,7 @@ GameObject:
   - component: {fileID: 726358508704332469}
   - component: {fileID: 726358508704287772}
   - component: {fileID: 726358508704287775}
+  - component: {fileID: 726358508704287774}
   m_Layer: 0
   m_Name: OVRControllerPrefab
   m_TagString: Untagged
@@ -17138,6 +17139,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &726358508704287774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726358508704287773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0d57f2bd9bd4cecab173d41fc828f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/Avril 14th
+  occlusionEnabled: 1
+  occlusionDepth: 1
+  playOnStartup: 0
 --- !u!82 &726358508704287775
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17301,6 +17318,7 @@ MonoBehaviour:
   m_objSound: {fileID: 726358508704287775}
   hud: {fileID: 1839510054}
   inEditMode: 0
+  fullSong: {fileID: 0}
 --- !u!1001 &726358508714356499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20834,6 +20852,7 @@ MonoBehaviour:
   m_objSound: {fileID: 726358509713741496}
   hud: {fileID: 1839510054}
   inEditMode: 0
+  fullSong: {fileID: 0}
 --- !u!82 &726358509713741496
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21041,6 +21060,7 @@ GameObject:
   - component: {fileID: 726358509713645654}
   - component: {fileID: 726358509713741497}
   - component: {fileID: 726358509713741496}
+  - component: {fileID: 726358509713741503}
   m_Layer: 0
   m_Name: OVRControllerPrefab
   m_TagString: Untagged
@@ -21048,6 +21068,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &726358509713741503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726358509713741502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0d57f2bd9bd4cecab173d41fc828f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/Avril 14th
+  occlusionEnabled: 1
+  occlusionDepth: 1
+  playOnStartup: 0
 --- !u!4 &726358509714084554
 Transform:
   m_ObjectHideFlags: 0
