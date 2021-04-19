@@ -511,6 +511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 1104718573}
   patrol2: {fileID: 2094200648}
+  backTrigger: 1
 --- !u!1001 &67457840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1492,7 +1493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrol1: {fileID: 1393143608}
-  patrol2: {fileID: 1156513287}
+  patrol2: {fileID: 0}
 --- !u!65 &197120150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2515,6 +2516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 667563348}
   patrol2: {fileID: 1393143608}
+  backTrigger: 0
 --- !u!1 &415784617
 GameObject:
   m_ObjectHideFlags: 0
@@ -2935,13 +2937,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480765514}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1218912572}
-  patrol2: {fileID: 617752859}
+  patrol1: {fileID: 0}
+  patrol2: {fileID: 1996650079}
 --- !u!65 &480765518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3982,6 +3984,21 @@ Transform:
   m_Father: {fileID: 1926497399}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &625283917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625283915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrol1: {fileID: 562840838}
+  patrol2: {fileID: 1527010810}
+  backTrigger: 1
 --- !u!1 &630201404
 GameObject:
   m_ObjectHideFlags: 0
@@ -4043,8 +4060,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1218912572}
-  patrol2: {fileID: 617752859}
+  patrol1: {fileID: 1156513287}
+  patrol2: {fileID: 1527010810}
 --- !u!65 &630201408
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4789,13 +4806,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694793707}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1218912572}
-  patrol2: {fileID: 617752859}
+  patrol1: {fileID: 877457934}
+  patrol2: {fileID: 0}
 --- !u!65 &694793711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5957,7 +5974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &809831188
 Transform:
   m_ObjectHideFlags: 0
@@ -6518,13 +6535,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 880302094}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1218912572}
-  patrol2: {fileID: 617752859}
+  patrol1: {fileID: 1996650079}
+  patrol2: {fileID: 0}
 --- !u!65 &880302098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6585,6 +6602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 809628733}
   patrol2: {fileID: 746440228}
+  backTrigger: 0
 --- !u!1 &891168467 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5222464736322565275, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
@@ -7645,8 +7663,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 2094200648}
-  patrol2: {fileID: 667563348}
+  patrol1: {fileID: 1996650079}
+  patrol2: {fileID: 1104718573}
+  backTrigger: 0
 --- !u!1001 &1068599557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7907,6 +7926,12 @@ PrefabInstance:
       objectReference: {fileID: 987135841}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b46e0920d9667ca45b59dc5301c885aa, type: 3}
+--- !u!1 &1084363096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6587462670816615220, guid: 3cb2cf3c6565345cd813d9f7db97430a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1292455765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1093527205
 GameObject:
   m_ObjectHideFlags: 0
@@ -8018,9 +8043,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
         type: 3}
+      propertyPath: bite
+      value: 
+      objectReference: {fileID: 1974256873}
+    - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 726358509022742865}
+    - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
+        type: 3}
+      propertyPath: toBite
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
         type: 3}
       propertyPath: mapMarker
@@ -8194,13 +8229,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114357009}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1218912572}
-  patrol2: {fileID: 617752859}
+  patrol1: {fileID: 1393143608}
+  patrol2: {fileID: 1156513287}
 --- !u!65 &1114357013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8294,8 +8329,8 @@ MonoBehaviour:
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
-  startMark: {fileID: 1556737259}
-  endMark: {fileID: 1952666245}
+  startMark: {fileID: 1151253810}
+  endMark: {fileID: 1556737259}
 --- !u!1 &1159972263
 GameObject:
   m_ObjectHideFlags: 0
@@ -8433,6 +8468,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
+        type: 3}
+      propertyPath: bite
+      value: 
+      objectReference: {fileID: 1084363096}
     - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
         type: 3}
       propertyPath: player
@@ -8815,13 +8855,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262356204}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1218912572}
-  patrol2: {fileID: 617752859}
+  patrol1: {fileID: 0}
+  patrol2: {fileID: 618826624}
 --- !u!65 &1262356208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9239,7 +9279,7 @@ PrefabInstance:
     - target: {fileID: 2988201345335955092, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2988201345335955092, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
@@ -9304,7 +9344,7 @@ PrefabInstance:
     - target: {fileID: 6587462670816615211, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6587462670816615220, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
@@ -10019,9 +10059,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
         type: 3}
+      propertyPath: bite
+      value: 
+      objectReference: {fileID: 1084363096}
+    - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 726358509022742865}
+    - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
+        type: 3}
+      propertyPath: toBite
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
         type: 3}
       propertyPath: mapMarker
@@ -10070,13 +10120,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369465981}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -17.5, y: 0, z: -7.75}
   m_LocalScale: {x: 4.5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1926497399}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &1369465983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10871,6 +10921,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 1218912572}
   patrol2: {fileID: 617752859}
+  patrol1: {fileID: 848874917}
+  patrol2: {fileID: 1996650079}
+  backTrigger: 1
 --- !u!1 &1470868525
 GameObject:
   m_ObjectHideFlags: 0
@@ -11105,6 +11158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 186535236}
   patrol2: {fileID: 667563348}
+  backTrigger: 1
 --- !u!1 &1484890891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1662322996942477817, guid: b46e0920d9667ca45b59dc5301c885aa,
@@ -11925,7 +11979,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556737259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: -24.5}
+  m_LocalPosition: {x: 1, y: 0, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 807942539}
@@ -12555,6 +12609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 1527010810}
   patrol2: {fileID: 877457934}
+  backTrigger: 0
 --- !u!1 &1664292803 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1662322996942477817, guid: b46e0920d9667ca45b59dc5301c885aa,
@@ -13618,6 +13673,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
         type: 3}
+      propertyPath: bite
+      value: 
+      objectReference: {fileID: 1974256873}
+    - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 726358509022742865}
@@ -13809,6 +13869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 617752859}
   patrol2: {fileID: 1159972263}
+  backTrigger: 1
 --- !u!1 &1808912644
 GameObject:
   m_ObjectHideFlags: 0
@@ -14840,15 +14901,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924468160}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 25, y: 0, z: -24.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25, y: 0, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1794009142}
   - {fileID: 1828664011}
   m_Father: {fileID: 1926497399}
   m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1924468162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14861,8 +14922,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1156513287}
-  patrol2: {fileID: 809831187}
+  patrol1: {fileID: 667563348}
+  patrol2: {fileID: 1156513287}
+  backTrigger: 1
 --- !u!1 &1926497398
 GameObject:
   m_ObjectHideFlags: 0
@@ -15299,7 +15361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1156513287}
+  patrol1: {fileID: 0}
   patrol2: {fileID: 1527010810}
 --- !u!65 &1948048356
 BoxCollider:
@@ -15477,13 +15539,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959838633}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1218912572}
-  patrol2: {fileID: 617752859}
+  patrol1: {fileID: 809628733}
+  patrol2: {fileID: 0}
 --- !u!65 &1959838637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15589,6 +15651,86 @@ Transform:
   m_Father: {fileID: 1286389565}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1974256873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5363754361508785210, guid: 3cb2cf3c6565345cd813d9f7db97430a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1292455765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1975255604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1975255605}
+  - component: {fileID: 1975255607}
+  - component: {fileID: 1975255606}
+  m_Layer: 0
+  m_Name: Back Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1975255605
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975255604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 5, z: 4}
+  m_Children: []
+  m_Father: {fileID: 1624581532}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1975255606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975255604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e5e29da54e0894e8b2324d95a5a6d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1975255607
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975255604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1996650079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1996650080}
+  - component: {fileID: 1996650081}
+  m_Layer: 0
+  m_Name: Patrol 10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &1996650080
 Transform:
   m_ObjectHideFlags: 0
@@ -16060,6 +16202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 1393143608}
   patrol2: {fileID: 1438569683}
+  backTrigger: 0
 --- !u!4 &2114918979 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ddd95aa4817356645979f7a136313957,
@@ -18252,7 +18395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726358509022975359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 726358509022742869}

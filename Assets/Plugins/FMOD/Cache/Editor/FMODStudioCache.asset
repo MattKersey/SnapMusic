@@ -40,6 +40,46 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-9184496454844577721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 2/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-9130466531239317794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 3/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-9117063433069793759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,26 +93,6 @@ MonoBehaviour:
   m_Name: parameter:/Bite 2/Looping
   m_EditorClassIdentifier: 
   Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-9082035808699920295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
   Min: 0
   Max: 1
   Default: 1
@@ -119,26 +139,6 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
---- !u!114 &-9031752239981881529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
   Exists: 0
 --- !u!114 &-9001551073286691854
 MonoBehaviour:
@@ -163,7 +163,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1200
---- !u!114 &-8989161428400143834
+--- !u!114 &-8957169318791050637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,16 +173,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Looping
+  m_Name: parameter:/Bite 2/Occlusion
   m_EditorClassIdentifier: 
-  Name: Looping
+  Name: Occlusion
   Min: 0
-  Max: 1
-  Default: 1
+  Max: 10
+  Default: 0
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-8950936073341012549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,26 +223,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-8917508852353565653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-8893051600916270106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,26 +363,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-8723407600465623557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-8702227514142413963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,7 +423,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-8595307517447466974
+--- !u!114 &-8591104286448064500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -473,36 +433,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Direction
+  m_Name: parameter:/Bite 2/Occlusion
   m_EditorClassIdentifier: 
-  Name: Direction
+  Name: Occlusion
   Min: 0
-  Max: 1
-  Default: 1
+  Max: 10
+  Default: 0
   ID:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-8589430349583840061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-8579147375414366522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,7 +463,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-8552623414992820167
+--- !u!114 &-8534607493362391577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -533,7 +473,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Looping
+  m_Name: parameter:/Bite 3/Looping
   m_EditorClassIdentifier: 
   Name: Looping
   Min: 0
@@ -542,29 +482,6 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
---- !u!114 &-8508417123617124001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: SnapMusicAudio/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637544501100000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1322
-  - Name: Mobile
-    Value: 1322
   Exists: 1
 --- !u!114 &-8476471663502411578
 MonoBehaviour:
@@ -626,46 +543,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-8444790312678088659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-8417124413512282052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-8409443208264624618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,55 +578,15 @@ MonoBehaviour:
   Path: event:/Ambience
   guid: 352200aadb4f3b428297df036153efb8
   Banks:
-  - {fileID: 0}
+  - {fileID: -7805829033893545818}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 2043590571399282325}
+  - {fileID: -2967533147946268563}
   MinDistance: 0
   MaxDistance: 0
   Length: 4558
---- !u!114 &-8385482692085877891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-8361141191772231999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-8348415052667120555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,6 +603,26 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-8301988885523086147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 3/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
   ID:
     data1: 0
     data2: 0
@@ -789,7 +646,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-8235361447638621069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -810,7 +667,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-8206141484097339352
+--- !u!114 &-8060643875480139487
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -820,17 +677,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Occlusion
+  m_Name: parameter:/Ambience/Attenuation
   m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
+  Name: Attenuation
+  Min: 5
+  Max: 100
+  Default: 5
   ID:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-8092681778701563942
+--- !u!114 &-8058044835369299432
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -840,9 +697,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Looping
+  m_Name: parameter:/Bite 2/Direction
   m_EditorClassIdentifier: 
-  Name: Looping
+  Name: Direction
   Min: 0
   Max: 1
   Default: 1
@@ -850,26 +707,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-8090855978764926596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-8026700861071578586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,26 +747,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-7999727005916335011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-7974153359742686661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,26 +760,6 @@ MonoBehaviour:
   m_Name: parameter:/Bite 5/Looping
   m_EditorClassIdentifier: 
   Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-7973502277203347199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
   Min: 0
   Max: 1
   Default: 1
@@ -994,52 +791,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 4558
---- !u!114 &-7943981307559080027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-7939228662560956735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Bite 1
-  m_EditorClassIdentifier: 
-  Path: event:/Bite 1
-  guid: 2a7f4bd899881b4f91699980a5f2fdfc
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -658670832691761802}
-  - {fileID: -7973502277203347199}
-  - {fileID: -7535276080468696752}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 12139
 --- !u!114 &-7936784029442889283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1080,7 +831,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-7885960089744984958
+--- !u!114 &-7809323703003800131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1090,7 +841,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Direction
+  m_Name: parameter:/Bite 3/Direction
   m_EditorClassIdentifier: 
   Name: Direction
   Min: 0
@@ -1100,32 +851,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-7867085629517381985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Bite 2
-  m_EditorClassIdentifier: 
-  Path: event:/Bite 2
-  guid: 1d3d9a2599db814f98b1b4ff14f6eaeb
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 6535965948517499466}
-  - {fileID: 4282553305523399276}
-  - {fileID: -7547959311922153877}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 12139
 --- !u!114 &-7805829033893545818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1135,39 +860,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/laser_hum
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: event:/laser_hum
-  guid: e3425eaef177a343a7d534320146645f
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 8000
---- !u!114 &-7774454564023810077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
+  Path: SnapMusicAudio/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637544225958965926
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &-7773798574680247117
 MonoBehaviour:
@@ -1185,26 +886,6 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-7763177642433399450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
   ID:
     data1: 0
     data2: 0
@@ -1244,14 +925,14 @@ MonoBehaviour:
   Path: event:/Bite 1
   guid: 2a7f4bd899881b4f91699980a5f2fdfc
   Banks:
-  - {fileID: 0}
+  - {fileID: -7805829033893545818}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -7276685611462218947}
-  - {fileID: -317796377812633875}
-  - {fileID: -3853629489092019521}
+  - {fileID: 5916665312329794177}
+  - {fileID: -6289978476566358715}
+  - {fileID: 788607695838707929}
   MinDistance: 0
   MaxDistance: 0
   Length: 12139
@@ -1275,32 +956,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-7630140966328048217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Bite 5
-  m_EditorClassIdentifier: 
-  Path: event:/Bite 5
-  guid: 3cbfffb5a0a8f048b64e3b767f3f8eb2
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 3279004164453213755}
-  - {fileID: 5188767888792034362}
-  - {fileID: -433575472289717839}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 12161
 --- !u!114 &-7614319938336917377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,7 +976,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-7553097602342419289
+--- !u!114 &-7547688206655184182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1331,7 +986,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Direction
+  m_Name: parameter:/Bite 3/Direction
   m_EditorClassIdentifier: 
   Name: Direction
   Min: 0
@@ -1340,27 +995,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
---- !u!114 &-7547959311922153877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7541939468910429711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1381,26 +1016,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-7535276080468696752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-7521573940361632911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1521,46 +1136,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-7349100713853692819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-7348140036665441664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-7325035673405607878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,26 +1149,6 @@ MonoBehaviour:
   m_Name: parameter:/Bite 2/Looping
   m_EditorClassIdentifier: 
   Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-7282398773897754275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
   Min: 0
   Max: 1
   Default: 1
@@ -1620,7 +1175,27 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
+--- !u!114 &-7226433734717942251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 6/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-7224557276451976927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1701,50 +1276,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-7142994213629490823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience 2
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience 2
-  guid: 0231c056f996724ab2234d5f4b936768
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 2909225383445785963}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 4558
---- !u!114 &-7117775021367639222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-7095499401368382981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1780,7 +1311,7 @@ MonoBehaviour:
   Path: event:/Avril 14th
   guid: dc49ab62ff815a49b117bc1e0403f60e
   Banks:
-  - {fileID: 0}
+  - {fileID: -7805829033893545818}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1788,46 +1319,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 75139
---- !u!114 &-7026237293281707007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-7000645707233815164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-6999603756573111862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1848,26 +1339,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-6994926057021707245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-6950666545090484222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1888,47 +1359,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-6878779047112436705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-6834499250890351837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-6823910734670416288
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2071,26 +1502,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 75139
---- !u!114 &-6482104572617022974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-6466466352286877147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2111,7 +1522,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-6450989684432283089
+--- !u!114 &-6435290539342526372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2121,7 +1532,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Direction
+  m_Name: parameter:/Bite 4/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-6379551100584991864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 1/Direction
   m_EditorClassIdentifier: 
   Name: Direction
   Min: 0
@@ -2130,8 +1561,8 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
---- !u!114 &-6379551100584991864
+  Exists: 0
+--- !u!114 &-6355981513375892272
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2171,26 +1602,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-6328030149138113175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-6309126519706282735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2206,15 +1617,55 @@ MonoBehaviour:
   Path: event:/Ambience 2
   guid: 0231c056f996724ab2234d5f4b936768
   Banks:
-  - {fileID: 0}
+  - {fileID: -7805829033893545818}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 460079212491403466}
+  - {fileID: -4721468800204359219}
   MinDistance: 0
   MaxDistance: 0
   Length: 4558
+--- !u!114 &-6307652318997448309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 1/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-6289978476566358715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 1/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6271928480137862434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2255,52 +1706,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-6212705775085445693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-6188732782743720519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Bite 3
-  m_EditorClassIdentifier: 
-  Path: event:/Bite 3
-  guid: 2e0488401382214d9ccb406fc11f57bc
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -4411454052219526236}
-  - {fileID: -6450989684432283089}
-  - {fileID: 4754399793837496025}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 12139
 --- !u!114 &-6166098277215640497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2321,6 +1726,46 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-6120982801476161842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 4/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-6105185809379615015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 2/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6100640870452278644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2401,26 +1846,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-6012752430706183547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-5957562774543491619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2467,7 +1892,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 12139
---- !u!114 &-5907115901039962186
+--- !u!114 &-5887285133606521948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2477,9 +1902,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Looping
+  m_Name: parameter:/Bite 1/Direction
   m_EditorClassIdentifier: 
-  Name: Looping
+  Name: Direction
   Min: 0
   Max: 1
   Default: 1
@@ -2487,7 +1912,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-5869441967064442559
+--- !u!114 &-5824244364647164309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2497,27 +1922,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-5813087527839096861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Occlusion
+  m_Name: parameter:/Bite 1/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   Min: 0
@@ -2526,31 +1931,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
---- !u!114 &-5760668290688155701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience
-  guid: 352200aadb4f3b428297df036153efb8
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 5778436528880217336}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 4558
+  Exists: 0
 --- !u!114 &-5729366876286293422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2564,26 +1945,6 @@ MonoBehaviour:
   m_Name: parameter:/Bite 4/Looping
   m_EditorClassIdentifier: 
   Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-5717818763896513673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
   Min: 0
   Max: 1
   Default: 1
@@ -2611,7 +1972,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-5666870704688009561
+--- !u!114 &-5622061714653952831
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2621,17 +1982,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Occlusion
+  m_Name: parameter:/Bite 6/Direction
   m_EditorClassIdentifier: 
-  Name: Occlusion
+  Name: Direction
   Min: 0
-  Max: 10
-  Default: 0
+  Max: 1
+  Default: 1
   ID:
     data1: 0
     data2: 0
-  Exists: 1
---- !u!114 &-5632866788203987349
+  Exists: 0
+--- !u!114 &-5616179426813699072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2641,7 +2002,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Looping
+  m_Name: parameter:/Bite 5/Looping
   m_EditorClassIdentifier: 
   Name: Looping
   Min: 0
@@ -2651,7 +2012,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-5620877819299303882
+--- !u!114 &-5607525346031385996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2661,12 +2022,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Occlusion
+  m_Name: parameter:/Bite 6/Direction
   m_EditorClassIdentifier: 
-  Name: Occlusion
+  Name: Direction
   Min: 0
-  Max: 10
-  Default: 0
+  Max: 1
+  Default: 1
   ID:
     data1: 0
     data2: 0
@@ -2690,7 +2051,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &-5584658470004718639
+--- !u!114 &-5575017277313840922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2700,17 +2061,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Occlusion
+  m_Name: parameter:/Bite 2/Looping
   m_EditorClassIdentifier: 
-  Name: Occlusion
+  Name: Looping
   Min: 0
-  Max: 10
-  Default: 0
+  Max: 1
+  Default: 1
   ID:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-5497168684954576000
+--- !u!114 &-5569156636785219904
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2720,16 +2081,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Occlusion
+  m_Name: parameter:/Ambience 2/Attenuation
   m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
+  Name: Attenuation
+  Min: 5
+  Max: 100
+  Default: 5
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5484540861733038879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2766,6 +2127,26 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-5370994166436791727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 4/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
   ID:
     data1: 0
     data2: 0
@@ -2836,106 +2217,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-5223427285083807137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-5217406425941270242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-5217100323343697122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-5137245158334106359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-5129663186046061397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-5120195699108535156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2956,6 +2237,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-5080900468814960357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience 2/Attenuation
+  m_EditorClassIdentifier: 
+  Name: Attenuation
+  Min: 5
+  Max: 100
+  Default: 5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-5056078697411059254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2972,6 +2273,26 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-5044841047407094525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 6/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
   ID:
     data1: 0
     data2: 0
@@ -2996,46 +2317,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-5020555412900916724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-4965812955219840516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience 2/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-4960793869714862528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3069,46 +2350,6 @@ MonoBehaviour:
   m_Name: parameter:/Bite 3/Direction
   m_EditorClassIdentifier: 
   Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-4901447012765802067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-4898634126420911517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
   Min: 0
   Max: 1
   Default: 1
@@ -3176,7 +2417,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-4702591539782934632
+--- !u!114 &-4721468800204359219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3186,17 +2427,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Occlusion
+  m_Name: parameter:/Ambience 2/Attenuation
   m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
+  Name: Attenuation
+  Min: 5
+  Max: 100
+  Default: 5
   ID:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-4674023763193946151
+--- !u!114 &-4716610928644437391
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3206,7 +2447,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Occlusion
+  m_Name: parameter:/Bite 5/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   Min: 0
@@ -3215,7 +2456,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4636380855864357462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3316,26 +2557,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-4563986481842084119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-4533775480423449728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3356,26 +2577,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-4532304999090666488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-4508593903877916891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3387,46 +2588,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Bite 3/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-4505456850267093813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience 2/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-4485343703310545817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Direction
   m_EditorClassIdentifier: 
   Name: Direction
   Min: 0
@@ -3456,7 +2617,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-4411454052219526236
+--- !u!114 &-4344928778065729114
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3466,12 +2627,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Occlusion
+  m_Name: parameter:/Bite 1/Looping
   m_EditorClassIdentifier: 
-  Name: Occlusion
+  Name: Looping
   Min: 0
-  Max: 10
-  Default: 0
+  Max: 1
+  Default: 1
   ID:
     data1: 0
     data2: 0
@@ -3556,6 +2717,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-4078487879478650751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 2/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-4051577959708137940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3576,29 +2757,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-4050423070583183077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Door
-  m_EditorClassIdentifier: 
-  Path: event:/Door
-  guid: 21a65aa3e2e1d24aaaa9eaca034f7b8f
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1200
 --- !u!114 &-4025694375785207292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3610,26 +2768,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Bite 5/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-4013017617058951654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Looping
   m_EditorClassIdentifier: 
   Name: Looping
   Min: 0
@@ -3659,7 +2797,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-3960057030783977221
+--- !u!114 &-3989696935590412964
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3669,12 +2807,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Direction
+  m_Name: parameter:/Ambience/Attenuation
   m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
+  Name: Attenuation
+  Min: 5
+  Max: 100
+  Default: 5
   ID:
     data1: 0
     data2: 0
@@ -3690,6 +2828,26 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Bite 1/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-3924262411247454357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 6/Looping
   m_EditorClassIdentifier: 
   Name: Looping
   Min: 0
@@ -3758,7 +2916,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3849793919951278485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3839,6 +2997,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-3707984983553154469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 6/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-3700327744544609392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3919,26 +3097,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-3674740524575801227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-3651459408821877971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3952,26 +3110,6 @@ MonoBehaviour:
   m_Name: parameter:/Bite 2/Direction
   m_EditorClassIdentifier: 
   Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-3637206846322671281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
   Min: 0
   Max: 1
   Default: 1
@@ -4079,6 +3217,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-3434442797434668343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 3/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-3428930726929329202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4099,7 +3257,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-3416797362809754809
+--- !u!114 &-3422034195941297477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4108,16 +3266,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Occlusion
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
+  Path: SnapMusicAudio/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637544225958995929
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1232
+  - Name: Mobile
+    Value: 1232
   Exists: 1
 --- !u!114 &-3413252289754951345
 MonoBehaviour:
@@ -4179,6 +3340,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-3317645638775609627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience 2/Attenuation
+  m_EditorClassIdentifier: 
+  Name: Attenuation
+  Min: 5
+  Max: 100
+  Default: 5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-3268229570401484876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4199,7 +3380,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-3241272657350929925
+--- !u!114 &-3102577127252907449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4209,7 +3390,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Occlusion
+  m_Name: parameter:/Bite 2/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   Min: 0
@@ -4219,66 +3400,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-3165403849017989700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-3142645181777076872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-3113839962601913378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-3100747644025238412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4319,7 +3440,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-3021054065549810537
+--- !u!114 &-2967533147946268563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4329,32 +3450,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Direction
+  m_Name: parameter:/Ambience/Attenuation
   m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-2936952122353378454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
+  Name: Attenuation
+  Min: 5
+  Max: 100
+  Default: 5
   ID:
     data1: 0
     data2: 0
@@ -4379,46 +3480,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-2900208979063236089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-2890882456468599203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-2856432964906439218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4479,66 +3540,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-2671415938871939618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-2615193782438859655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-2538610847457911845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-2533574817540398820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4579,26 +3580,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-2489563115202798018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-2478458709017637849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4615,6 +3596,26 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-2460030886471853457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 6/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 1
   ID:
     data1: 0
     data2: 0
@@ -4659,26 +3660,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-2389786881086956391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-2357644591418008345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4699,7 +3680,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-2284495953613786860
+--- !u!114 &-2277469661496442572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4708,20 +3689,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/TeleportNoise
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience 2/Attenuation
   m_EditorClassIdentifier: 
-  Path: event:/TeleportNoise
-  guid: f311de1296ebfd4abbcfa48c8fe2f39b
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 981
+  Name: Attenuation
+  Min: 5
+  Max: 100
+  Default: 5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-2274558729003613639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4753,6 +3731,26 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Bite 4/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-2210471218509151173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 3/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   Min: 0
@@ -4822,26 +3820,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-2135895756048031762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-2122536558067429946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4862,6 +3840,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-2102107080760407858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 4/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-2067083645205059441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5022,30 +4020,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-1846208783153071392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/TeleportHum
-  m_EditorClassIdentifier: 
-  Path: event:/TeleportHum
-  guid: e3425eaef177a343a7d534320146645f
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1600
---- !u!114 &-1766474314580537692
+--- !u!114 &-1829005705935438252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5055,7 +4030,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Direction
+  m_Name: parameter:/Bite 4/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-1817903438124024348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 2/Direction
   m_EditorClassIdentifier: 
   Name: Direction
   Min: 0
@@ -5064,7 +4059,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 0
+  Exists: 1
 --- !u!114 &-1745274833328375765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5085,7 +4080,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-1666248581772687373
+--- !u!114 &-1739962664173546472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5095,7 +4090,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Direction
+  m_Name: parameter:/Bite 4/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-1671239840385993732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 6/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-1649903916558037574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 4/Direction
   m_EditorClassIdentifier: 
   Name: Direction
   Min: 0
@@ -5125,6 +4160,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-1582764323714326038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/Attenuation
+  m_EditorClassIdentifier: 
+  Name: Attenuation
+  Min: 5
+  Max: 100
+  Default: 5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-1543817247073083780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5224,7 +4279,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1423824168833325384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5240,14 +4295,14 @@ MonoBehaviour:
   Path: event:/Bite 6
   guid: 20da57530ad69e4798288828447f3760
   Banks:
-  - {fileID: 0}
+  - {fileID: -7805829033893545818}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 6898634255614557834}
-  - {fileID: -9049797805932003748}
-  - {fileID: -5056078697411059254}
+  - {fileID: -5044841047407094525}
+  - {fileID: -3707984983553154469}
+  - {fileID: 3845747561504035209}
   MinDistance: 0
   MaxDistance: 0
   Length: 15209
@@ -5291,26 +4346,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-1334446391121834214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-1332150422764287476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5331,46 +4366,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-1331090965974721395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-1320986163608564609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-1308100714059229750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5437,29 +4432,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-1161173693284808069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/TeleportNoise
-  m_EditorClassIdentifier: 
-  Path: event:/TeleportNoise
-  guid: f311de1296ebfd4abbcfa48c8fe2f39b
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 981
 --- !u!114 &-1152571300770423066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5480,7 +4452,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-1105525765302831442
+--- !u!114 &-1127157316342819057
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5490,9 +4462,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Looping
+  m_Name: parameter:/Bite 5/Direction
   m_EditorClassIdentifier: 
-  Name: Looping
+  Name: Direction
   Min: 0
   Max: 1
   Default: 1
@@ -5520,26 +4492,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-1058856376229039416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-1025164475685682945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5686,26 +4638,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-859804058707837677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-837080407388788566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5726,26 +4658,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-759366050309212283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-736384226891611638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5826,26 +4738,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-687289198954291842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-669019831822827971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5866,66 +4758,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-668172988528996944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-658670832691761802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-633667107332844737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-599831534513365510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5939,46 +4771,6 @@ MonoBehaviour:
   m_Name: parameter:/Bite 6/Looping
   m_EditorClassIdentifier: 
   Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-533986819781974134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-533326263458164602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
   Min: 0
   Max: 1
   Default: 1
@@ -6026,7 +4818,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-433575472289717839
+--- !u!114 &-454966034947712019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6036,7 +4828,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Looping
+  m_Name: parameter:/Bite 6/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-414734331697972967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 1/Looping
   m_EditorClassIdentifier: 
   Name: Looping
   Min: 0
@@ -6066,46 +4878,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-341578031302023813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-338367704976698265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &-317796377812633875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6125,7 +4897,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-293909594138014903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6189,7 +4961,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-167520823027632397
+--- !u!114 &-7126636481618239
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6209,86 +4981,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-137637179680240240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-65892826265489018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-6984882494625619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-5842408182104051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6302,27 +4994,25 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -8508417123617124001}
-  - {fileID: 1509401091727250490}
+  - {fileID: -3422034195941297477}
+  - {fileID: -7805829033893545818}
   EditorEvents:
-  - {fileID: -7142994213629490823}
-  - {fileID: 1747147518605254801}
-  - {fileID: -7867085629517381985}
-  - {fileID: 1233683909884732590}
-  - {fileID: -4050423070583183077}
-  - {fileID: -7939228662560956735}
-  - {fileID: -6188732782743720519}
-  - {fileID: -5760668290688155701}
-  - {fileID: -7630140966328048217}
-  - {fileID: 3935740908791035636}
-  - {fileID: 7615219486025995634}
-  - {fileID: -1161173693284808069}
+  - {fileID: -6309126519706282735}
+  - {fileID: 1137791045836523874}
+  - {fileID: 4444318931020997430}
+  - {fileID: -1423824168833325384}
+  - {fileID: 5163776548538100755}
+  - {fileID: -7728456395735033869}
+  - {fileID: 7678585456878371013}
+  - {fileID: -8388023600019339103}
+  - {fileID: 6730579304032550190}
+  - {fileID: -7035703919531755415}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1509401091727250490}
+  - {fileID: -7805829033893545818}
   StringsBanks:
-  - {fileID: -8508417123617124001}
-  stringsBankWriteTime: 637544501100000000
+  - {fileID: -3422034195941297477}
+  stringsBankWriteTime: 637544225958995929
   cacheVersion: 6
 --- !u!114 &7585233080695992
 MonoBehaviour:
@@ -6444,7 +5134,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &219916607734226866
+--- !u!114 &243785885524860653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6454,47 +5144,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &228782260655095601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience 2/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &277318042492175805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Occlusion
+  m_Name: parameter:/Bite 3/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   Min: 0
@@ -6503,27 +5153,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
---- !u!114 &293313057035445799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &302176927032127308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6624,6 +5254,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &416308092788996859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 3/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &419606373648046906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6663,7 +5313,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &473008517916317986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6704,26 +5354,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &571488127595574854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &596454067653848870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6735,26 +5365,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Bite 1/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &616624174059782102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   Min: 0
@@ -6824,6 +5434,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &675995681922450851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 2/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &687824316358431887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6844,6 +5474,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &735320374687351544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/Attenuation
+  m_EditorClassIdentifier: 
+  Name: Attenuation
+  Min: 5
+  Max: 100
+  Default: 5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &785449630991035961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6857,6 +5507,26 @@ MonoBehaviour:
   m_Name: parameter:/Bite 5/Direction
   m_EditorClassIdentifier: 
   Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &788607695838707929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 1/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
   Min: 0
   Max: 1
   Default: 1
@@ -6984,7 +5654,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &951091003537751720
+--- !u!114 &917252099900133079
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6994,32 +5664,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Direction
+  m_Name: parameter:/Bite 4/Looping
   m_EditorClassIdentifier: 
-  Name: Direction
+  Name: Looping
   Min: 0
   Max: 1
   Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &959411996848945995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
   ID:
     data1: 0
     data2: 0
@@ -7119,14 +5769,14 @@ MonoBehaviour:
   Path: event:/Bite 4
   guid: 19a495735710404783d4d6c819be27a0
   Banks:
-  - {fileID: 0}
+  - {fileID: -7805829033893545818}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 2551703148231396057}
-  - {fileID: 0}
-  - {fileID: -1448236337208913130}
+  - {fileID: 5759512054563286594}
+  - {fileID: 8843357311769192168}
+  - {fileID: 917252099900133079}
   MinDistance: 0
   MaxDistance: 0
   Length: 12186
@@ -7150,7 +5800,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &1162389956549928967
+--- !u!114 &1166652715529901092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7160,42 +5810,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Occlusion
+  m_Name: parameter:/Bite 6/Looping
   m_EditorClassIdentifier: 
-  Name: Occlusion
+  Name: Looping
   Min: 0
-  Max: 10
-  Default: 0
+  Max: 1
+  Default: 1
   ID:
     data1: 0
     data2: 0
-  Exists: 0
---- !u!114 &1233683909884732590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Bite 6
-  m_EditorClassIdentifier: 
-  Path: event:/Bite 6
-  guid: 20da57530ad69e4798288828447f3760
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -5813087527839096861}
-  - {fileID: -7885960089744984958}
-  - {fileID: -4898634126420911517}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 15209
+  Exists: 1
 --- !u!114 &1242266994189044671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7236,26 +5860,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &1281170231093249532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &1312409621185407409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7315,7 +5919,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &1370355391286391071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7356,26 +5960,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &1403037078537203750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &1410680190044622806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7396,7 +5980,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &1509401091727250490
+--- !u!114 &1423298785589784700
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7405,15 +5989,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 5/Direction
   m_EditorClassIdentifier: 
-  Path: SnapMusicAudio/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637544501100000000
-  LoadResult: 0
-  FileSizes: []
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &1520579700086018299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 2/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &1535934672814802007
 MonoBehaviour:
@@ -7495,46 +6100,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &1644731170852026367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &1655892106372837956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &1659678984912125767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7555,7 +6120,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &1675558823043261511
+--- !u!114 &1737884863022942096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7565,47 +6130,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &1693211943605702929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &1702119298533182628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Occlusion
+  m_Name: parameter:/Bite 6/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   Min: 0
@@ -7615,32 +6140,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &1747147518605254801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Bite 4
-  m_EditorClassIdentifier: 
-  Path: event:/Bite 4
-  guid: 19a495735710404783d4d6c819be27a0
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 277318042492175805}
-  - {fileID: -9082035808699920295}
-  - {fileID: 5703294701924100703}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 12186
 --- !u!114 &1754588656373298753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7657,6 +6156,26 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &1772713328172195788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 2/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 1
   ID:
     data1: 0
     data2: 0
@@ -7701,7 +6220,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &1789349083309204452
+--- !u!114 &1813936215682522452
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7711,16 +6230,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience 2/Attenuation
+  m_Name: parameter:/Bite 5/Looping
   m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 1
   ID:
     data1: 0
     data2: 0
-  Exists: 0
+  Exists: 1
 --- !u!114 &1828874636179782136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7760,7 +6279,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &1859719836679799296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7801,7 +6320,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &1925440588620366992
+--- !u!114 &1990751769420746762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7820,8 +6339,8 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 0
---- !u!114 &1990751769420746762
+  Exists: 1
+--- !u!114 &2006481586132933008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7831,7 +6350,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Looping
+  m_Name: parameter:/Bite 6/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &2016204167693364735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 5/Looping
   m_EditorClassIdentifier: 
   Name: Looping
   Min: 0
@@ -7860,7 +6399,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &2046562371843287213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7960,7 +6499,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &2097370963891435852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8041,27 +6580,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &2303707421908606395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &2360688174513885695
+--- !u!114 &2344062321325543200
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8081,26 +6600,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &2370018194170242615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &2391739697025500501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8112,46 +6611,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Bite 4/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &2424796413824721041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &2499427105468069832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   Min: 0
@@ -8240,27 +6699,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
---- !u!114 &2603830528613146489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &2619032087393902878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8281,26 +6720,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &2653506241777494527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &2662951287319129261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8381,26 +6800,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &2733301033308814258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &2779777987814628017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8421,7 +6820,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &2899880059446443604
+--- !u!114 &2790584680346941937
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8431,7 +6830,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Occlusion
+  m_Name: parameter:/Bite 6/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   Min: 0
@@ -8441,26 +6840,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &2909225383445785963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience 2/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &2940505619481687878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8477,26 +6856,6 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &2951003170134396398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
   ID:
     data1: 0
     data2: 0
@@ -8581,26 +6940,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &2984971384511739572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &3006481676633292492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8617,26 +6956,6 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &3066822811401348042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
   ID:
     data1: 0
     data2: 0
@@ -8681,7 +7000,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &3247665679747404620
+--- !u!114 &3218324274716635833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8691,27 +7010,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &3279004164453213755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Occlusion
+  m_Name: parameter:/Bite 1/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   Min: 0
@@ -8720,7 +7019,47 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 0
+--- !u!114 &3234541107374395758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 3/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
+--- !u!114 &3307006478643681079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 2/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &3312914982714162275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8801,6 +7140,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &3402513047334360009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 3/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &3413916254987412913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8841,6 +7200,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &3425821288379449921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 2/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &3485724431787955028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8852,26 +7231,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Bite 6/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &3491617747081144015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Direction
   m_EditorClassIdentifier: 
   Name: Direction
   Min: 0
@@ -9041,46 +7400,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &3756347680720654408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience 2/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &3769825959260079113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &3781362278930978340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9141,7 +7460,27 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &3848198555521158329
+--- !u!114 &3845747561504035209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 6/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &3859631479976196245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9160,8 +7499,8 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
---- !u!114 &3905712603625329873
+  Exists: 0
+--- !u!114 &3911225448192663598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9171,7 +7510,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Direction
+  m_Name: parameter:/Bite 4/Direction
   m_EditorClassIdentifier: 
   Name: Direction
   Min: 0
@@ -9180,7 +7519,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &3934552497683810308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9201,29 +7540,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &3935740908791035636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Avril 14th
-  m_EditorClassIdentifier: 
-  Path: event:/Avril 14th
-  guid: dc49ab62ff815a49b117bc1e0403f60e
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 75139
 --- !u!114 &3942894006758976098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9244,26 +7560,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &3965258748487215639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &3993959044199874036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9284,7 +7580,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &4044215188175823226
+--- !u!114 &4014904597597613833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9294,12 +7590,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Direction
+  m_Name: parameter:/Bite 4/Looping
   m_EditorClassIdentifier: 
-  Name: Direction
+  Name: Looping
   Min: 0
   Max: 1
   Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &4054905836735143983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 3/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
   ID:
     data1: 0
     data2: 0
@@ -9464,7 +7780,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &4220801423072458199
+--- !u!114 &4219701681195297539
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9474,16 +7790,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Direction
+  m_Name: parameter:/Bite 2/Looping
   m_EditorClassIdentifier: 
-  Name: Direction
+  Name: Looping
   Min: 0
   Max: 1
   Default: 1
   ID:
     data1: 0
     data2: 0
-  Exists: 0
+  Exists: 1
 --- !u!114 &4236887009144956032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9497,26 +7813,6 @@ MonoBehaviour:
   m_Name: parameter:/Bite 4/Looping
   m_EditorClassIdentifier: 
   Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &4282553305523399276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
   Min: 0
   Max: 1
   Default: 1
@@ -9544,26 +7840,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &4347555581656097361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &4348881713014442864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9584,7 +7860,27 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &4374136738361245069
+--- !u!114 &4415866309739137311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 5/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &4416032358245005569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9604,7 +7900,33 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &4414446839610383530
+--- !u!114 &4444318931020997430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bite 2
+  m_EditorClassIdentifier: 
+  Path: event:/Bite 2
+  guid: 1d3d9a2599db814f98b1b4ff14f6eaeb
+  Banks:
+  - {fileID: -7805829033893545818}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5460212497766253535}
+  - {fileID: -6105185809379615015}
+  - {fileID: -5575017277313840922}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12139
+--- !u!114 &4456859427755784428
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9614,16 +7936,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Occlusion
+  m_Name: parameter:/Bite 5/Direction
   m_EditorClassIdentifier: 
-  Name: Occlusion
+  Name: Direction
   Min: 0
-  Max: 10
-  Default: 0
+  Max: 1
+  Default: 1
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &4463830612454859454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9644,26 +7966,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &4485855587923314008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience 2/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &4531834402851981271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9684,7 +7986,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &4689229283378756352
+--- !u!114 &4553763241509067637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9694,7 +7996,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Looping
+  m_Name: parameter:/Bite 5/Looping
   m_EditorClassIdentifier: 
   Name: Looping
   Min: 0
@@ -9703,7 +8005,27 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
+--- !u!114 &4611612996323186004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 6/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &4712785339207516273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9727,7 +8049,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 6000
---- !u!114 &4754399793837496025
+--- !u!114 &4741596199653317071
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9737,9 +8059,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Looping
+  m_Name: parameter:/Bite 3/Direction
   m_EditorClassIdentifier: 
-  Name: Looping
+  Name: Direction
   Min: 0
   Max: 1
   Default: 1
@@ -9747,7 +8069,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &4783927071990411787
+--- !u!114 &4844959928698719612
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9757,47 +8079,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &4853972448125325845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &4872703189629374490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Looping
+  m_Name: parameter:/Bite 5/Looping
   m_EditorClassIdentifier: 
   Name: Looping
   Min: 0
@@ -9911,7 +8193,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &5052035240560179859
+--- !u!114 &5021108264911352551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9921,36 +8203,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience 2/Attenuation
+  m_Name: parameter:/Bite 4/Looping
   m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &5101743910893149787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
+  Name: Looping
   Min: 0
   Max: 1
   Default: 1
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
+--- !u!114 &5024219840301196441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 3/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &5119993159770530283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9967,6 +8249,26 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &5152171020116102133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 4/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 1
   ID:
     data1: 0
     data2: 0
@@ -9991,30 +8293,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &5163776548538100755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Door
-  m_EditorClassIdentifier: 
-  Path: event:/Door
-  guid: 21a65aa3e2e1d24aaaa9eaca034f7b8f
-  Banks:
-  - {fileID: 0}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1200
---- !u!114 &5188767888792034362
+--- !u!114 &5156042746876776079
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10034,6 +8313,49 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &5163776548538100755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Door
+  m_EditorClassIdentifier: 
+  Path: event:/Door
+  guid: 21a65aa3e2e1d24aaaa9eaca034f7b8f
+  Banks:
+  - {fileID: -7805829033893545818}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1200
+--- !u!114 &5182841126242156609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 3/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &5203008593731787786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10054,26 +8376,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &5205541525289304659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &5320966752973976149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10090,46 +8392,6 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &5332262331008210594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &5350248683598611099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
   ID:
     data1: 0
     data2: 0
@@ -10174,6 +8436,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &5460212497766253535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 2/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5467936195129434103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10214,26 +8496,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &5507884680602988584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &5539009093441733366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10274,6 +8536,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &5568602926836969117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 5/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &5572852392924814592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10305,6 +8587,26 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Bite 2/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &5583124062844969944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 5/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   Min: 0
@@ -10414,26 +8716,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &5703294701924100703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &5707132944699616862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10534,7 +8816,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &5778436528880217336
+--- !u!114 &5759512054563286594
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10544,17 +8826,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience/Attenuation
+  m_Name: parameter:/Bite 4/Occlusion
   m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
   ID:
     data1: 0
     data2: 0
   Exists: 1
 --- !u!114 &5782750107395577246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 5/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &5824441337475887141
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10614,6 +8916,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &5873404955657778525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 1/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &5890308289168583145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10645,6 +8967,26 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Bite 5/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &5916665312329794177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 1/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   Min: 0
@@ -10734,66 +9076,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &6045797270779242984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &6074073269222564234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &6111089195128527264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &6141527751048312224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10807,26 +9089,6 @@ MonoBehaviour:
   m_Name: parameter:/Bite 6/Direction
   m_EditorClassIdentifier: 
   Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &6150263864605727050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
   Min: 0
   Max: 1
   Default: 1
@@ -10854,26 +9116,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &6280200022865456832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &6288825399865449612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10890,26 +9132,6 @@ MonoBehaviour:
   Min: 5
   Max: 100
   Default: 5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &6289373170165699014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
   ID:
     data1: 0
     data2: 0
@@ -10994,26 +9216,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &6463994317672283095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &6519880363970845229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11074,26 +9276,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &6535965948517499466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &6579572309997522986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11174,7 +9356,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &6660412689052722223
+--- !u!114 &6701434139055898439
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11184,36 +9366,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Direction
+  m_Name: parameter:/Bite 1/Looping
   m_EditorClassIdentifier: 
-  Name: Direction
+  Name: Looping
   Min: 0
   Max: 1
   Default: 1
   ID:
     data1: 0
     data2: 0
-  Exists: 1
---- !u!114 &6675835450315815561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6704423392347372149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11254,7 +9416,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &6724740093775250957
+--- !u!114 &6730579304032550190
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11263,17 +9425,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Looping
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bite 5
   m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
+  Path: event:/Bite 5
+  guid: 3cbfffb5a0a8f048b64e3b767f3f8eb2
+  Banks:
+  - {fileID: -7805829033893545818}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5824441337475887141}
+  - {fileID: -1127157316342819057}
+  - {fileID: -5616179426813699072}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12161
 --- !u!114 &6766327679891906877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11310,26 +9478,6 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &6786866070957498337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
   ID:
     data1: 0
     data2: 0
@@ -11413,7 +9561,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6911633368201388852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11430,26 +9578,6 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &6944832332358101132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
   ID:
     data1: 0
     data2: 0
@@ -11474,26 +9602,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &7067198156722960775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &7077598768098337238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11514,26 +9622,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &7093605318259036268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &7110946402989762537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11567,26 +9655,6 @@ MonoBehaviour:
   m_Name: parameter:/Bite 5/Looping
   m_EditorClassIdentifier: 
   Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &7174534393050394004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
   Min: 0
   Max: 1
   Default: 1
@@ -11654,46 +9722,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &7277910436662824937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 3/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &7339690902650917748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &7382344197230521425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11720,26 +9748,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 12161
---- !u!114 &7401277879614510750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &7409886898582700653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11760,26 +9768,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &7534644165436919205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &7537474527346311421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11820,49 +9808,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &7604497965059330104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &7615219486025995634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/TeleportHum
-  m_EditorClassIdentifier: 
-  Path: event:/TeleportHum
-  guid: e3425eaef177a343a7d534320146645f
-  Banks:
-  - {fileID: 1509401091727250490}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1600
 --- !u!114 &7627429604622520291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11918,17 +9863,57 @@ MonoBehaviour:
   Path: event:/Bite 3
   guid: 2e0488401382214d9ccb406fc11f57bc
   Banks:
-  - {fileID: 0}
+  - {fileID: -7805829033893545818}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 0}
-  - {fileID: -8348415052667120555}
-  - {fileID: 1849881185931193218}
+  - {fileID: 4054905836735143983}
+  - {fileID: 4741596199653317071}
+  - {fileID: -8534607493362391577}
   MinDistance: 0
   MaxDistance: 0
   Length: 12139
+--- !u!114 &7695051969877728900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 5/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &7700522936552402116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 4/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &7728850690413391154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11975,26 +9960,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &7731646003544923881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &7737098396812255897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12014,7 +9979,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &7763260051580698117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12135,7 +10100,27 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &7976440701973901022
+--- !u!114 &7952269096591090145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 5/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &7978320106875682411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12154,26 +10139,6 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 0
---- !u!114 &7990948074406556782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience 2/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
-  ID:
-    data1: 0
-    data2: 0
   Exists: 1
 --- !u!114 &7992356067961864274
 MonoBehaviour:
@@ -12186,66 +10151,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Bite 6/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &8010342669304662209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience 2/Attenuation
-  m_EditorClassIdentifier: 
-  Name: Attenuation
-  Min: 5
-  Max: 100
-  Default: 5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &8036284019419093954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &8070781442725258946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   Min: 0
@@ -12276,6 +10181,26 @@ MonoBehaviour:
     data2: 0
   Exists: 1
 --- !u!114 &8105446367160186124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 2/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &8124133485063481286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12395,6 +10320,46 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &8419261540994201642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 1/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &8504242401084961905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bite 6/Direction
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &8511309477833685591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12415,7 +10380,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &8514726702145562284
+--- !u!114 &8541416301088279100
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12425,9 +10390,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 5/Direction
+  m_Name: parameter:/Bite 3/Looping
   m_EditorClassIdentifier: 
-  Name: Direction
+  Name: Looping
   Min: 0
   Max: 1
   Default: 1
@@ -12535,26 +10500,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &8656135026941811781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &8740707395602791609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12595,7 +10540,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &8810756082277249711
+--- !u!114 &8807035801706175800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12605,7 +10550,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 1/Looping
+  m_Name: parameter:/Bite 4/Looping
   m_EditorClassIdentifier: 
   Name: Looping
   Min: 0
@@ -12635,7 +10580,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &8820043870928694340
+--- !u!114 &8843357311769192168
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12645,29 +10590,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Occlusion
+  m_Name: parameter:/Bite 4/Direction
   m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &8820638774722281046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Looping
-  m_EditorClassIdentifier: 
-  Name: Looping
+  Name: Direction
   Min: 0
   Max: 1
   Default: 1
@@ -12755,26 +10680,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &9001578220609240504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 4/Direction
-  m_EditorClassIdentifier: 
-  Name: Direction
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &9040428718512724502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12815,26 +10720,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &9072565448731947887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 6/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
 --- !u!114 &9080861934813061173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12855,7 +10740,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &9177138549873098907
+--- !u!114 &9097885617613101135
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12865,12 +10750,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bite 2/Direction
+  m_Name: parameter:/Bite 5/Occlusion
   m_EditorClassIdentifier: 
-  Name: Direction
+  Name: Occlusion
   Min: 0
-  Max: 1
-  Default: 1
+  Max: 10
+  Default: 0
   ID:
     data1: 0
     data2: 0

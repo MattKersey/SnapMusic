@@ -386,7 +386,7 @@
 			<value>Max Distance</value>
 		</property>
 		<property name="value">
-			<value>7</value>
+			<value>15</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(2.000000,1.000000)(5.000000,5.000000)(10.000000,10.000000)(15.000000,100.000000)(20.000000,1000.000000)(27.000000,10000.000000)}</value>
@@ -425,7 +425,7 @@
 			<value>Directivity</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>
@@ -436,7 +436,7 @@
 			<value>Dir Sharpness</value>
 		</property>
 		<property name="value">
-			<value>10</value>
+			<value>1</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,1.000000)(1.000000,2.000000)(2.000000,5.000000)(3.000000,10.000000)}</value>

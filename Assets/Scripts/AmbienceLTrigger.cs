@@ -7,9 +7,11 @@ public class AmbienceLTrigger : MonoBehaviour
 
     AmbiencePatrol patrolAmbience1;
     AmbiencePatrol patrolAmbience2;
+    public bool backTrigger = true;
 
     float enterDirection = 0.0f;
     float exitDirection = 0.0f;
+    float normalizedDirection = 0.0f;
 
     private void Start()
     {
@@ -67,9 +69,22 @@ public class AmbienceLTrigger : MonoBehaviour
         patrolAmbience1.StopPatrol();
         patrolAmbience2.StopPatrol();
 
-        // Re-activate patrols based on enter direction and trigger name
-        if (enterDirection > 0)
+        // Normalize direction based on child trigger and L trigger angle
+        if ((name == "Front Trigger" && transform.localEulerAngles.y > 90) ||
+            (name == "Back Trigger" && transform.localEulerAngles.y >= 90 && transform.localEulerAngles.y < 270))
         {
+            normalizedDirection = -enterDirection;
+        }
+
+        else
+        {
+            normalizedDirection = enterDirection;
+        }
+
+        // Re-activate patrols based on enter direction and trigger name
+        if (normalizedDirection > 0)
+        {
+            BiteSelf.insideLTrigger = true;
             if (name == "Front Trigger")
             {
                 patrolAmbience1.ForwardPatrol();
@@ -88,15 +103,17 @@ public class AmbienceLTrigger : MonoBehaviour
             patrolAmbience2.StartPatrol();
         }
 
-        else if (enterDirection < 0 && name == "Front Trigger")
+        else if (normalizedDirection < 0 && name == "Front Trigger")
         {
+            BiteSelf.insideLTrigger = false;
             patrolAmbience1.activated = true;
             patrolAmbience1.StartPatrol();
             patrolAmbience2.activated = false;
         }
 
-        else if (enterDirection < 0 && name == "Back Trigger")
+        else if (normalizedDirection < 0 && name == "Back Trigger")
         {
+            BiteSelf.insideLTrigger = false;
             patrolAmbience1.activated = false;
             patrolAmbience2.activated = true;
             patrolAmbience2.StartPatrol();

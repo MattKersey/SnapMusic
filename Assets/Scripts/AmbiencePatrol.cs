@@ -14,8 +14,7 @@ public class AmbiencePatrol : StudioEventEmitterOcclusion
     GameObject player;
     float distance;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         // Get player, start marker, and end marker positions
         player = GameObject.Find("OVRPlayerController");
@@ -33,7 +32,11 @@ public class AmbiencePatrol : StudioEventEmitterOcclusion
         {
             distance = Mathf.Abs(endPosition.x - startPosition.x);
         }
+    }
 
+    // Start is called before the first frame update
+    void Start()
+    {
         // Initialize FMOD Instance
         fmodInstance = RuntimeManager.CreateInstance(fmodEvent);
         RuntimeManager.AttachInstanceToGameObject(fmodInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
