@@ -14,6 +14,7 @@ public class AmbienceDoorTrigger : MonoBehaviour
     float enterDirection;
     float exitDirection;
     string state = "none";
+    bool firstDoor = false;
 
     private void Start()
     {
@@ -27,8 +28,9 @@ public class AmbienceDoorTrigger : MonoBehaviour
             patrolAmbience2 = patrol2.GetComponent<AmbiencePatrol>();
         }
 
-        if (patrol1 != null && patrol2 != null)
+        if (name == "Door Trigger 1")
         {
+            firstDoor = true;
             start = patrolAmbience1.endPosition;
             end = patrolAmbience2.startPosition;
         }
@@ -57,38 +59,30 @@ public class AmbienceDoorTrigger : MonoBehaviour
 
         if (start.x == end.x)
         {
-            direction = (heading / heading.magnitude).z;
-            /*
-            if (name == "Door Trigger 1")
+            if (firstDoor)
             {
-                
+                direction = (heading / heading.magnitude).z;
             }
-
+            
             else
             {
                 direction = (heading / heading.magnitude).x;
             }
-            */
+
         }
 
         else if (start.z == end.z)
         {
-            direction = (heading / heading.magnitude).x;
-            /*
-            if (name == "Door Trigger 1")
+            if (firstDoor)
             {
-                
+                direction = (heading / heading.magnitude).x;
             }
 
             else
             {
                 direction = (heading / heading.magnitude).z;
             }
-            */
         }
-
-        Debug.Log("Direction");
-        Debug.Log(direction);
 
         if (enter)
         {
@@ -135,12 +129,8 @@ public class AmbienceDoorTrigger : MonoBehaviour
             patrolAmbience2.StopPatrol();
         }
 
-        Debug.Log("Enter Direction");
-        Debug.Log(enterDirection);
-
         if (enterDirection > 0)
         {
-            Debug.Log("Triggered This Condition");
             if (patrolAmbience1 != null)
             {
                 patrolAmbience1.activated = false;
@@ -155,13 +145,12 @@ public class AmbienceDoorTrigger : MonoBehaviour
 
         else if (enterDirection < 0)
         {
-            Debug.Log("Triggered This Condition");
             if (patrolAmbience2 != null)
             {
                 patrolAmbience2.activated = false;
             }
 
-            if (patrolAmbience2 != null)
+            if (patrolAmbience1 != null)
             {
                 patrolAmbience1.StartPatrol();
                 patrolAmbience1.activated = true;

@@ -513,8 +513,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 1104718573}
   patrol2: {fileID: 2094200648}
-  bite: {fileID: 0}
-  bite2: {fileID: 0}
   backTrigger: 1
 --- !u!1001 &67457840
 PrefabInstance:
@@ -1497,7 +1495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrol1: {fileID: 1393143608}
-  patrol2: {fileID: 1156513287}
+  patrol2: {fileID: 0}
 --- !u!65 &197120150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1648,12 +1646,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b46e0920d9667ca45b59dc5301c885aa,
     type: 3}
   m_PrefabInstance: {fileID: 771722270}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &222614402 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2988201345335955083, guid: 3cb2cf3c6565345cd813d9f7db97430a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1292455765}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &229738715
 PrefabInstance:
@@ -2504,8 +2496,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 667563348}
   patrol2: {fileID: 1393143608}
-  bite: {fileID: 1974256873}
-  bite2: {fileID: 222614402}
   backTrigger: 0
 --- !u!1 &415784617
 GameObject:
@@ -2927,13 +2917,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480765514}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1218912572}
-  patrol2: {fileID: 617752859}
+  patrol1: {fileID: 0}
+  patrol2: {fileID: 1996650079}
 --- !u!65 &480765518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4006,8 +3996,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 562840838}
   patrol2: {fileID: 1527010810}
-  bite: {fileID: 222614402}
-  bite2: {fileID: 0}
   backTrigger: 1
 --- !u!1 &630201404
 GameObject:
@@ -4065,13 +4053,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630201404}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1218912572}
-  patrol2: {fileID: 617752859}
+  patrol1: {fileID: 1156513287}
+  patrol2: {fileID: 1527010810}
 --- !u!65 &630201408
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4856,13 +4844,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694793707}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1218912572}
-  patrol2: {fileID: 617752859}
+  patrol1: {fileID: 877457934}
+  patrol2: {fileID: 0}
 --- !u!65 &694793711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6733,8 +6721,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 809628733}
   patrol2: {fileID: 746440228}
-  bite: {fileID: 1358193772}
-  bite2: {fileID: 0}
   backTrigger: 0
 --- !u!1 &891168467 stripped
 GameObject:
@@ -7719,8 +7705,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 1996650079}
   patrol2: {fileID: 1104718573}
-  bite: {fileID: 1292455767}
-  bite2: {fileID: 0}
   backTrigger: 0
 --- !u!1001 &1068599557
 PrefabInstance:
@@ -8247,13 +8231,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114357009}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1218912572}
-  patrol2: {fileID: 617752859}
+  patrol1: {fileID: 1393143608}
+  patrol2: {fileID: 1156513287}
 --- !u!65 &1114357013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8873,13 +8857,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262356204}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1218912572}
-  patrol2: {fileID: 617752859}
+  patrol1: {fileID: 0}
+  patrol2: {fileID: 618826624}
 --- !u!65 &1262356208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9437,12 +9421,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1292455765}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1292455767 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6824154009339687807, guid: 3cb2cf3c6565345cd813d9f7db97430a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1292455765}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1301949921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9936,12 +9914,6 @@ PrefabInstance:
       objectReference: {fileID: 381901037}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd95aa4817356645979f7a136313957, type: 3}
---- !u!1 &1358193772 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4604472101417630403, guid: 3cb2cf3c6565345cd813d9f7db97430a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1292455765}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1364626270
 GameObject:
   m_ObjectHideFlags: 0
@@ -10098,13 +10070,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369465981}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -17.5, y: 0, z: -7.75}
   m_LocalScale: {x: 4.5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1926497399}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &1369465983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10899,8 +10871,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 848874917}
   patrol2: {fileID: 1996650079}
-  bite: {fileID: 1292455767}
-  bite2: {fileID: 0}
   backTrigger: 1
 --- !u!1 &1470868525
 GameObject:
@@ -11136,8 +11106,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 186535236}
   patrol2: {fileID: 667563348}
-  bite: {fileID: 1974256873}
-  bite2: {fileID: 0}
   backTrigger: 1
 --- !u!1 &1484890891 stripped
 GameObject:
@@ -12500,8 +12468,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 1527010810}
   patrol2: {fileID: 877457934}
-  bite: {fileID: 222614402}
-  bite2: {fileID: 0}
   backTrigger: 0
 --- !u!1 &1664292803 stripped
 GameObject:
@@ -13762,8 +13728,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 617752859}
   patrol2: {fileID: 1159972263}
-  bite: {fileID: 0}
-  bite2: {fileID: 0}
   backTrigger: 1
 --- !u!1 &1808912644
 GameObject:
@@ -14819,8 +14783,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 667563348}
   patrol2: {fileID: 1156513287}
-  bite: {fileID: 222614402}
-  bite2: {fileID: 0}
   backTrigger: 1
 --- !u!1 &1926497398
 GameObject:
@@ -15258,7 +15220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1156513287}
+  patrol1: {fileID: 0}
   patrol2: {fileID: 1527010810}
 --- !u!65 &1948048356
 BoxCollider:
@@ -15436,13 +15398,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959838633}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84870c6bfb5f8445bd8133e6ca22127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1218912572}
-  patrol2: {fileID: 617752859}
+  patrol1: {fileID: 809628733}
+  patrol2: {fileID: 0}
 --- !u!65 &1959838637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16348,8 +16310,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 1393143608}
   patrol2: {fileID: 1438569683}
-  bite: {fileID: 222614402}
-  bite2: {fileID: 0}
   backTrigger: 0
 --- !u!4 &2114918979 stripped
 Transform:
@@ -18526,7 +18486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726358509022975359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 726358509022742869}
