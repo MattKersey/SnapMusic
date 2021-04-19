@@ -26,7 +26,10 @@ public class BiteController : MonoBehaviour
     public OVRScreenFade cameraFader;
     public AudioSource teled;
 
+    private GameObject directionsParent;
+    private GameObject directions;
     private GameObject arrows;
+
 
     /**
     Upon start, get all the bite gameobjects (children), calculate their quantity,
@@ -38,8 +41,10 @@ public class BiteController : MonoBehaviour
         //get the screen fader object from the main camera
         cameraFader = GameObject.Find("CenterEyeAnchor").GetComponent<OVRScreenFade>();
 
-        arrows = GameObject.Find("Stage Directions");
+        directionsParent = GameObject.Find("Stage Directions");
+        arrows = directionsParent.transform.GetChild(1).gameObject;
         arrows.SetActive(false);
+        directions = directionsParent.transform.GetChild(0).gameObject;
 
         songBites = GameObject.FindGameObjectsWithTag("Sound Bite");
         numOfTotalBites = songBites.Length;
@@ -114,6 +119,7 @@ public class BiteController : MonoBehaviour
             thePlayerObject.GetComponent<AdditionalControls>().UpdateState(AdditionalControls.States.EDIT);
             //turn on song bite direction arrows
             arrows.SetActive(true);
+            directions.SetActive(false);
         }
     }
 
