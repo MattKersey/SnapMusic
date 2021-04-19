@@ -109,7 +109,7 @@ public class CustomController : OVRGrabber
             bite.GetComponent<BiteSelf>().Reverse();
         }
 
-        if (OVRInput.GetDown(OVRInput.Button.Three) || Input.GetKey(KeyCode.C))
+        if (OVRInput.GetDown(OVRInput.Button.Three))
         {
             if (songIsPlaying)
             {
