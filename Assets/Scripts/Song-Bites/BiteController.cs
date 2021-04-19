@@ -271,8 +271,8 @@ public class BiteController : MonoBehaviour
             BiteSelf _biteSelf = child.GetComponent<BiteSelf>();
             if (idx != _biteSelf.GetBiteIdx() || _biteSelf.GetPlayBackOrder() != 1)
             {
-                child.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
-                child.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.red);
+                child.GetComponent<Renderer>().material = invalidMaterial;
+                child.GetComponent<Renderer>().material = invalidMaterial;
                 correctOrder = false;
             }
         }
