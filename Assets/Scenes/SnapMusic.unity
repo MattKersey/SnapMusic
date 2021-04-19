@@ -446,9 +446,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
+      propertyPath: currentPatrols
+      value: 
+      objectReference: {fileID: 882614102}
+    - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
+        type: 3}
       propertyPath: justTeleported
       value: 
       objectReference: {fileID: 1364626270}
+    - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
+        type: 3}
+      propertyPath: stationPatrols
+      value: 
+      objectReference: {fileID: 1924468162}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
       propertyPath: connectedStation
@@ -705,9 +715,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
+      propertyPath: currentPatrols
+      value: 
+      objectReference: {fileID: 67136523}
+    - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
+        type: 3}
       propertyPath: justTeleported
       value: 
       objectReference: {fileID: 1364626270}
+    - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
+        type: 3}
+      propertyPath: stationPatrols
+      value: 
+      objectReference: {fileID: 1464221406}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
       propertyPath: connectedStation
@@ -1399,7 +1419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -1459,7 +1479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!114 &197120149
 MonoBehaviour:
@@ -2473,8 +2493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1393143608}
-  patrol2: {fileID: 1438569683}
+  patrol1: {fileID: 667563348}
+  patrol2: {fileID: 1393143608}
 --- !u!1 &415784617
 GameObject:
   m_ObjectHideFlags: 0
@@ -2590,7 +2610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!114 &421672007
 MonoBehaviour:
@@ -2766,6 +2786,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
         type: 3}
+      propertyPath: currentPatrols
+      value: 
+      objectReference: {fileID: 1624581533}
+    - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
+        type: 3}
       propertyPath: justTeleported
       value: 
       objectReference: {fileID: 1364626270}
@@ -2821,7 +2846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -2881,7 +2906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!114 &480765517
 MonoBehaviour:
@@ -3665,7 +3690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -3792,7 +3817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -3844,7 +3869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -4016,7 +4041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!114 &630201407
 MonoBehaviour:
@@ -4215,7 +4240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -4750,6 +4775,11 @@ PrefabInstance:
       objectReference: {fileID: 1364626270}
     - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
         type: 3}
+      propertyPath: stationPatrols
+      value: 
+      objectReference: {fileID: 625283917}
+    - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
+        type: 3}
       propertyPath: connectedStation
       value: 
       objectReference: {fileID: 26960061}
@@ -4802,7 +4832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!114 &694793710
 MonoBehaviour:
@@ -4878,7 +4908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!114 &696191512
 MonoBehaviour:
@@ -5132,7 +5162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -5223,6 +5253,11 @@ PrefabInstance:
       propertyPath: cameraObscurer
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
+        type: 3}
+      propertyPath: currentPatrols
+      value: 
+      objectReference: {fileID: 625283917}
     - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
         type: 3}
       propertyPath: justTeleported
@@ -5479,9 +5514,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
         type: 3}
+      propertyPath: currentPatrols
+      value: 
+      objectReference: {fileID: 2107361022}
+    - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
+        type: 3}
       propertyPath: justTeleported
       value: 
       objectReference: {fileID: 1364626270}
+    - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
+        type: 3}
+      propertyPath: stationPatrols
+      value: 
+      objectReference: {fileID: 1483944596}
     - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
         type: 3}
       propertyPath: connectedStation
@@ -5941,7 +5986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -5993,7 +6038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -6075,6 +6120,11 @@ PrefabInstance:
       propertyPath: justTeleported
       value: 
       objectReference: {fileID: 2117706665}
+    - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
+        type: 3}
+      propertyPath: stationPatrols
+      value: 
+      objectReference: {fileID: 1624581533}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
       propertyPath: connectedStation
@@ -6406,7 +6456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -6538,7 +6588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -6592,7 +6642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!114 &880302097
 MonoBehaviour:
@@ -6797,7 +6847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -7735,9 +7785,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
         type: 3}
+      propertyPath: currentPatrols
+      value: 
+      objectReference: {fileID: 1924468162}
+    - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
+        type: 3}
       propertyPath: justTeleported
       value: 
       objectReference: {fileID: 1364626270}
+    - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
+        type: 3}
+      propertyPath: stationPatrols
+      value: 
+      objectReference: {fileID: 882614102}
     - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
         type: 3}
       propertyPath: connectedStation
@@ -7790,7 +7850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -7881,9 +7941,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
         type: 3}
+      propertyPath: currentPatrols
+      value: 
+      objectReference: {fileID: 1464221406}
+    - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
+        type: 3}
       propertyPath: justTeleported
       value: 
       objectReference: {fileID: 1364626270}
+    - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
+        type: 3}
+      propertyPath: stationPatrols
+      value: 
+      objectReference: {fileID: 67136523}
     - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
         type: 3}
       propertyPath: connectedStation
@@ -8017,6 +8087,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
         type: 3}
+      propertyPath: currentPatrols
+      value: 
+      objectReference: {fileID: 1065975521}
+    - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
+        type: 3}
       propertyPath: justTeleported
       value: 
       objectReference: {fileID: 1364626270}
@@ -8072,7 +8147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -8126,7 +8201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!114 &1114357012
 MonoBehaviour:
@@ -8230,7 +8305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -8282,7 +8357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -8476,7 +8551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 1
   startPosition: {x: 0, y: 0, z: 0}
@@ -8747,7 +8822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!114 &1262356207
 MonoBehaviour:
@@ -9798,6 +9873,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
         type: 3}
+      propertyPath: currentPatrols
+      value: 
+      objectReference: {fileID: 391830927}
+    - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
+        type: 3}
       propertyPath: justTeleported
       value: 
       objectReference: {fileID: 1364626270}
@@ -9975,7 +10055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!114 &1369465984
 MonoBehaviour:
@@ -10049,7 +10129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -10101,7 +10181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -10570,7 +10650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -10987,8 +11067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 667563348}
-  patrol2: {fileID: 1393143608}
+  patrol1: {fileID: 186535236}
+  patrol2: {fileID: 667563348}
 --- !u!1 &1484890891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1662322996942477817, guid: b46e0920d9667ca45b59dc5301c885aa,
@@ -11338,7 +11418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -11484,7 +11564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!114 &1532437599
 MonoBehaviour:
@@ -12003,9 +12083,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
+      propertyPath: currentPatrols
+      value: 
+      objectReference: {fileID: 1483944596}
+    - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
+        type: 3}
       propertyPath: justTeleported
       value: 
       objectReference: {fileID: 1364626270}
+    - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
+        type: 3}
+      propertyPath: stationPatrols
+      value: 
+      objectReference: {fileID: 2107361022}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
       propertyPath: connectedStation
@@ -12734,7 +12824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -13423,6 +13513,11 @@ PrefabInstance:
       objectReference: {fileID: 1364626270}
     - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
         type: 3}
+      propertyPath: stationPatrols
+      value: 
+      objectReference: {fileID: 1065975521}
+    - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
+        type: 3}
       propertyPath: connectedStation
       value: 
       objectReference: {fileID: 1816907402}
@@ -13636,7 +13731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!114 &1808912647
 MonoBehaviour:
@@ -14270,6 +14365,11 @@ PrefabInstance:
       propertyPath: justTeleported
       value: 
       objectReference: {fileID: 1364626270}
+    - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
+        type: 3}
+      propertyPath: stationPatrols
+      value: 
+      objectReference: {fileID: 391830927}
     - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
         type: 3}
       propertyPath: connectedStation
@@ -15060,7 +15160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!114 &1948048355
 MonoBehaviour:
@@ -15243,7 +15343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!114 &1959838636
 MonoBehaviour:
@@ -15466,7 +15566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -15755,7 +15855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -16028,7 +16128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Ambience 2
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 0
   activated: 0
   startPosition: {x: 0, y: 0, z: 0}
@@ -16109,7 +16209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Door
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
   playOnStartup: 1
 --- !u!1 &2107361020
 GameObject:
@@ -16156,8 +16256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 1438569683}
-  patrol2: {fileID: 186535236}
+  patrol1: {fileID: 1393143608}
+  patrol2: {fileID: 1438569683}
 --- !u!4 &2114918979 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ddd95aa4817356645979f7a136313957,

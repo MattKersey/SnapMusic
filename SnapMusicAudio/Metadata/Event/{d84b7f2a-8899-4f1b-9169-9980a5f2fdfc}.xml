@@ -364,7 +364,7 @@
 			<value>Spread</value>
 		</property>
 		<property name="value">
-			<value>9.99999975e-06</value>
+			<value>0</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,360.000000)}</value>
@@ -425,7 +425,7 @@
 			<value>Directivity</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>
@@ -436,7 +436,7 @@
 			<value>Dir Sharpness</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>10</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,1.000000)(1.000000,2.000000)(2.000000,5.000000)(3.000000,10.000000)}</value>
