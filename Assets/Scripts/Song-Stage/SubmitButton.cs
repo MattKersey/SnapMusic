@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD.Studio;
 
 public class SubmitButton : OVRGrabbable
 {
     public GameObject songBitesContainer;
+    public bool isPlaying = false;
+    protected List<EventInstance> instances = new List<EventInstance>();
+    protected List<Coroutine> coroutines = new List<Coroutine>();
 
     /**
     If the controller 'grabs' the button, activate the PlayAudioInOrder command 
@@ -16,7 +20,7 @@ public class SubmitButton : OVRGrabbable
         base.GrabBegin(hand, grabPoint);
         Debug.Log("Submit: Grabs");
         EmissionStatus(true);
-        //PlayAudioInOrder();
+        PlayAudioInOrder();
     }
 
     /**
@@ -28,7 +32,7 @@ public class SubmitButton : OVRGrabbable
         base.GrabEnd(linearVelocity, angularVelocity);
         Debug.Log("Submit: Lets go");
         EmissionStatus(false);
-        // StopAudio();
+        StopAudio();
     }
 
     // Turns on/off the button's emission to indicate selected status
@@ -47,10 +51,26 @@ public class SubmitButton : OVRGrabbable
     /**
     Stop the app from playing any audioclip from the cubes on stage.
     **/
-    private void StopAudio()
+    public void StopAudio()
     {
         Debug.Log("Stopping Audio");
+        foreach (Coroutine coroutine in coroutines)
+        {
+            StopCoroutine(coroutine);
+        }
+        foreach (EventInstance instance in instances)
+        {
+            instance.stop(STOP_MODE.ALLOWFADEOUT);
+        }
+        instances.Clear();
+        coroutines.Clear();
+        isPlaying = false;
     }
+
+    static int SortByX(Transform t0, Transform t1)
+     {
+         return t0.position.x.CompareTo(t1.position.x);
+     }
 
     /**
     Iterate on every sound bite on stage and play it's corresponding audioclip by
@@ -58,15 +78,47 @@ public class SubmitButton : OVRGrabbable
     **/
     private void PlayAudioInOrder()
     {
+        List<Transform> bites = new List<Transform>();
         for (int i=0; i< songBitesContainer.transform.childCount; i++)
         {
-            AudioSource audioSource = songBitesContainer.transform.GetChild(i).gameObject.GetComponent<AudioSource>();
-            AudioClip audioclip = audioSource.clip;
-            double duration = (double)audioclip.samples / audioclip.frequency;
-            audioSource.mute = false;
-            audioSource.loop = false;
-            audioSource.PlayScheduled(duration * (i+1)); // needs fixing
+            bites.Add(songBitesContainer.transform.GetChild(i));
         }
+        bites.Sort(SortByX);
+
+        int totalLength = 0;
+        foreach (Transform bite in bites)
+        {
+            // EventDescription description;
+            // EventInstance instance = bite.GetComponent<BiteAudio>().fmodInstance;
+            // instance.getDescription(out description);
+            // float direction;
+            // instance.getParameterByName("Direction", out direction);
+            // EventInstance instanceCopy;
+            // description.createInstance(out instanceCopy);
+            // instanceCopy.setParameterByName("Direction", direction);
+            // int length;
+            // description.getLength(out length);
+            // instances.Add(instanceCopy);
+            // coroutines.Add(StartCoroutine(PlayBites(length, totalLength, instanceCopy)));
+            // totalLength += length;
+        }
+        isPlaying = true;
+    }
+
+    IEnumerator PlayBites(int pre, int post, EventInstance instance, bool final=false)
+    {
+        yield return new WaitForSeconds(((float)pre) / 1000f);
+        instance.start();
+        yield return new WaitForSeconds(((float)post) / 1000f);
+        if (final)
+        {
+            instance.stop(STOP_MODE.ALLOWFADEOUT);
+            instances.Clear();
+            coroutines.Clear();
+            isPlaying = false;
+        }
+        else
+            instance.stop(STOP_MODE.IMMEDIATE);
     }
 }
 
