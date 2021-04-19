@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 1508694402703710557}
   - component: {fileID: 1508694402703710558}
   - component: {fileID: 1508694402703710559}
-  - component: {fileID: 1508694402703710556}
-  - component: {fileID: 1508694402703710532}
   m_Layer: 0
   m_Name: Ghost-Bite
   m_TagString: Untagged
@@ -82,34 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1508694402703710556
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508694402703710530}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1508694402703710532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508694402703710530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d3df92e8ac7473da34f91707a013cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentlySelected: 0
-  rotateSpeed: 50
-  playbackOrder: 0
 --- !u!1 &1927072213291550230
 GameObject:
   m_ObjectHideFlags: 0

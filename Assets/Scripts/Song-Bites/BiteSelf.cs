@@ -75,6 +75,7 @@ public class BiteSelf : MonoBehaviour
         System.Random random = new System.Random();
         List<int> pitches = new List<int> { -1, 1 };
         playbackOrder = pitches[random.Next(pitches.Count)];
+        Debug.Log("idx: " + biteIdx + ", pitch: " + playbackOrder);
         //_audioSource.pitch = playbackOrder;
     }
 
@@ -109,23 +110,24 @@ public class BiteSelf : MonoBehaviour
         float newVolume = 0.5f; // insert funny math for calculating new volume
         _audioSource.volume = newVolume;
         // insert fancy math to pass onto implement volume color
-        ImplementVolumeColor();
+        // ImplementVolumeColor();
     }
 
     /**
     Change the bite material's color and emission depending on how much the user
     scales the cube's volume. 
     **/
-    public void ImplementVolumeColor()
+    public void ImplementVolumeColor(float scalar)
     {
         // raise volume -> darker shade
         // lower volume -> lighter shade
         Color newColor = new Color(
             originalColor.r,                            // r
-            1 - ((255 * _audioSource.volume) / 255),    // g
+            1 - ((255 * scalar) / 255),    // g
             originalColor.b);                           // b
         gameObject.GetComponent<Renderer>().material.SetColor("_Color", newColor); 
         gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", newColor);
+        originalMaterial = gameObject.GetComponent<Renderer>().material;
     }
 
     /**
@@ -148,6 +150,7 @@ public class BiteSelf : MonoBehaviour
         //_audioSource.timeSamples = _audioSource.clip.samples - 1;  // keeping for now...
     }
 
+    // Performs the swap when the bite is in contact with another bite
     public void PerformSwap()
     {
         if (cubeInContact != null)
@@ -157,6 +160,7 @@ public class BiteSelf : MonoBehaviour
         }
     }
 
+    // Removes the color from the collided bite
     public void RemoveCollidedColor()
     {
         if (cubeInContact != null)
@@ -165,6 +169,7 @@ public class BiteSelf : MonoBehaviour
         }
     }
 
+    // Color a bite to show that it is selected or in collision with (highlight)
     public void ColorBite(GameObject obj, bool isHighlight)
     {
         if (isHighlight) // collided case
@@ -177,6 +182,7 @@ public class BiteSelf : MonoBehaviour
         }
     }
 
+    // Uncolors a bite to show that it is no longer selected or in collision with
     public void UnColorBite(GameObject obj)
     {
         obj.GetComponent<Renderer>().material = originalMaterial;
@@ -189,20 +195,6 @@ public class BiteSelf : MonoBehaviour
     **/
     private void OnTriggerEnter(Collider other)
     {
-        //if (other.CompareTag("Sound Bite"))
-        //{
-        //    bool otherFound = other.gameObject.GetComponent<BiteSelf>().found;
-        //    if ((found) && (otherFound))
-        //    {
-        //        SwapInHierarchy(other.gameObject);
-        //    }
-        //}
-        //else if (!found)
-        //{
-        //    _biteController.FoundBite(gameObject, biteIdx);
-        //    found = true;
-        //}
-
         // if the current bite enters the collider of another bite 
         if (other.CompareTag("Sound Bite"))
         {

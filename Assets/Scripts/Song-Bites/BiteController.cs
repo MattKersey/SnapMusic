@@ -30,7 +30,7 @@ public class BiteController : MonoBehaviour
     public GameObject hud;
     public GameObject celebrateObj;
     public GameObject watchTextObj;
-    public GameObject ghostBite;
+    public GameObject ghostBitesParent;
     public OVRScreenFade cameraFader;
     public AudioSource teled;
 
@@ -49,6 +49,7 @@ public class BiteController : MonoBehaviour
         arrows.SetActive(false);
 
         songBites = GameObject.FindGameObjectsWithTag("Sound Bite");
+
         numOfTotalBites = songBites.Length;
         orderFound = new int[songBites.Length];
         RandomizeBitIdxs();
@@ -103,13 +104,13 @@ public class BiteController : MonoBehaviour
         System.Random random = new System.Random();
         List<int> numberList = Enumerable.Range(0, numOfTotalBites).ToList();
         numberList = numberList.OrderBy(item => random.Next()).ToList<int>();
-        // foreach (int i in numberList) { Debug.Log("numberList: " + i); }
+        //foreach (int i in numberList) { Debug.Log("numberList: " + i); }
         for (int i=0; i<numOfTotalBites; i++)
         {
             BiteSelf _biteSelf = songBites[i].GetComponent<BiteSelf>();
             _biteSelf.SetBiteIdx(numberList[i]);
             _biteSelf.SetRandomPitch();
-            // FoundBite(songBites[i], _biteSelf.GetBiteIdx()); // debug test purposes
+            //FoundBite(songBites[i], _biteSelf.GetBiteIdx()); // debug test purposes
         }
     }
 
@@ -134,7 +135,7 @@ public class BiteController : MonoBehaviour
     {
         orderFound[numOfFoundBites] = biteIdx;
         PlaceBiteInStage(bite);
-        ChangeLayer(bite);
+        // ChangeLayer(bite);
         numOfFoundBites += 1;
         SayHowManyFound();
         if (FoundAllBites())
@@ -185,13 +186,14 @@ public class BiteController : MonoBehaviour
         ParticleEffect(bite, false);
     }
 
-    // Instantiates a ghost bite in place of the found bite. 
-    private void AddGhostBite(Vector3 originalPosition, string name)
+    private int count = 0;
+    private void SwitchWithGhost(Vector3 originalPosition)
     {
-        // Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent);
-        GameObject copy = Instantiate(ghostBite, originalPosition, Quaternion.identity, transform);
-        copy.SetActive(true);
-        copy.name = "Ghost-" + name;
+        Transform ghost = ghostBitesParent.transform.GetChild(count);
+        ghost.position = originalPosition;
+        ghost.GetChild(0).gameObject.layer = 9;
+        Debug.Log("ghost: " + ghost.gameObject.name);
+        count += 1;
     }
 
     /**
@@ -202,6 +204,7 @@ public class BiteController : MonoBehaviour
     private void PlaceBiteInStage(GameObject bite)
     {
         BiteSelf _biteSelf = bite.GetComponent<BiteSelf>(); // add bite to parent obj
+        SwitchWithGhost(bite.transform.position);
         bite.transform.parent = finalBitesPositions.transform; // add to finalBitesPositions group
         Vector3 target = new Vector3(
             minX + stepSize,
@@ -209,7 +212,6 @@ public class BiteController : MonoBehaviour
             finalBitesPositions.transform.position.z
         );
         float duration = 3f;
-        AddGhostBite(bite.transform.position, bite.name);
         ParticleEffect(bite, true);
         StartCoroutine(AnimateMove(bite, target, duration));
         // bite.transform.position = finalBitesPositions.transform.position; // reset position
