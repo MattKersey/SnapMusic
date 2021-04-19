@@ -13,7 +13,6 @@ public class BiteController : MonoBehaviour
     private float minX = -7;
     private float stepSize = 2;
     private int numOfTotalBites;
-    private GameObject arrows;
     private float timer = 0f;
     private int numOfSwaps = 0;
     private bool gameOver = false;
@@ -118,7 +117,7 @@ public class BiteController : MonoBehaviour
         {
             BiteSelf _biteSelf = songBites[i].GetComponent<BiteSelf>();
             _biteSelf.SetBiteIdx(numberList[i]);
-            _biteSelf.SetRandomPitch();
+            //_biteSelf.SetRandomPitch();
             //FoundBite(songBites[i], _biteSelf.GetBiteIdx()); // debug test purposes
         }
     }
@@ -271,9 +270,8 @@ public class BiteController : MonoBehaviour
             BiteSelf _biteSelf = child.GetComponent<BiteSelf>();
             if (idx != _biteSelf.GetBiteIdx() || _biteSelf.GetPlayBackOrder() != 1)
             {
-                GameObject myChild = placeholderParent.transform.GetChild(idx).gameObject;
-                myChild.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
-                myChild.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.red);
+                child.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
+                child.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.red);
                 correctOrder = false;
             }
         }

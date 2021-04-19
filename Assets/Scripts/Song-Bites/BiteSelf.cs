@@ -164,26 +164,6 @@ public class BiteSelf : MonoBehaviour
         originalMaterial = gameObject.GetComponent<Renderer>().material;
     }
 
-    /**
-    Public method to reverse the pitch of the audio.
-    Source: https://forum.unity.com/threads/playing-audio-backwards.95770/
-    **/
-    public void Reverse()
-    {
-        switch (playbackOrder) // to undo the reverse, just set to -1 or 1
-        {
-            case 1:
-                _audioSource.pitch = -1;
-                playbackOrder = -1;
-                break;
-            case -1:
-                _audioSource.pitch = 1;
-                playbackOrder = 1;
-                break;
-        }
-        //_audioSource.timeSamples = _audioSource.clip.samples - 1;  // keeping for now...
-    }
-
     // Performs the swap when the bite is in contact with another bite
     public void PerformSwap()
     {
@@ -257,14 +237,6 @@ public class BiteSelf : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (found && other.name == "OVRControllerPrefab")
-        {
-            biteAudio.StopBite();
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
         // if the current bite leaves the collider of another bite
         if (other.CompareTag("Sound Bite"))
         {
@@ -274,6 +246,11 @@ public class BiteSelf : MonoBehaviour
                 UnColorBite(other.gameObject);
                 cubeInContact = null;
             }
+        }
+
+        if (found && other.name == "OVRControllerPrefab")
+        {
+            biteAudio.StopBite();
         }
     }
 
