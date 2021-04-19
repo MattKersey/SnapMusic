@@ -31,19 +31,19 @@ public class DebugMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            movement = new Vector3(0.0f, 0.0f, 2.0f * Time.deltaTime);
+            movement = new Vector3(0.0f, 0.0f, 5.0f * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            movement = new Vector3(0.0f, 0.0f, -2.0f * Time.deltaTime);
+            movement = new Vector3(0.0f, 0.0f, -5.0f * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            movement = new Vector3(-2.0f * Time.deltaTime, 0.0f, 0.0f);
+            movement = new Vector3(-5.0f * Time.deltaTime, 0.0f, 0.0f);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            movement = new Vector3(2.0f * Time.deltaTime, 0.0f, 0.0f);
+            movement = new Vector3(5.0f * Time.deltaTime, 0.0f, 0.0f);
         }
 
 

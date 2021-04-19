@@ -19,7 +19,10 @@ public class BiteSelf : MonoBehaviour
     public int rotateSpeed;
     float rotationDirection = 1;
     public int playbackDirection;
+    float playbackThreshold = 10.0f;
+    public static bool insideLTrigger = false;
     BiteAudio biteAudio;
+    GameObject player;
 
     // Store the initail positions, rotation, color, and pitch
     private void Start()
@@ -29,6 +32,30 @@ public class BiteSelf : MonoBehaviour
         originalColor = gameObject.GetComponent<Renderer>().material.color;
         originalPosition = transform.position;
         originalAngles = transform.rotation;
+        player = GameObject.Find("OVRPlayerController");
+    }
+
+    private void Update()
+    {
+        if (!found)
+        {
+            // Calculate distance between player and sound bite
+            float distance = Vector3.Distance(player.transform.position, transform.position);
+            if (distance <= playbackThreshold && !biteAudio.isPlaying && !insideLTrigger)
+            {
+                biteAudio.PlayBite();
+            }
+
+            else if (distance > playbackThreshold && biteAudio.isPlaying)
+            {
+                biteAudio.StopBite();
+            }
+
+            else if (biteAudio.isPlaying && insideLTrigger)
+            {
+                biteAudio.StopBite();
+            }
+        }        
     }
 
     /**
@@ -47,20 +74,6 @@ public class BiteSelf : MonoBehaviour
             transform.Rotate(0f, -rotationDirection * rotateSpeed * Time.deltaTime, 0f);        
         }
     }
-
-    /*
-    // Give the bite a random index/sample from the song 
-    public void SetBiteIdx(int idx)
-    {
-        biteIdx = idx;
-        audioName = "sample-" + idx.ToString();
-        //StartCoroutine(LoadAudio());
-        audioClip = Resources.Load<AudioClip>(soundPath + audioName);
-        audioClip.name = audioName;
-        _audioSource.clip = audioClip;
-        PlayAudioFile();
-    }
-    */
 
     // Give the bite a random index/sample from the song 
     public void SetBiteIdx(int idx)

@@ -29,6 +29,7 @@ public class BiteController : MonoBehaviour
     private GameObject directionsParent;
     private GameObject directions;
     private GameObject arrows;
+    GameObject ambience;
 
 
     /**
@@ -45,6 +46,7 @@ public class BiteController : MonoBehaviour
         arrows = directionsParent.transform.GetChild(1).gameObject;
         arrows.SetActive(false);
         directions = directionsParent.transform.GetChild(0).gameObject;
+        ambience = GameObject.Find("Ambience");
 
         songBites = GameObject.FindGameObjectsWithTag("Sound Bite");
         numOfTotalBites = songBites.Length;
@@ -120,6 +122,9 @@ public class BiteController : MonoBehaviour
             //turn on song bite direction arrows
             arrows.SetActive(true);
             directions.SetActive(false);
+
+            // Turn off ambient music
+            ambience.SetActive(false);
         }
     }
 
