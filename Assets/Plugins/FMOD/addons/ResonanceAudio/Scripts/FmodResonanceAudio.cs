@@ -170,58 +170,48 @@ namespace FMODUnityResonance
             rotation = Quaternion.LookRotation(transformMatrix.GetColumn(2), transformMatrix.GetColumn(1));
         }
 
-        public static Transform ListenerTransform
+        // Reference: https://alessandrofama.com/tutorials/fmod-unity/occlusion/
+        public static Transform PlayerTransform
         {
             get
             {
-                if (listenerTransform == null)
+                if (playerTransform == null)
                 {
-                    var listener = GameObject.FindObjectOfType<StudioListener>();
-                    if (listener != null)
-                    {
-                        listenerTransform = listener.transform;
-                    }
+                    // Get transform of GameObject with FMOD Studio Listener component
+                    var player = GameObject.FindObjectOfType<StudioListener>();
+                    if (player != null)
+                        playerTransform = player.transform;
                 }
-                return listenerTransform;
+                return playerTransform;
             }
         }
-        private static Transform listenerTransform = null;
+        private static Transform playerTransform = null;
 
-        public static float ComputeOcclusion(Transform sourceTransform)
+        // Dynamically compute occlusion with multi-raycasting
+        public static float DynamicOcclusion(Transform audioTransform)
         {
-            var listener = GameObject.FindObjectOfType<StudioListener>();
-            occlusionMaskValue = listener.occlusionMask;
+            var player = GameObject.FindObjectOfType<StudioListener>();
+            occlusionMask = player.occlusionMask;
             float occlusion = 0.0f;
-            if (ListenerTransform != null)
+            if (PlayerTransform != null)
             {
-                Vector3 listenerPosition = ListenerTransform.position;
-                Vector3 sourceFromListener = sourceTransform.position - listenerPosition;
-                int numHits = Physics.RaycastNonAlloc(listenerPosition, sourceFromListener, occlusionHits,
-                                                      sourceFromListener.magnitude, occlusionMaskValue);
+                Vector3 position = PlayerTransform.position;
+                Vector3 distance = audioTransform.position - position;
+                int numHits = Physics.RaycastNonAlloc(position, distance, occlusionHits, distance.magnitude, occlusionMask);
                 for (int i = 0; i < numHits; ++i)
-                {
-                    if (occlusionHits[i].transform != listenerTransform &&
-                        occlusionHits[i].transform != sourceTransform)
-                    {
+                    if (occlusionHits[i].transform != playerTransform && occlusionHits[i].transform != audioTransform)
                         occlusion += 1.0f;
-                    }
-                }
             }
             return occlusion;
         }
 
+        // Occlusion mask, detection rate (200 ms)
+        private static int occlusionMask = -1;
+        public const float occlusionDetectionRate = 0.2f;
 
-        /// Maximum allowed number of raycast hits for occlusion computation per source.
+        // Occlusion raycast hits
         public const int maxNumOcclusionHits = 12;
-
-        // Pre-allocated raycast hit list for occlusion computation.
         private static RaycastHit[] occlusionHits = new RaycastHit[maxNumOcclusionHits];
-
-        // Occlusion layer mask.
-        private static int occlusionMaskValue = -1;
-
-        /// Source occlusion detection rate in seconds.
-        public const float occlusionDetectionInterval = 0.2f;
 
         // Returns a byte array of |length| created from |ptr|.
         private static byte[] GetBytes(IntPtr ptr, int length)
