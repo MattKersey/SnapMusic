@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3966363703546557040}
   - component: {fileID: 4032846415505433352}
   - component: {fileID: 1508694402703710532}
-  - component: {fileID: -5399517614861118527}
+  - component: {fileID: -6704255465205331262}
   m_Layer: 0
   m_Name: Bite-without-Parent
   m_TagString: Sound Bite
@@ -154,9 +154,9 @@ MonoBehaviour:
   grabbedMaterial: {fileID: 2100000, guid: 4ab01a4d4849d42d3b9797ef436e2720, type: 2}
   currentlySelected: 0
   rotateSpeed: 50
-  playbackOrder: 0
---- !u!82 &1508694402703710533
-AudioSource:
+  playbackDirection: 0
+--- !u!114 &-6704255465205331262
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -169,7 +169,8 @@ AudioSource:
   m_EditorClassIdentifier: 
   fmodEvent: 
   occlusionEnabled: 1
-  occlusionIntensity: 1
+  occlusionDepth: 1
+  playOnStartup: 0
 --- !u!1001 &5538730857307870491
 PrefabInstance:
   m_ObjectHideFlags: 0

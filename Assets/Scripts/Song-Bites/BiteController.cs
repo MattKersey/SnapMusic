@@ -204,6 +204,7 @@ public class BiteController : MonoBehaviour
         ghost.GetChild(0).gameObject.layer = 9;
         Debug.Log("ghost: " + ghost.gameObject.name);
         count += 1;
+        ghost.transform.GetChild(0).GetComponent<Collider>().enabled = false;
     }
 
     /**

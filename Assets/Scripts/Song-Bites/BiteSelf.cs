@@ -4,12 +4,12 @@ using UnityEngine;
 public class BiteSelf : MonoBehaviour
 {
     private BiteController _biteController;
-    private AudioSource _audioSource;
+    //private AudioSource _audioSource;
     private int biteIdx;
     private bool found = false;
-    private string soundPath = "Songs/Test-Song-1/";
-    private string audioName;
-    private AudioClip audioClip;
+    //private string soundPath = "Songs/Test-Song-1/";
+    //private string audioName;
+    //private AudioClip audioClip;
     private Color originalColor;
     private Vector3 originalPosition;
     private Quaternion originalAngles;
@@ -31,7 +31,7 @@ public class BiteSelf : MonoBehaviour
     private void Start()
     {
         _biteController = gameObject.GetComponentInParent<BiteController>();
-        _audioSource = gameObject.GetComponent<AudioSource>();
+        //_audioSource = gameObject.GetComponent<AudioSource>();
         originalMaterial = gameObject.GetComponent<Renderer>().material;
         originalColor = gameObject.GetComponent<Renderer>().material.color;
         originalPosition = transform.position;
@@ -128,8 +128,8 @@ public class BiteSelf : MonoBehaviour
     // Play the audio clip and set it to loop
     private void PlayAudioFile()
     {
-        _audioSource.Play();
-        _audioSource.loop = true;
+        //_audioSource.Play();
+        //_audioSource.loop = true;
     }
 
     /**
@@ -142,7 +142,7 @@ public class BiteSelf : MonoBehaviour
         // min = 0.0f, max = 1.0f
         // prefab default is 0.5
         float newVolume = 0.5f; // insert funny math for calculating new volume
-        _audioSource.volume = newVolume;
+        //_audioSource.volume = newVolume;
         // insert fancy math to pass onto implement volume color
         // ImplementVolumeColor();
     }
