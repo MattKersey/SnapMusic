@@ -105,17 +105,18 @@ public class SubmitButton : OVRGrabbable
             int length;
             description.getLength(out length);
             instances.Add(instanceCopy);
-            coroutines.Add(StartCoroutine(PlayBites(totalLength, length, instanceCopy, index==5)));
+            coroutines.Add(StartCoroutine(PlayBites(totalLength, length, instanceCopy, bite, index==5)));
             totalLength += length;
             index += 1;
         }
         isPlaying = true;
     }
 
-    IEnumerator PlayBites(int pre, int post, EventInstance instance, bool final = false)
+    IEnumerator PlayBites(int pre, int post, EventInstance instance, Transform bite, bool final = false)
     {
         yield return new WaitForSeconds(((float)pre) / 1000f);
         instance.start();
+        bite.GetComponent<BiteSelf>().ColorBite(bite.gameObject, false);
         yield return new WaitForSeconds(((float)post) / 1000f);
         if (final)
         {
@@ -127,5 +128,7 @@ public class SubmitButton : OVRGrabbable
         }
         else
             instance.stop(STOP_MODE.ALLOWFADEOUT);
+
+        bite.GetComponent<BiteSelf>().UnColorBite(bite.gameObject);
     }
 }
