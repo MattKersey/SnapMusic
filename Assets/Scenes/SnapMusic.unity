@@ -10100,6 +10100,18 @@ Transform:
   m_Father: {fileID: 807942539}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1353721464 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4569174593199621845, guid: a4c1558d0ad5d4f88b792cdc2db7ba62,
+    type: 3}
+  m_PrefabInstance: {fileID: 8065259597426147788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5871f941935ce43f995e03a18bad0ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1357347438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17642,6 +17654,7 @@ MonoBehaviour:
   m_wallSound: {fileID: 726358508704287777}
   m_grabSound: {fileID: 726358508704287776}
   m_releaseSound: {fileID: 726358508704287775}
+  m_submitButton: {fileID: 1353721464}
   hud: {fileID: 1839510054}
   inEditMode: 0
   fullSong: {fileID: 0}
@@ -21177,6 +21190,7 @@ MonoBehaviour:
   m_wallSound: {fileID: 726358509713741506}
   m_grabSound: {fileID: 726358509713741505}
   m_releaseSound: {fileID: 726358509713741504}
+  m_submitButton: {fileID: 1353721464}
   hud: {fileID: 1839510054}
   inEditMode: 0
   fullSong: {fileID: 0}

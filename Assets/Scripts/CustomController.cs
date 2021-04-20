@@ -31,6 +31,7 @@ public class CustomController : OVRGrabber
     public ControllerSounds m_wallSound;
     public ControllerSounds m_grabSound;
     public ControllerSounds m_releaseSound;
+    public SubmitButton m_submitButton;
     protected SoundBiteGrabbable m_draggedObj = null;
     protected static List<MoveLogEntry> m_undoList = null;
     protected static List<MoveLogEntry> m_redoList = null;
@@ -275,6 +276,7 @@ public class CustomController : OVRGrabber
             OVRInput.SetControllerVibration(m_currentVibration, m_currentVibration, m_controller);
             if (otherCollider.CompareTag("Sound Bite"))
             {
+                m_submitButton.StopAudio();
                 touchedBite = true;
                 bite = otherCollider.gameObject;
                 bite.GetComponent<BiteSelf>().ColorBite(bite, false);
