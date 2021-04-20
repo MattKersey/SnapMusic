@@ -38,7 +38,7 @@ public class BiteController : MonoBehaviour
     private GameObject arrows;
     GameObject ambience;
     public Avril14th fullSong;
-
+    private WristText wristT;
 
     /**
     Upon start, get all the bite gameobjects (children), calculate their quantity,
@@ -66,6 +66,7 @@ public class BiteController : MonoBehaviour
         RandomizeBitIdxs();
 
         fullSong = transform.GetComponent<Avril14th>();
+        wristT = watchTextObj.GetComponent<WristText>();
     }
 
     // Every fixed update, check if gameover and update the time
@@ -74,7 +75,7 @@ public class BiteController : MonoBehaviour
         if (!gameOver)
         {
             timer += Time.deltaTime;
-            watchTextObj.GetComponent<WristText>().UpdateTime(timer);
+            wristT.UpdateTime(timer);
             //if (timer > 3f)
             //{       // Testing: DELETE ALL UNDERNEATH
             //    gameOver = true;
