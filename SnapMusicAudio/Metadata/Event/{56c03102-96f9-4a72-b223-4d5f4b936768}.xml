@@ -209,7 +209,7 @@
 			<value>Gain</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>7</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,-80.000000)(1.000000,24.000000)}</value>
@@ -327,7 +327,7 @@
 			<value>Near-Field Gain</value>
 		</property>
 		<property name="value">
-			<value>1.00001001</value>
+			<value>1</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,9.000000)}</value>
