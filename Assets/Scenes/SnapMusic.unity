@@ -281,6 +281,18 @@ Transform:
   m_Father: {fileID: 807942539}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &23077609 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2481089833415379870, guid: 056ae9261e176b542a72268caec60083,
+    type: 3}
+  m_PrefabInstance: {fileID: 430830213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &26960061 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ddd95aa4817356645979f7a136313957,
@@ -448,7 +460,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentPatrols
       value: 
-      objectReference: {fileID: 882614102}
+      objectReference: {fileID: 1534209170}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
       propertyPath: justTeleported
@@ -458,7 +470,7 @@ PrefabInstance:
         type: 3}
       propertyPath: stationPatrols
       value: 
-      objectReference: {fileID: 1924468162}
+      objectReference: {fileID: 0}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
       propertyPath: connectedStation
@@ -716,7 +728,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentPatrols
       value: 
-      objectReference: {fileID: 67136523}
+      objectReference: {fileID: 780567458}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
       propertyPath: justTeleported
@@ -726,7 +738,7 @@ PrefabInstance:
         type: 3}
       propertyPath: stationPatrols
       value: 
-      objectReference: {fileID: 1464221406}
+      objectReference: {fileID: 1651446060}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
       propertyPath: connectedStation
@@ -2731,6 +2743,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 056ae9261e176b542a72268caec60083, type: 3}
+--- !u!114 &430830214 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2481089833846629938, guid: 056ae9261e176b542a72268caec60083,
+    type: 3}
+  m_PrefabInstance: {fileID: 430830213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &435092910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2880,7 +2904,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentPatrols
       value: 
-      objectReference: {fileID: 1624581533}
+      objectReference: {fileID: 853307987}
     - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
         type: 3}
       propertyPath: justTeleported
@@ -4798,7 +4822,7 @@ PrefabInstance:
         type: 3}
       propertyPath: stationPatrols
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 430830214}
     - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
         type: 3}
       propertyPath: connectedStation
@@ -5278,7 +5302,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentPatrols
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 430830214}
     - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
         type: 3}
       propertyPath: justTeleported
@@ -5537,7 +5561,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentPatrols
       value: 
-      objectReference: {fileID: 2107361022}
+      objectReference: {fileID: 1596918598}
     - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
         type: 3}
       propertyPath: justTeleported
@@ -5547,7 +5571,7 @@ PrefabInstance:
         type: 3}
       propertyPath: stationPatrols
       value: 
-      objectReference: {fileID: 1483944596}
+      objectReference: {fileID: 1031207723}
     - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
         type: 3}
       propertyPath: connectedStation
@@ -5585,6 +5609,18 @@ Transform:
   m_Father: {fileID: 807942539}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &780567458 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2481089833322649972, guid: 056ae9261e176b542a72268caec60083,
+    type: 3}
+  m_PrefabInstance: {fileID: 430830213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &785210146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5781,6 +5817,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 61433811}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &798853388 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2481089832562129085, guid: 056ae9261e176b542a72268caec60083,
+    type: 3}
+  m_PrefabInstance: {fileID: 430830213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &804386969
 GameObject:
   m_ObjectHideFlags: 0
@@ -6145,7 +6193,7 @@ PrefabInstance:
         type: 3}
       propertyPath: stationPatrols
       value: 
-      objectReference: {fileID: 1624581533}
+      objectReference: {fileID: 853307987}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
       propertyPath: connectedStation
@@ -6403,6 +6451,18 @@ MonoBehaviour:
   endPosition: {x: 0, y: 0, z: 0}
   startMark: {fileID: 2083016386}
   endMark: {fileID: 738444805}
+--- !u!114 &853307987 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2481089832866205922, guid: 056ae9261e176b542a72268caec60083,
+    type: 3}
+  m_PrefabInstance: {fileID: 430830213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &862222804 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5222464736322565275, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
@@ -7406,6 +7466,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1031207723 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2481089831920519147, guid: 056ae9261e176b542a72268caec60083,
+    type: 3}
+  m_PrefabInstance: {fileID: 430830213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1034637405
 GameObject:
   m_ObjectHideFlags: 0
@@ -7808,7 +7880,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentPatrols
       value: 
-      objectReference: {fileID: 1924468162}
+      objectReference: {fileID: 0}
     - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
         type: 3}
       propertyPath: justTeleported
@@ -7818,7 +7890,7 @@ PrefabInstance:
         type: 3}
       propertyPath: stationPatrols
       value: 
-      objectReference: {fileID: 882614102}
+      objectReference: {fileID: 1534209170}
     - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
         type: 3}
       propertyPath: connectedStation
@@ -7964,7 +8036,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentPatrols
       value: 
-      objectReference: {fileID: 1464221406}
+      objectReference: {fileID: 1651446060}
     - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
         type: 3}
       propertyPath: justTeleported
@@ -7974,7 +8046,7 @@ PrefabInstance:
         type: 3}
       propertyPath: stationPatrols
       value: 
-      objectReference: {fileID: 67136523}
+      objectReference: {fileID: 780567458}
     - target: {fileID: 2484446604479099610, guid: b46e0920d9667ca45b59dc5301c885aa,
         type: 3}
       propertyPath: connectedStation
@@ -8120,7 +8192,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentPatrols
       value: 
-      objectReference: {fileID: 1065975521}
+      objectReference: {fileID: 23077609}
     - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
         type: 3}
       propertyPath: justTeleported
@@ -8545,11 +8617,28 @@ PrefabInstance:
       objectReference: {fileID: 1364626270}
     - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
         type: 3}
+      propertyPath: stationPatrols
+      value: 
+      objectReference: {fileID: 798853388}
+    - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
+        type: 3}
       propertyPath: connectedStation
       value: 
       objectReference: {fileID: 1486705326}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 931a75669ffc1214f93c0d969895e8a1, type: 3}
+--- !u!114 &1212719484 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2481089833009490160, guid: 056ae9261e176b542a72268caec60083,
+    type: 3}
+  m_PrefabInstance: {fileID: 430830213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1217002256
 GameObject:
   m_ObjectHideFlags: 0
@@ -10001,7 +10090,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentPatrols
       value: 
-      objectReference: {fileID: 391830927}
+      objectReference: {fileID: 1212719484}
     - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
         type: 3}
       propertyPath: justTeleported
@@ -10132,6 +10221,11 @@ PrefabInstance:
       propertyPath: cameraObscurer
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
+        type: 3}
+      propertyPath: currentPatrols
+      value: 
+      objectReference: {fileID: 798853388}
     - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
         type: 3}
       propertyPath: justTeleported
@@ -11731,6 +11825,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1534209170 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2481089833600838185, guid: 056ae9261e176b542a72268caec60083,
+    type: 3}
+  m_PrefabInstance: {fileID: 430830213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1535508111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12240,6 +12346,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1593913036}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1596918598 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2481089832376087425, guid: 056ae9261e176b542a72268caec60083,
+    type: 3}
+  m_PrefabInstance: {fileID: 430830213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1607409178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12314,7 +12432,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentPatrols
       value: 
-      objectReference: {fileID: 1483944596}
+      objectReference: {fileID: 1031207723}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
       propertyPath: justTeleported
@@ -12324,7 +12442,7 @@ PrefabInstance:
         type: 3}
       propertyPath: stationPatrols
       value: 
-      objectReference: {fileID: 2107361022}
+      objectReference: {fileID: 1596918598}
     - target: {fileID: 860419485953117428, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
       propertyPath: connectedStation
@@ -12659,6 +12777,18 @@ MonoBehaviour:
   patrol1: {fileID: 1527010810}
   patrol2: {fileID: 877457934}
   backTrigger: 0
+--- !u!114 &1651446060 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2481089831933954977, guid: 056ae9261e176b542a72268caec60083,
+    type: 3}
+  m_PrefabInstance: {fileID: 430830213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1664292803 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1662322996942477817, guid: b46e0920d9667ca45b59dc5301c885aa,
@@ -13749,7 +13879,7 @@ PrefabInstance:
         type: 3}
       propertyPath: stationPatrols
       value: 
-      objectReference: {fileID: 1065975521}
+      objectReference: {fileID: 23077609}
     - target: {fileID: 1320269251564325518, guid: ddd95aa4817356645979f7a136313957,
         type: 3}
       propertyPath: connectedStation
@@ -14604,7 +14734,7 @@ PrefabInstance:
         type: 3}
       propertyPath: stationPatrols
       value: 
-      objectReference: {fileID: 391830927}
+      objectReference: {fileID: 1212719484}
     - target: {fileID: 2168797481865930779, guid: 931a75669ffc1214f93c0d969895e8a1,
         type: 3}
       propertyPath: connectedStation
