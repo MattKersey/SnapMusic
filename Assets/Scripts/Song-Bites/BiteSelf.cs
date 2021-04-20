@@ -63,7 +63,7 @@ public class BiteSelf : MonoBehaviour
             {
                 biteAudio.StopBite();
             }
-        }        
+        }
     }
 
     /**
@@ -75,14 +75,15 @@ public class BiteSelf : MonoBehaviour
     {
         if (!found)
         {
-           float newY = Mathf.Sin(Time.time * 1.5f) * 0.5f + originalPosition.y;
-           transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+            float newY = Mathf.Sin(Time.time * 1.5f) * 0.5f + originalPosition.y;
+            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
         }
-        if (!currentlySelected) {
-            transform.Rotate(0f, -rotationDirection * rotateSpeed * Time.deltaTime, 0f);        
+        if (!currentlySelected)
+        {
+            transform.Rotate(0f, -rotationDirection * rotateSpeed * Time.deltaTime, 0f);
         }
     }
-    
+
     // Give the bite a random index/sample from the song 
     public void SetBiteIdx(int idx)
     {
@@ -149,15 +150,16 @@ public class BiteSelf : MonoBehaviour
     Calculuates the math to determine the new volume based on how much the
     user scales the bite.
     **/
-    private void GetNewVolume()
+    public void GetNewVolume(float newVolume)
     {
         // raise or lower the volume depending on movement
         // min = 0.0f, max = 1.0f
         // prefab default is 0.5
-        float newVolume = 0.5f; // insert funny math for calculating new volume
+        // float newVolume = 0.5f; // insert funny math for calculating new volume
         //_audioSource.volume = newVolume;
         // insert fancy math to pass onto implement volume color
         // ImplementVolumeColor();
+        biteAudio.fmodInstance.setVolume(newVolume);
     }
 
     /**
@@ -172,7 +174,7 @@ public class BiteSelf : MonoBehaviour
             originalColor.r,                            // r
             1 - ((255 * scalar) / 255),    // g
             originalColor.b);                           // b
-        gameObject.GetComponent<Renderer>().material.SetColor("_Color", newColor); 
+        gameObject.GetComponent<Renderer>().material.SetColor("_Color", newColor);
         gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", newColor);
         originalMaterial = gameObject.GetComponent<Renderer>().material;
     }
@@ -305,7 +307,8 @@ public class BiteSelf : MonoBehaviour
     public void SetCurrentlySelected(bool isSelected)
     {
         currentlySelected = isSelected;
-        if (!isSelected){
+        if (!isSelected)
+        {
             transform.position = foundPosition;
             transform.rotation = originalAngles;
         }

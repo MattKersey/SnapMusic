@@ -11,9 +11,18 @@ public class SoundBiteGrabbable : OVRGrabbable
     public Vector3 m_startScale;
     public Vector3 m_startPosition;
     public Vector3 m_startRotation;
-    public float maxSize;
-    public float minSize;
+    public float maxSize = 1.5f;
+    public float minSize = 0.5f;
     protected float m_startDist;
+    protected float m_startScaleFloat;
+    protected float m_currentScaleFloat = 1.0f;
+    protected BiteSelf bite;
+
+    new private void Start()
+    {
+        base.Start();
+
+    }
 
     /**
     In every frame update, check if the bite is grabbed and dragged by the two
@@ -25,8 +34,18 @@ public class SoundBiteGrabbable : OVRGrabbable
         {
             float scalar = (m_draggedBy.transform.position - m_grabbedBy.transform.position).magnitude / m_startDist;
             // EDIT THE COLOR
-            gameObject.GetComponent<BiteSelf>().ImplementVolumeColor(scalar);
-            // transform.localScale = scalar * m_startScale;
+            m_currentScaleFloat = scalar * m_startScaleFloat;
+            if (m_currentScaleFloat < maxSize && m_currentScaleFloat > minSize)
+            {
+                Debug.Log("scalar: " + m_currentScaleFloat);
+                bite.ImplementVolumeColor(m_currentScaleFloat);
+                bite.GetNewVolume(m_currentScaleFloat);
+                transform.localScale = scalar * m_startScale;
+            }
+            else
+            {
+                m_currentScaleFloat = Mathf.Clamp(m_currentScaleFloat, minSize, maxSize);
+            }
         }
     }
 
@@ -36,7 +55,9 @@ public class SoundBiteGrabbable : OVRGrabbable
     **/
     public void ScaleBegin(OVRGrabber hand)
     {
+        bite = gameObject.GetComponent<BiteSelf>();
         m_draggedBy = hand;
+        m_startScaleFloat = m_currentScaleFloat;
         m_startScale = transform.localScale;
         m_startDist = (m_draggedBy.transform.position - m_grabbedBy.transform.position).magnitude;
     }
