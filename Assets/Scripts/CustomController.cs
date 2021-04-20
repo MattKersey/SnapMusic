@@ -252,12 +252,15 @@ public class CustomController : OVRGrabber
     new void OnTriggerExit(Collider other)
     {
         base.OnTriggerExit(other);
+        Debug.Log(other.tag);
         if (other.CompareTag("Sound Bite") || other.CompareTag("Stage-Button"))
         {
+            Debug.Log("m_grabCandidates: " + m_grabCandidates.Count);
             if (m_grabCandidates.Count == 0)
             {
                 touchedBite = false;
-                bite.GetComponent<BiteSelf>().UnColorBite(bite);
+                if (bite != null && bite.GetComponent<BiteSelf>() != null)
+                    bite.GetComponent<BiteSelf>().UnColorBite(bite);
                 bite = null;
                 m_currentVibration = 0.0f;
                 OVRInput.SetControllerVibration(0.0f, 0.0f, m_controller);
