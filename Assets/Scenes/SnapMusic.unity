@@ -10918,7 +10918,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Find the cubes in the labyrinth and put them in order
+  m_Text: Find the cubes in the maze and put them in order
 --- !u!222 &1435151511
 CanvasRenderer:
   m_ObjectHideFlags: 0
