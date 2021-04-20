@@ -43,29 +43,6 @@ public class BiteSelf : MonoBehaviour
         player = GameObject.Find("OVRPlayerController");
     }
 
-    private void Update()
-    {
-        if (!found)
-        {
-            // Calculate distance between player and sound bite
-            float distance = Vector3.Distance(player.transform.position, transform.position);
-            if (distance <= playbackThreshold && !biteAudio.isPlaying && !insideLTrigger)
-            {
-                biteAudio.PlayBite();
-            }
-
-            else if (distance > playbackThreshold && biteAudio.isPlaying)
-            {
-                biteAudio.StopBite();
-            }
-
-            else if (biteAudio.isPlaying && insideLTrigger)
-            {
-                biteAudio.StopBite();
-            }
-        }
-    }
-
     /**
     If the bite has not been found, then have it bounce in air.
     If the bite is not currently selected, then allow it to rotate according
@@ -77,7 +54,44 @@ public class BiteSelf : MonoBehaviour
         {
             float newY = Mathf.Sin(Time.time * 1.5f) * 0.5f + originalPosition.y;
             transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+
+            // Send Raycast to check whether bite is within line of sight
+            Vector3 direction = (transform.position - player.transform.position);
+            Ray ray = new Ray(player.transform.position, direction);
+            RaycastHit hit;
+            Physics.Raycast(ray, out hit, direction.magnitude);
+
+            // Calculate distance between player and sound bite
+            float distance = Vector3.Distance(player.transform.position, transform.position);
+
+            // Determine whether distance or line of sight criteria is met
+            bool distanceCheck = (distance <= playbackThreshold);
+            bool lineOfSightCheck = (hit.collider.transform == transform);
+
+            // If criteria is met, check that player is not inside L trigger before playing
+            if (distanceCheck || lineOfSightCheck)
+            {
+                if (!biteAudio.isPlaying && !insideLTrigger)
+                {
+                    biteAudio.PlayBite();
+                }
+
+                else if (biteAudio.isPlaying && insideLTrigger)
+                {
+                    biteAudio.StopBite();
+                }
+            }
+
+            // If criteria is not met, stop audio bite
+            else
+            {
+                if (biteAudio.isPlaying)
+                {
+                    biteAudio.StopBite();
+                }
+            }
         }
+
         if (!currentlySelected)
         {
             transform.Rotate(0f, -rotationDirection * rotateSpeed * Time.deltaTime, 0f);
