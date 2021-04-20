@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2481089831867830559}
   - component: {fileID: 2481089831867830560}
   - component: {fileID: 2481089831867830561}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481089831920519148}
   - component: {fileID: 2481089831920519147}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: L Trigger 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,6 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 2481089833206396987}
   patrol2: {fileID: 2481089833822175275}
+  backTrigger: 1
 --- !u!1 &2481089831933954979
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481089831933954978}
   - component: {fileID: 2481089831933954977}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: L Trigger 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,6 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 2481089833634576602}
   patrol2: {fileID: 2481089832466875168}
+  backTrigger: 1
 --- !u!1 &2481089831940938066
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +295,7 @@ GameObject:
   - component: {fileID: 2481089831940938065}
   - component: {fileID: 2481089831940938063}
   - component: {fileID: 2481089831940938064}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Back Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +509,7 @@ GameObject:
   - component: {fileID: 2481089832041288190}
   - component: {fileID: 2481089832041288191}
   - component: {fileID: 2481089832041287936}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +644,7 @@ GameObject:
   - component: {fileID: 2481089832089059427}
   - component: {fileID: 2481089832089059425}
   - component: {fileID: 2481089832089059426}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Front Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,7 +702,7 @@ GameObject:
   - component: {fileID: 2481089832134767503}
   - component: {fileID: 2481089832134767504}
   - component: {fileID: 2481089832134767505}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -887,7 +889,7 @@ GameObject:
   - component: {fileID: 2481089832197794011}
   - component: {fileID: 2481089832197794009}
   - component: {fileID: 2481089832197794010}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Back Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1151,7 +1153,7 @@ GameObject:
   - component: {fileID: 2481089832267719273}
   - component: {fileID: 2481089832267719274}
   - component: {fileID: 2481089832267719275}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1227,7 +1229,7 @@ GameObject:
   - component: {fileID: 2481089832289060970}
   - component: {fileID: 2481089832289060971}
   - component: {fileID: 2481089832289060972}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1355,7 +1357,7 @@ GameObject:
   - component: {fileID: 2481089832374248503}
   - component: {fileID: 2481089832374248502}
   - component: {fileID: 2481089832374248500}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1429,7 +1431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481089832376087426}
   - component: {fileID: 2481089832376087425}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: L Trigger 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1466,6 +1468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 2481089831997692487}
   patrol2: {fileID: 2481089831975330220}
+  backTrigger: 1
 --- !u!1 &2481089832385622868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,7 +1480,7 @@ GameObject:
   - component: {fileID: 2481089832385622867}
   - component: {fileID: 2481089832385622865}
   - component: {fileID: 2481089832385622866}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Back Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1668,7 +1671,7 @@ GameObject:
   - component: {fileID: 2481089832444506798}
   - component: {fileID: 2481089832444506796}
   - component: {fileID: 2481089832444506797}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Back Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1725,7 +1728,7 @@ GameObject:
   - component: {fileID: 2481089832463753118}
   - component: {fileID: 2481089832463753116}
   - component: {fileID: 2481089832463753117}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Front Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1864,7 +1867,7 @@ GameObject:
   - component: {fileID: 2481089832469735242}
   - component: {fileID: 2481089832469735240}
   - component: {fileID: 2481089832469735241}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Front Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1921,7 +1924,7 @@ GameObject:
   - component: {fileID: 2481089832512386890}
   - component: {fileID: 2481089832512386888}
   - component: {fileID: 2481089832512386889}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Back Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1979,7 +1982,7 @@ GameObject:
   - component: {fileID: 2481089832518626971}
   - component: {fileID: 2481089832518626972}
   - component: {fileID: 2481089832518626973}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2085,7 +2088,7 @@ GameObject:
   - component: {fileID: 2481089832530949842}
   - component: {fileID: 2481089832530949843}
   - component: {fileID: 2481089832530949844}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2159,7 +2162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481089832562129086}
   - component: {fileID: 2481089832562129085}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: L Trigger 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2196,6 +2199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 2481089833732813659}
   patrol2: {fileID: 2481089832263682936}
+  backTrigger: 1
 --- !u!1 &2481089832564289801
 GameObject:
   m_ObjectHideFlags: 0
@@ -2329,7 +2333,7 @@ GameObject:
   - component: {fileID: 2481089832667367348}
   - component: {fileID: 2481089832667367346}
   - component: {fileID: 2481089832667367347}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Back Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2386,7 +2390,7 @@ GameObject:
   - component: {fileID: 2481089832671927678}
   - component: {fileID: 2481089832671927676}
   - component: {fileID: 2481089832671927677}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Back Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2442,7 +2446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481089832674481554}
   - component: {fileID: 2481089832674481553}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: L Trigger 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2479,6 +2483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 2481089833873038436}
   patrol2: {fileID: 2481089832234004696}
+  backTrigger: 1
 --- !u!1 &2481089832681874555
 GameObject:
   m_ObjectHideFlags: 0
@@ -2491,7 +2496,7 @@ GameObject:
   - component: {fileID: 2481089832681874551}
   - component: {fileID: 2481089832681874552}
   - component: {fileID: 2481089832681874553}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2566,7 +2571,7 @@ GameObject:
   - component: {fileID: 2481089832699927881}
   - component: {fileID: 2481089832699927879}
   - component: {fileID: 2481089832699927880}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Front Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2734,7 +2739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481089832866205923}
   - component: {fileID: 2481089832866205922}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: L Trigger 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2771,6 +2776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 2481089831862771845}
   patrol2: {fileID: 2481089833595504497}
+  backTrigger: 1
 --- !u!1 &2481089832890894161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,7 +2848,7 @@ GameObject:
   - component: {fileID: 2481089832895222230}
   - component: {fileID: 2481089832895222228}
   - component: {fileID: 2481089832895222229}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Front Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2900,7 +2906,7 @@ GameObject:
   - component: {fileID: 2481089832929989425}
   - component: {fileID: 2481089832929989426}
   - component: {fileID: 2481089832929989427}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3028,7 +3034,7 @@ GameObject:
   - component: {fileID: 2481089832972304695}
   - component: {fileID: 2481089832972304696}
   - component: {fileID: 2481089832972304697}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3103,7 +3109,7 @@ GameObject:
   - component: {fileID: 2481089832985102544}
   - component: {fileID: 2481089832985102542}
   - component: {fileID: 2481089832985102543}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Front Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3159,7 +3165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481089833009490161}
   - component: {fileID: 2481089833009490160}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: L Trigger 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3196,6 +3202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 2481089833822175275}
   patrol2: {fileID: 2481089831997692487}
+  backTrigger: 1
 --- !u!1 &2481089833117684703
 GameObject:
   m_ObjectHideFlags: 0
@@ -3208,7 +3215,7 @@ GameObject:
   - component: {fileID: 2481089833117684699}
   - component: {fileID: 2481089833117684700}
   - component: {fileID: 2481089833117684701}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3283,7 +3290,7 @@ GameObject:
   - component: {fileID: 2481089833119764264}
   - component: {fileID: 2481089833119764262}
   - component: {fileID: 2481089833119764263}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Back Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3341,7 +3348,7 @@ GameObject:
   - component: {fileID: 2481089833122189352}
   - component: {fileID: 2481089833122189353}
   - component: {fileID: 2481089833122189354}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3447,7 +3454,7 @@ GameObject:
   - component: {fileID: 2481089833164553484}
   - component: {fileID: 2481089833164553485}
   - component: {fileID: 2481089833164553486}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3575,7 +3582,7 @@ GameObject:
   - component: {fileID: 2481089833216779753}
   - component: {fileID: 2481089833216779754}
   - component: {fileID: 2481089833216779755}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3651,7 +3658,7 @@ GameObject:
   - component: {fileID: 2481089833249553739}
   - component: {fileID: 2481089833249553740}
   - component: {fileID: 2481089833249553741}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3726,7 +3733,7 @@ GameObject:
   - component: {fileID: 2481089833280035697}
   - component: {fileID: 2481089833280035695}
   - component: {fileID: 2481089833280035696}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Front Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3782,7 +3789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481089833283006056}
   - component: {fileID: 2481089833283006055}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: L Trigger 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3819,6 +3826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 2481089832443527299}
   patrol2: {fileID: 2481089831980184520}
+  backTrigger: 1
 --- !u!1 &2481089833295382054
 GameObject:
   m_ObjectHideFlags: 0
@@ -3830,7 +3838,7 @@ GameObject:
   - component: {fileID: 2481089833295382053}
   - component: {fileID: 2481089833295382051}
   - component: {fileID: 2481089833295382052}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Back Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3886,7 +3894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481089833322649973}
   - component: {fileID: 2481089833322649972}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: L Trigger 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3923,6 +3931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 2481089832313380754}
   patrol2: {fileID: 2481089832396587575}
+  backTrigger: 1
 --- !u!1 &2481089833327918103
 GameObject:
   m_ObjectHideFlags: 0
@@ -3994,7 +4003,7 @@ GameObject:
   - component: {fileID: 2481089833349674679}
   - component: {fileID: 2481089833349674677}
   - component: {fileID: 2481089833349674678}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Front Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4080,7 +4089,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481089833415379871}
   - component: {fileID: 2481089833415379870}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: L Trigger 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4117,6 +4126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 2481089832466875168}
   patrol2: {fileID: 2481089832313380754}
+  backTrigger: 1
 --- !u!1 &2481089833419577343
 GameObject:
   m_ObjectHideFlags: 0
@@ -4270,7 +4280,7 @@ GameObject:
   - component: {fileID: 2481089833466287018}
   - component: {fileID: 2481089833466287016}
   - component: {fileID: 2481089833466287017}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Front Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4357,7 +4367,7 @@ GameObject:
   - component: {fileID: 2481089833546956483}
   - component: {fileID: 2481089833546956481}
   - component: {fileID: 2481089833546956482}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Front Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4582,7 +4592,7 @@ GameObject:
   - component: {fileID: 2481089833598954861}
   - component: {fileID: 2481089833598954862}
   - component: {fileID: 2481089833598954863}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4656,7 +4666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481089833600838186}
   - component: {fileID: 2481089833600838185}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: L Trigger 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4693,6 +4703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 2481089833662284098}
   patrol2: {fileID: 2481089833732813659}
+  backTrigger: 1
 --- !u!1 &2481089833634576602
 GameObject:
   m_ObjectHideFlags: 0
@@ -4756,7 +4767,7 @@ GameObject:
   - component: {fileID: 2481089833637115378}
   - component: {fileID: 2481089833637115376}
   - component: {fileID: 2481089833637115377}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Front Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4989,7 +5000,7 @@ GameObject:
   - component: {fileID: 2481089833690598885}
   - component: {fileID: 2481089833690598883}
   - component: {fileID: 2481089833690598884}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Back Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5218,7 +5229,7 @@ GameObject:
   - component: {fileID: 2481089833778548216}
   - component: {fileID: 2481089833778548214}
   - component: {fileID: 2481089833778548215}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Back Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5329,7 +5340,7 @@ GameObject:
   - component: {fileID: 2481089833782362256}
   - component: {fileID: 2481089833782362257}
   - component: {fileID: 2481089833782362258}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5405,7 +5416,7 @@ GameObject:
   - component: {fileID: 2481089833783066470}
   - component: {fileID: 2481089833783066471}
   - component: {fileID: 2481089833783066472}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5480,7 +5491,7 @@ GameObject:
   - component: {fileID: 2481089833788332075}
   - component: {fileID: 2481089833788332073}
   - component: {fileID: 2481089833788332074}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Front Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5538,7 +5549,7 @@ GameObject:
   - component: {fileID: 2481089833790114599}
   - component: {fileID: 2481089833790114600}
   - component: {fileID: 2481089833790114601}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5664,7 +5675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481089833846629939}
   - component: {fileID: 2481089833846629938}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: L Trigger 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5701,6 +5712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrol1: {fileID: 2481089833918509177}
   patrol2: {fileID: 2481089831862771845}
+  backTrigger: 1
 --- !u!1 &2481089833852201283
 GameObject:
   m_ObjectHideFlags: 0
@@ -5713,7 +5725,7 @@ GameObject:
   - component: {fileID: 2481089833852201279}
   - component: {fileID: 2481089833852201280}
   - component: {fileID: 2481089833852201281}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5922,7 +5934,7 @@ GameObject:
   - component: {fileID: 2481089833898619487}
   - component: {fileID: 2481089833898619485}
   - component: {fileID: 2481089833898619486}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Back Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6032,7 +6044,7 @@ GameObject:
   - component: {fileID: 2481089833920197356}
   - component: {fileID: 2481089833920197357}
   - component: {fileID: 2481089833920197358}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door Trigger 22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
