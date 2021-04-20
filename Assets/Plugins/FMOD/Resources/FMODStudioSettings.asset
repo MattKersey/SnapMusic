@@ -79,9 +79,9 @@ MonoBehaviour:
   HasSourceProject: 1
   HasPlatforms: 1
   sourceProjectPath: SnapMusicAudio/SnapMusicAudio.fspro
-  sourceBankPath: SnapMusicAudio\Build
+  sourceBankPath: SnapMusicAudio/Build
   SourceBankPathUnformatted: 
-  AutomaticEventLoading: 1
+  AutomaticEventLoading: 0
   BankLoadType: 0
   AutomaticSampleLoading: 0
   EncryptionKey: 
@@ -101,7 +101,8 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks: []
-  BanksToLoad: []
+  BanksToLoad:
+  - /Master.bank
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
   AndroidUseOBB: 0
@@ -320,8 +321,8 @@ MonoBehaviour:
       Value: 1
       HasValue: 1
     LiveUpdatePort:
-      Value: 0
-      HasValue: 0
+      Value: 9264
+      HasValue: 1
     Overlay:
       Value: 1
       HasValue: 1
