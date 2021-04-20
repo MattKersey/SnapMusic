@@ -88,7 +88,8 @@ public class Teleport : MonoBehaviour
             {
                 stationPatrols.StartAllPatrols();
             }
+
+            cameraFader.FadeIn();
         }
-        cameraFader.FadeIn();
     }
 }
