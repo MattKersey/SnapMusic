@@ -744,10 +744,20 @@ PrefabInstance:
       propertyPath: connectedStation
       value: 
       objectReference: {fileID: 1708227328}
+    - target: {fileID: 4385198139643525047, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
+        type: 3}
+      propertyPath: occlusionEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5222464736322565275, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488046907946737516, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a,
+        type: 3}
+      propertyPath: occlusionEnabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a, type: 3}
