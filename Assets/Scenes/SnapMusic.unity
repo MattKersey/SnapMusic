@@ -6081,7 +6081,7 @@ PrefabInstance:
         type: 3}
       propertyPath: connectedStation
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 748594864}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60ea8a8ee79fc564294d0a35f8b0ae4a, type: 3}
 --- !u!1 &824138088
@@ -7650,7 +7650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3236f1e4f4fc1934ca36d62215d4a97a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrol1: {fileID: 0}
+  patrol1: {fileID: 1108032444}
   patrol2: {fileID: 1104718573}
   backTrigger: 0
 --- !u!1001 &1068599557
