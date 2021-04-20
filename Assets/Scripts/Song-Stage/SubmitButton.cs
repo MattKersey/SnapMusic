@@ -69,6 +69,12 @@ public class SubmitButton : OVRGrabbable
         coroutines.Clear();
         isPlaying = false;
         EmissionStatus(false);
+
+        for (int i = 0; i < songBitesContainer.transform.childCount; i++)
+        {
+            Transform child = songBitesContainer.transform.GetChild(i);
+            child.GetComponent<BiteSelf>().UnColorBite(child.gameObject);
+        }
     }
 
     static int SortByX(Transform t0, Transform t1)
