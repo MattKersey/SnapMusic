@@ -11,6 +11,8 @@ TagManager:
   - Stage-Button
   - Ignore-Me
   - Ghost Bite
+  - Patrol
+  - Door Trigger
   layers:
   - Default
   - TransparentFX

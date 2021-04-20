@@ -46,4 +46,9 @@ public class StudioEventEmitterOcclusion : MonoBehaviour
             }
         }
     }
+
+    public void StopAudio()
+    {
+        fmodInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
 }

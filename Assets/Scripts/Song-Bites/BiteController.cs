@@ -173,7 +173,23 @@ public class BiteController : MonoBehaviour
             arrows.SetActive(true);
             directions.SetActive(false);
 
-            // Turn off ambient music
+            // Turn off ambient patrols
+            GameObject[] patrols = GameObject.FindGameObjectsWithTag("Patrol");
+            foreach(GameObject patrol in patrols)
+            {
+                AmbiencePatrol patrolAmbience = patrol.GetComponent<AmbiencePatrol>();
+                patrolAmbience.StopPatrol();
+            }
+
+            // Turn off door triggers
+            GameObject[] doors = GameObject.FindGameObjectsWithTag("Door Trigger");
+            foreach (GameObject door in doors)
+            {
+                StudioEventEmitterOcclusion doorSound = door.GetComponent<StudioEventEmitterOcclusion>();
+                doorSound.StopAudio();
+            }
+
+            // Disable auditory wayfinding game object
             ambience.SetActive(false);
         }
     }

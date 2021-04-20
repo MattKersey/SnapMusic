@@ -277,6 +277,15 @@ public class CustomController : OVRGrabber
             if (otherCollider.CompareTag("Sound Bite"))
             {
                 m_submitButton.StopAudio();
+
+                /*
+                if (songIsPlaying)
+                {
+                    fullSong.StopSong();
+                    songIsPlaying = false;
+                }
+                */
+
                 touchedBite = true;
                 bite = otherCollider.gameObject;
                 bite.GetComponent<BiteSelf>().ColorBite(bite, false);
