@@ -18,11 +18,11 @@ public class MinimapLean : MonoBehaviour
 
         if (euler.x < 90)
         {
-            transform.localPosition = new Vector3(transform.localPosition.x, 60 + euler.x * .5f, -200 + euler.x * 2.5f);
+            transform.localPosition = new Vector3(transform.localPosition.x, 60 + euler.x * .7f, -200 + euler.x * 3f);
         }
         else if (euler.x > 280)
         {
-            transform.localPosition = new Vector3(transform.localPosition.x, 60 + (euler.x-360) * .5f, -200 + (euler.x-360) * 2.5f);
+            transform.localPosition = new Vector3(transform.localPosition.x, 60 + (euler.x-360) * .7f, -200 + (euler.x-360) * 3f);
         }
 
         Debug.Log(transform.localPosition);

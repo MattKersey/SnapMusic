@@ -9575,6 +9575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Song-Bites-without-Parent
       objectReference: {fileID: 0}
+    - target: {fileID: 8890329374241208204, guid: 3cb2cf3c6565345cd813d9f7db97430a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8890329374241208205, guid: 3cb2cf3c6565345cd813d9f7db97430a,
         type: 3}
       propertyPath: m_RootOrder
@@ -9654,6 +9659,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1292455765}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1292455767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292455766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0d57f2bd9bd4cecab173d41fc828f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/Avril 14th
+  occlusionEnabled: 1
+  occlusionDepth: 1
+  playOnStartup: 0
 --- !u!114 &1292455769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10828,7 +10849,7 @@ GameObject:
   - component: {fileID: 1435151509}
   - component: {fileID: 1435151511}
   - component: {fileID: 1435151510}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Message
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -37,6 +37,7 @@ public class BiteController : MonoBehaviour
     private GameObject directions;
     private GameObject arrows;
     GameObject ambience;
+    public Avril14th fullSong;
 
 
     /**
@@ -63,6 +64,8 @@ public class BiteController : MonoBehaviour
         numOfTotalBites = songBites.Length;
         orderFound = new int[songBites.Length];
         RandomizeBitIdxs();
+
+        fullSong = transform.GetComponent<Avril14th>();
     }
 
     // Every fixed update, check if gameover and update the time
@@ -95,6 +98,8 @@ public class BiteController : MonoBehaviour
         Debug.Log("Celebrate");
         celebrateObj.SetActive(true);
         celebrateObj.GetComponent<Celebrate>().ShowMessages(timer, numOfSwaps);
+        fullSong.PlaySong();
+
     }
 
     // Public method to get all the sound bite gameobjects
@@ -277,7 +282,6 @@ public class BiteController : MonoBehaviour
             BiteSelf _biteSelf = child.GetComponent<BiteSelf>();
             if (idx != _biteSelf.GetBiteIdx() || _biteSelf.GetPlayBackOrder() != 1)
             {
-                child.GetComponent<Renderer>().material = invalidMaterial;
                 child.GetComponent<Renderer>().material = invalidMaterial;
                 correctOrder = false;
             }
