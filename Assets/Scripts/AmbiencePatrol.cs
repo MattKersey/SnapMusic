@@ -64,11 +64,6 @@ public class AmbiencePatrol : StudioEventEmitterOcclusion
         {
             if (coroutineAllowed)
             {
-                /*
-                float angle = Vector3.Angle(player.transform.forward, startMark.transform.position - player.transform.position);
-                Debug.Log("Angle");
-                Debug.Log(angle);
-                */
                 StartCoroutine("Move");
             }
         }
