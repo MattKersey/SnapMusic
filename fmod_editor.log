@@ -1,13 +1,13 @@
 [LOG] System::create                           : Header version = 2.01.07. Current version = 2.01.07.
-[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0x0.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20107 (113487), maxchannels=256, flags=0x00020000
-[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
-[LOG] OutputCoreAudio::init                    : Output running 2 channels at 44100Hz sample rate.
-[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
-[LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7f9dd7304208 isAsync 0 updatePeriod 0.02
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 000001EDDDA60F68 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,117 +16,7 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SystemI::createSound                     : filename = SnapMusicAudio/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] SystemI::createSound                     : setdata soundi = 0x7f9dd5cf1228 : node = 0x7f9dd5c0c940
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7f9dd47bb368.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f9dd5cf1228
-[LOG] SystemI::createSoundInternal             :     Create name='SnapMusicAudio/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSound                     : filename = SnapMusicAudio/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0x7f9dd80a4098 : node = 0x7f9dd80a4250
-[LOG] SystemI::createSound                     :     add node to async list : head = 0x7f9dd47bb368.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3137664
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 30240
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f9dd5c0ca50
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AphexTwin-06', format=5, channels=2, frequency=48000, lengthbytes=200160, lengthpcm=730065, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.774261.
-[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 49152, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f9dd5cf1228
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f9dd80a4098
-[LOG] SystemI::createSoundInternal             :     Create name='SnapMusicAudio/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3137664
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 30240
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f9dd80a4360
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AphexTwin-Reverse-06', format=5, channels=2, frequency=48000, lengthbytes=196576, lengthpcm=730065, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.774170.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f9dd80a4098
-[LOG] SoundI::release                          : AphexTwin-Reverse-06 (0x7f9dd80a4098)
-[LOG] SoundI::release                          :     AphexTwin-Reverse-06 (0x7f9dd6334b58)
-[LOG] SoundI::release                          :     AphexTwin-Reverse-06 (0x7f9dd6334ce8)
-[LOG] SoundI::release                          : AphexTwin-06 (0x7f9dd5cf1228)
-[LOG] SoundI::release                          :     AphexTwin-06 (0x7f9dd6ce5168)
-[LOG] SoundI::release                          :     AphexTwin-06 (0x7f9dd6385998)
-[LOG] SystemI::createSound                     : filename = SnapMusicAudio/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7f9df62a57f8 : node = 0x7f9df62f7ee0
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7f9dd47bb368.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f9df62a57f8
-[LOG] SystemI::createSound                     : filename = SnapMusicAudio/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     Create name='SnapMusicAudio/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3137664
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 30240
-[LOG] SystemI::createSound                     :     setdata soundi = 0x7f9df6261ce8 : node = 0x7f9df6255e50
-[LOG] SystemI::createSound                     :     add node to async list : head = 0x7f9dd47bb368.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f9df62f7ff0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AphexTwin-06', format=5, channels=2, frequency=48000, lengthbytes=200160, lengthpcm=730065, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.774261.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f9df62a57f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f9df6261ce8
-[LOG] SystemI::createSoundInternal             :     Create name='SnapMusicAudio/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3137664
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 30240
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f9df6255f60
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AphexTwin-Reverse-06', format=5, channels=2, frequency=48000, lengthbytes=196576, lengthpcm=730065, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.774170.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f9df6261ce8
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          : AphexTwin-Reverse-06 (0x7f9df6261ce8)
-[LOG] SoundI::release                          :     AphexTwin-Reverse-06 (0x7f9dd809f678)
-[LOG] SoundI::release                          :     AphexTwin-Reverse-06 (0x7f9dd809f808)
-[LOG] SoundI::release                          : AphexTwin-06 (0x7f9df62a57f8)
-[LOG] SoundI::release                          :     AphexTwin-06 (0x7f9dd8091118)
-[LOG] SoundI::release                          :     AphexTwin-06 (0x7f9dd80912a8)
-[LOG] SystemI::createSound                     : filename = SnapMusicAudio/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7f9dd5c6fb38 : node = 0x7f9dd5c78860
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7f9dd47bb368.  list count = 0
-[LOG] SystemI::createSound                     : filename = SnapMusicAudio/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7f9dd5c82858 : node = 0x7f9dd5c6a960
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7f9dd47bb368.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f9dd5c6fb38
-[LOG] SystemI::createSoundInternal             :     Create name='SnapMusicAudio/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3137664
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 30240
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f9dd5c78970
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AphexTwin-Reverse-01', format=5, channels=2, frequency=48000, lengthbytes=156928, lengthpcm=582712, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.661652.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f9dd5c6fb38
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f9dd5c82858
-[LOG] SystemI::createSoundInternal             :     Create name='SnapMusicAudio/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3137664
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 30240
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f9dd5c6aa70
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AphexTwin-01', format=5, channels=2, frequency=48000, lengthbytes=158752, lengthpcm=582712, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.661743.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f9dd5c82858
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
@@ -162,82 +52,41 @@
 [LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
 [WRN] EffectInstanceFactory::create            : Creating stub DSP for plugin 'Resonance Audio Listener'
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
-[LOG] SystemI::createSound                     : filename = SnapMusicAudio/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7f9dd64d6c38 : node = 0x7f9dd45bc670
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7f9dd47bb368.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f9dd64d6c38
-[LOG] SystemI::createSound                     : filename = SnapMusicAudio/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='SnapMusicAudio/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3137664
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 30240
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f9dd45bc780
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0x7f9dd64d6f78 : node = 0x7f9dd4511880
-[LOG] SystemI::createSound                     :     add node to async list : head = 0x7f9dd47bb368.  list count = 0
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AphexTwin-Reverse-01', format=5, channels=2, frequency=48000, lengthbytes=156928, lengthpcm=582712, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.661652.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f9dd64d6c38
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f9dd64d6f78
-[LOG] SystemI::createSoundInternal             :     Create name='SnapMusicAudio/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3137664
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 30240
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f9dd4511990
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AphexTwin-01', format=5, channels=2, frequency=48000, lengthbytes=158752, lengthpcm=582712, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.661743.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f9dd64d6f78
-[LOG] SoundI::release                          : AphexTwin-Reverse-01 (0x7f9dd5c6fb38)
-[LOG] SoundI::release                          :     AphexTwin-Reverse-01 (0x7f9dd5c79848)
-[LOG] SoundI::release                          :     AphexTwin-Reverse-01 (0x7f9dd5c72388)
-[LOG] SoundI::release                          : AphexTwin-01 (0x7f9dd5c82858)
-[LOG] SoundI::release                          :     AphexTwin-01 (0x7f9dd5c76b38)
-[LOG] SoundI::release                          :     AphexTwin-01 (0x7f9dd5c8c498)
-[LOG] SoundI::release                          : AphexTwin-01 (0x7f9dd64d6f78)
-[LOG] SoundI::release                          :     AphexTwin-01 (0x7f9dd8058858)
-[LOG] SoundI::release                          :     AphexTwin-01 (0x7f9dd6e0c6a8)
-[LOG] SoundI::release                          : AphexTwin-Reverse-01 (0x7f9dd64d6c38)
-[LOG] SoundI::release                          :     AphexTwin-Reverse-01 (0x7f9dd804a788)
-[LOG] SoundI::release                          :     AphexTwin-Reverse-01 (0x7f9dd80f7928)
-[LOG] SoundI::release                          :  (0x7f9dd8035378)
-[LOG] SoundI::release                          :     ES_Space Door Open Whoosh (0x7f9dd80f8ff8)
-[LOG] SoundI::release                          :  (0x7f9dd80476d8)
-[LOG] SoundI::release                          :     TENET-3 (0x7f9dd80fc648)
-[LOG] SoundI::release                          :  (0x7f9dd80ff668)
-[LOG] SoundI::release                          :     Untitled_1#01.11grab (0x7f9dd80b64d8)
-[LOG] SoundI::release                          :  (0x7f9dd80c54c8)
-[LOG] SoundI::release                          :     laser_hum (0x7f9dd80df788)
-[LOG] SoundI::release                          :  (0x7f9dd8055bc8)
-[LOG] SoundI::release                          :     TENET-D (0x7f9dd8031e18)
-[LOG] SoundI::release                          :  (0x7f9dd8097028)
-[LOG] SoundI::release                          :     Untitled_1#01.7release (0x7f9dd80b9bb8)
-[LOG] SoundI::release                          :  (0x7f9dd80315f8)
-[LOG] SoundI::release                          :     Untitled_1#01.14bump (0x7f9dd80f8d28)
-[LOG] SoundI::release                          :  (0x7f9dd80e65e8)
-[LOG] SoundI::release                          :     TENET-1 (0x7f9dd808be68)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] SystemI::close                           : Closed.
-[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
-[LOG] Thread::callback                         : FMOD file thread finished.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Listener'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] PluginEffectModel::init                  : Missing DSP plugin 'Resonance Audio Source'
+[LOG] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[WRN] EffectInstanceFactory::create            : Creating stub DSP for plugin 'Resonance Audio Listener'
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
