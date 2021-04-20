@@ -123,6 +123,40 @@ public class CustomController : OVRGrabber
                 songIsPlaying = true;
             }
         }
+
+        if (!IsInObj())
+        {
+            touchedBite = false;
+            if (bite != null && bite.GetComponent<BiteSelf>() != null)
+            {
+                bite.GetComponent<BiteSelf>().UnColorBite(bite);
+                bite.GetComponent<BiteSelf>().SetNotInContact(gameObject);
+            }
+            bite = null;
+        }
+    }
+
+    protected bool IsInObj()
+    {
+        if (bite != null)
+        {
+            Vector3 offset = bite.transform.position - transform.position;
+            float objScale = 0.5f * bite.transform.localScale.x + 0.1f;
+            Vector3 forward = bite.transform.rotation * Vector3.forward;
+            Vector3 up = bite.transform.rotation * Vector3.up;
+            Vector3 right = bite.transform.rotation * Vector3.right;
+            Debug.Log(Vector3.Project(offset, forward).magnitude);
+            Debug.Log(objScale);
+            if (
+                Vector3.Project(offset, forward).magnitude > objScale ||
+                Vector3.Project(offset, up).magnitude > objScale ||
+                Vector3.Project(offset, right).magnitude > objScale
+            )
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void AddAction(MoveLogEntry.MoveType moveType, OVRGrabbable obj0, OVRGrabbable obj1, List<Vector3> scales)

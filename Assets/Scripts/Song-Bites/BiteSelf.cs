@@ -328,6 +328,11 @@ public class BiteSelf : MonoBehaviour
         }
     }
 
+    public void SetNotInContact(GameObject other)
+    {
+        OnTriggerExit(other.GetComponent<Collider>());
+    }
+
     /**
     Public method to get the found position (i.e. the position where the bite
     will be placed on the stage according to the number of bites found so far
