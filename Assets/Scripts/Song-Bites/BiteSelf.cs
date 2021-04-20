@@ -60,6 +60,7 @@ public class BiteSelf : MonoBehaviour
             Ray ray = new Ray(player.transform.position, direction);
             RaycastHit hit;
             Physics.Raycast(ray, out hit, direction.magnitude);
+            // Debug.DrawRay(player.transform.position, direction, Color.cyan);
 
             // Calculate distance between player and sound bite
             float distance = Vector3.Distance(player.transform.position, transform.position);
@@ -67,6 +68,8 @@ public class BiteSelf : MonoBehaviour
             // Determine whether distance or line of sight criteria is met
             bool distanceCheck = (distance <= playbackThreshold);
             bool lineOfSightCheck = (hit.collider.transform == transform);
+            // Debug.Log("Distance");
+            // Debug.Log(distanceCheck);
 
             // If criteria is met, check that player is not inside L trigger before playing
             if (distanceCheck || lineOfSightCheck)
